@@ -148,38 +148,18 @@ img{
     max-width: 100%;
 }
 
-.search input[type="text"]::-webkit-input-placeholder{
-    color: #000;
-}
-
-.search input[type="text"]::-moz-placeholder{
-    color: #000;
-}
-
-.search input[type="text"]::-moz-placeholder{
-    color: #000;
-}
 
 
-#registration input[type="text"]::-webkit-input-placeholder{
-    color: #686767;
+.menu-bar::-webkit-scrollbar
+{
+    width: 7px;
+    background-color: #F5F5F5;
 }
 
-#registration input[type="text"]::-moz-placeholder{
-    color: #686767;
-}
+.menu-bar::-webkit-scrollbar-thumb
+{
+    background: #1d1d1f;
+    border-left: 1px solid #F5F5F5;
+    border-right: 1px solid #F5F5F5;
 
-#registration input[type="text"]::-moz-placeholder{
-    color: #686767;
-}
-#login input[type="text"]::-webkit-input-placeholder{
-    color: #686767;
-}
-
-#login input[type="text"]::-moz-placeholder{
-    color: #686767;
-}
-
-#login input[type="text"]::-moz-placeholder{
-    color: #686767;
 }
