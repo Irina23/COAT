@@ -30,6 +30,9 @@ body
   margin: 0
   line-height: 1em
   font-size: 16px
+  width: initial
+  overflow-x: hidden
+  overflow-y: scroll
   p
     color: #545353
     line-height: 1.5em
@@ -54,6 +57,16 @@ body
     font-weight: 200
 
 .top
+  position: relative
+  left: 0
+  transition: left .6s ease
+  &.opened
+    left: 280px
+    transition: left .6s ease
+  &.opened_right
+
+    left: -280px
+    transition: left .6s ease
   >div
     display: inline-block
     vertical-align: middle
@@ -84,7 +97,7 @@ body
       font-family: "GothamPro-Bold", sans-serif
       color:  #000000
       font-size: 10px
-      content: "Menu"
+
       position: absolute
       top: 19px
       right: 0
@@ -131,7 +144,7 @@ body
       font-family: "GothamPro-Bold", sans-serif
       color:  #000000
       font-size: 10px
-      content: "Bag"
+
       position: absolute
       top: 13px
       left: 0
@@ -139,6 +152,60 @@ body
       //transition: all 0.35s
       line-height: 26px
 
+.content
+  position: relative
+  transition: left .6s ease
+  left: 0
+
+  &.opened
+    left: 280px
+    transition: left .6s ease
+  &.opened_right
+    left: -280px
+    //left: inherit
+    transition: left .6s ease
+
+#bar_opened
+  width: 100%
+  height: 100%
+  background: rgba(29, 29, 31, 0.5)
+  position: absolute
+  top: 0
+  left: 0
+  display: none
+  cursor: pointer
+  &.opened
+    display: block
+    z-index: 1
+
+.page_wrapper
+  overflow: hidden
+
 
 .menu-bar
-  display: none
+  //display: none
+  width: 280px
+  position: absolute
+  left: -280px
+  transition: all .6s ease
+  height: 100vh
+  background: #1d1d1f
+  top: 0
+  z-index: 2
+  &.opened
+    left: 0
+    transition: all .6s ease
+
+.bag_bar
+  //display: none
+  width: 280px
+  position: absolute
+  right: -280px
+  transition: all .6s ease
+  height: 100vh
+  background: #eaeaec
+  top: 0
+  z-index: 2
+  &.opened
+    right: 0
+    transition: all .6s ease
