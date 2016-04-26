@@ -167,14 +167,16 @@ img{
 
 
 .about .text_block::-webkit-scrollbar,
-.contacts .text_block::-webkit-scrollbar
+.contacts .text_block::-webkit-scrollbar,
+.list_collections::-webkit-scrollbar
 {
     width: 7px;
     background-color: #F5F5F5;
 }
 
 .about .text_block::-webkit-scrollbar-thumb,
-.contacts .text_block::-webkit-scrollbar-thumb
+.contacts .text_block::-webkit-scrollbar-thumb,
+.list_collections::-webkit-scrollbar-thumb
 {
     background: #1d1d1f;
     border-left: 1px solid #F5F5F5;

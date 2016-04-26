@@ -44,6 +44,16 @@ jQuery(document).ready(function() {
 
 
         });
+
+        jQuery('.gallery').bxSlider({
+            nextText: "",
+            prevText: "",
+            controls: false,
+            mode: 'vertical',
+            pagerCustom: '.gallery-icons'
+
+
+        });
     });
 
 
