@@ -33,11 +33,21 @@ jQuery(document).ready(function() {
 
 
     jQuery(window).load(function() {
+        //home img
         jQuery("#main_img").addClass("show");
+
+        jQuery('.slder_about').bxSlider({
+            nextText: "",
+            prevText: "",
+            auto: true,
+            controls: false
+
+
+        });
     });
 
 
-
+///bar
     jQuery(".menu-icon").on("click", function(){
         jQuery(".content").addClass("opened");
         jQuery(".top").addClass("opened");
@@ -60,6 +70,8 @@ jQuery(document).ready(function() {
         jQuery(".bag_bar").removeClass("opened");
 
     });
+ //end bar
+
 });
 
 

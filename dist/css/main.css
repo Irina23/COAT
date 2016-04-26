@@ -177,6 +177,8 @@ body {
 
 .page_wrapper {
   overflow: hidden; }
+  .page_wrapper.about {
+    background: #eaeaec; }
 
 .menu-bar {
   width: 280px;
@@ -349,3 +351,45 @@ body {
       background: #000;
       color: #fff;
       text-decoration: none; }
+
+.about .text_block {
+  float: left;
+  overflow: auto;
+  width: 40%;
+  box-sizing: border-box;
+  padding: 50px 70px;
+  height: 100vh; }
+  .about .text_block h3 {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #000;
+    font-size: 0.8571428571428571rem;
+    line-height: 1em;
+    font-family: "GothamPro-Bold", sans-serif;
+    font-weight: normal; }
+  .about .text_block p {
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #000; }
+    .about .text_block p strong, .about .text_block p b {
+      font-family: "GothamPro-Bold", sans-serif;
+      font-style: italic; }
+  .about .text_block ul, .about .text_block ol {
+    margin-bottom: 30px; }
+    .about .text_block ul li, .about .text_block ol li {
+      font-size: 1rem;
+      line-height: 1.5em;
+      color: #000;
+      margin-left: 30px; }
+  .about .text_block ul li {
+    list-style-type: disc; }
+  .about .text_block ol li {
+    list-style-type: decimal; }
+
+.about #slder_about {
+  width: 60%;
+  float: right; }
+  .about #slder_about li {
+    display: block;
+    height: 100vh; }

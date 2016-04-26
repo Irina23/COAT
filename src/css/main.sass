@@ -198,6 +198,9 @@ body
 
 .page_wrapper
   overflow: hidden
+  &.about
+    background: #eaeaec
+
 
 
 .menu-bar
@@ -382,3 +385,49 @@ body
 
 
 
+.about
+  .text_block
+    float: left
+    overflow: auto
+    width: 40%
+    box-sizing: border-box
+    padding: 50px 70px
+    height: 100vh
+
+
+    h3
+      text-transform: uppercase
+      margin-bottom: 40px
+      color: #000
+      font-size: 0.8571428571428571rem
+      line-height: 1em
+      font-family: "GothamPro-Bold", sans-serif
+      font-weight: normal
+    p
+      margin-bottom: 30px
+      font-size: 1rem
+      line-height: 1.5em
+      color: #000
+      strong,b
+        font-family: "GothamPro-Bold", sans-serif
+        font-style: italic
+    ul,ol
+      margin-bottom: 30px
+      li
+        font-size: 1rem
+        line-height: 1.5em
+        color: #000
+        margin-left: 30px
+    ul
+      li
+        list-style-type: disc
+    ol
+      li
+        list-style-type: decimal
+
+  #slder_about
+    width: 60%
+    float: right
+    li
+      display: block
+      height: 100vh
