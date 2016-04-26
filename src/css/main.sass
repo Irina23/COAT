@@ -187,10 +187,12 @@ body
   &.opened
     left: 280px
     transition: left .6s ease
+    overflow: hidden
   &.opened_right
     left: -280px
     //left: inherit
     transition: left .6s ease
+    overflow: hidden
 
 
 
@@ -532,7 +534,7 @@ body
       font-family: "GothamPro-Bold", sans-serif
       font-weight: normal
     p
-      margin-bottom: 30px
+      margin-bottom: 60px
       font-size: 1rem
       line-height: 1.5em
       color: #000
@@ -557,3 +559,58 @@ body
       li
         list-style-type: decimal
 
+    .block_left
+      width: 385px
+      padding-right: 25px
+      float: left
+      height: 100%
+      .gallery
+        height: 100%
+        a
+          display: block
+    .block_right
+      overflow: hidden
+      padding-right: 40px
+
+      .gallery-icons
+        a
+          float: left
+          width: 67px
+          height: 100px
+          margin: 0 15px 15px 0
+          border: 1px solid #dedfe0
+          opacity: 0.7
+          transition:  all 0.35s
+          &.active, &:hover
+            opacity: 1
+            transition:  all 0.35s
+
+#blueimp-gallery.blueimp-gallery
+  > .close
+    background: url("../img/icons/close.png") no-repeat
+    background-size: 100%
+    width: 25px
+    height: 25px
+    display: block
+    top: 10px
+    right: 10px
+    padding: 0
+    margin: 0
+    transition: all 0.35s
+    &:hover
+      transition: all 0.35s
+
+
+  > .prev, > .next
+    display: block
+    width: 22px
+    height: 38px
+    border: 0
+    border-radius: 0
+    background: url("../img/icons/next.png") no-repeat
+    background-size: 100%
+    transition: all 0.35s
+    &:hover
+      transition: all 0.35s
+  > .next
+    transform: rotate(180deg)

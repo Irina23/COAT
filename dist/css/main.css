@@ -160,11 +160,13 @@ body {
   .content.opened {
     left: 280px;
     -webkit-transition: left .6s ease;
-    transition: left .6s ease; }
+    transition: left .6s ease;
+    overflow: hidden; }
   .content.opened_right {
     left: -280px;
     -webkit-transition: left .6s ease;
-    transition: left .6s ease; }
+    transition: left .6s ease;
+    overflow: hidden; }
 
 #bar_opened {
   width: 100%;
@@ -458,7 +460,7 @@ body {
     font-family: "GothamPro-Bold", sans-serif;
     font-weight: normal; }
   .collections .block_text_collections p {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     font-size: 1rem;
     line-height: 1.5em;
     color: #000; }
@@ -478,3 +480,62 @@ body {
     list-style-type: disc; }
   .collections .block_text_collections ol li {
     list-style-type: decimal; }
+  .collections .block_text_collections .block_left {
+    width: 385px;
+    padding-right: 25px;
+    float: left;
+    height: 100%; }
+    .collections .block_text_collections .block_left .gallery {
+      height: 100%; }
+      .collections .block_text_collections .block_left .gallery a {
+        display: block; }
+  .collections .block_text_collections .block_right {
+    overflow: hidden;
+    padding-right: 40px; }
+    .collections .block_text_collections .block_right .gallery-icons a {
+      float: left;
+      width: 67px;
+      height: 100px;
+      margin: 0 15px 15px 0;
+      border: 1px solid #dedfe0;
+      opacity: 0.7;
+      -webkit-transition: all 0.35s;
+      transition: all 0.35s; }
+      .collections .block_text_collections .block_right .gallery-icons a.active, .collections .block_text_collections .block_right .gallery-icons a:hover {
+        opacity: 1;
+        -webkit-transition: all 0.35s;
+        transition: all 0.35s; }
+
+#blueimp-gallery.blueimp-gallery > .close {
+  background: url("../img/icons/close.png") no-repeat;
+  background-size: 100%;
+  width: 25px;
+  height: 25px;
+  display: block;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  margin: 0;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s; }
+  #blueimp-gallery.blueimp-gallery > .close:hover {
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s; }
+
+#blueimp-gallery.blueimp-gallery > .prev, #blueimp-gallery.blueimp-gallery > .next {
+  display: block;
+  width: 22px;
+  height: 38px;
+  border: 0;
+  border-radius: 0;
+  background: url("../img/icons/next.png") no-repeat;
+  background-size: 100%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s; }
+  #blueimp-gallery.blueimp-gallery > .prev:hover, #blueimp-gallery.blueimp-gallery > .next:hover {
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s; }
+
+#blueimp-gallery.blueimp-gallery > .next {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
