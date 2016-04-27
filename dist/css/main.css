@@ -12,6 +12,13 @@
   font-style: normal;
   font-weight: normal; }
 
+@font-face {
+  font-family: "GothamPro-MediumItalic";
+  src: url("../fonts/GothamPro-MediumItalic.eot");
+  src: url("../fonts/GothamPro-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-MediumItalic.otf") format("otf"), url("../fonts/GothamPro-MediumItalic.svg") format("svg"), url("../fonts/GothamPro-MediumItalic.woff") format("woff"), url("../fonts/GothamPro-MediumItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
 html {
   font-size: 14px; }
 
@@ -689,3 +696,66 @@ body {
       width: 100%; }
     .article .content .img-holder .bx-controls {
       display: none; }
+
+.list_product_page .content {
+  border-top: 1px solid #dedfe0;
+  padding: 50px 28px 85px; }
+
+.list_product_page .list_products {
+  font-size: 0; }
+  .list_product_page .list_products .item_product {
+    padding: 0 12px 25px;
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    box-sizing: border-box; }
+    .list_product_page .list_products .item_product a {
+      font-size: 0.8571428571428571rem;
+      line-height: 1.3em;
+      color: #000000;
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+      position: relative; }
+      .list_product_page .list_products .item_product a:hover {
+        text-decoration: none; }
+        .list_product_page .list_products .item_product a:hover .title {
+          opacity: 0;
+          -webkit-transition: opacity 0.5s ease;
+          transition: opacity 0.5s ease; }
+        .list_product_page .list_products .item_product a:hover .price {
+          opacity: 1;
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+          bottom: 0; }
+      .list_product_page .list_products .item_product a .img-holder {
+        margin-bottom: 15px;
+        width: 100%;
+        height: auto;
+        position: relative; }
+        .list_product_page .list_products .item_product a .img-holder .label {
+          position: absolute;
+          width: 100%;
+          text-align: right;
+          font-style: italic;
+          text-transform: uppercase;
+          color: #ababad;
+          font-size: 0.7142857142857143rem;
+          letter-spacing: 1px;
+          font-family: "GothamPro", sans-serif; }
+      .list_product_page .list_products .item_product a .title {
+        font-size: 1rem;
+        line-height: 1.3em;
+        letter-spacing: 2px;
+        -webkit-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease; }
+      .list_product_page .list_products .item_product a .price {
+        position: absolute;
+        bottom: -10%;
+        width: 100%;
+        opacity: 0;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        font-size: 1.142857142857143rem;
+        line-height: 1em;
+        font-family: "GothamPro-Bold", sans-serif; }

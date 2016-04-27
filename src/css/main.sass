@@ -20,6 +20,12 @@ $color-grey: #727272
   font-style: normal
   font-weight: normal
 
+@font-face
+  font-family: "GothamPro-MediumItalic"
+  src: url("../fonts/GothamPro-MediumItalic.eot")
+  src: url("../fonts/GothamPro-MediumItalic.eot?#iefix")format("embedded-opentype"),url("../fonts/GothamPro-MediumItalic.otf") format("otf"), url("../fonts/GothamPro-MediumItalic.svg") format("svg"),url("../fonts/GothamPro-MediumItalic.woff") format("woff"),url("../fonts/GothamPro-MediumItalic.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
 
 
 html
@@ -790,3 +796,67 @@ body
       .bx-controls
         display: none
 
+
+
+
+.list_product_page
+  .content
+    border-top: 1px solid #dedfe0
+    padding: 50px 28px 85px
+  .list_products
+    font-size: 0
+    .item_product
+      padding: 0 12px 25px
+      display: inline-block
+      vertical-align: top
+      width: 25%
+      box-sizing: border-box
+      a
+        font-size: 0.8571428571428571rem
+        line-height: 1.3em
+        color: #000000
+        text-transform: uppercase
+        text-align: center
+        display: block
+        //transition: all 0.35s
+        position: relative
+        &:hover
+          text-decoration: none
+          //transition: all 0.35s
+          .title
+            opacity: 0
+            transition: opacity 0.5s ease
+          .price
+            opacity: 1
+            transition: all 0.5s ease
+            bottom: 0
+        .img-holder
+          margin-bottom: 15px
+          width: 100%
+          height: auto
+          position: relative
+          .label
+            position: absolute
+            width: 100%
+            text-align: right
+            font-style: italic
+            text-transform: uppercase
+            color:  #ababad
+            font-size: 0.7142857142857143rem
+            letter-spacing: 1px
+            font-family: "GothamPro", sans-serif
+        .title
+          font-size: 1rem
+          line-height: 1.3em
+          letter-spacing: 2px
+          transition: opacity 0.5s ease
+          //font-family: "GothamPro-Bold", sans-serif
+        .price
+          position: absolute
+          bottom: -10%
+          width: 100%
+          opacity: 0
+          transition: all 0.5s ease
+          font-size: 1.142857142857143rem
+          line-height: 1em
+          font-family: "GothamPro-Bold", sans-serif

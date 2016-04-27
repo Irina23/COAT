@@ -54,12 +54,6 @@ jQuery(document).ready(function() {
 
 
         });
-
-
-
-        jQuery('.list_media_items').masonry({
-            itemSelector: '.media_item'
-        });
     });
 
 
