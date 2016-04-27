@@ -699,7 +699,8 @@ body {
 
 .list_product_page .content {
   border-top: 1px solid #dedfe0;
-  padding: 50px 28px 85px; }
+  padding: 50px 28px 85px;
+  height: auto; }
 
 .list_product_page .list_products {
   font-size: 0; }
@@ -759,3 +760,19 @@ body {
         font-size: 1.142857142857143rem;
         line-height: 1em;
         font-family: "GothamPro-Bold", sans-serif; }
+
+footer {
+  background: #1b1b1f;
+  padding: 100px 0 75px;
+  text-align: center;
+  color: #eaeaec;
+  line-height: 1em;
+  font-size: 1rem; }
+  footer p {
+    color: #eaeaec;
+    line-height: 1em;
+    font-size: 1rem; }
+  footer a {
+    color: #eaeaec;
+    line-height: 1em;
+    font-size: 1rem; }
