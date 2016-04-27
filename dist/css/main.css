@@ -364,6 +364,41 @@ body {
       background: #000;
       color: #fff;
       text-decoration: none; }
+  .bag_bar .list_product_bag {
+    height: calc( 100vh - 156px);
+    overflow: auto;
+    clear: both; }
+    .bag_bar .list_product_bag .item_product {
+      border-bottom: 1px solid #dedfe0;
+      padding: 20px 30px; }
+      .bag_bar .list_product_bag .item_product a {
+        display: block;
+        color: #000;
+        font-size: 0.8571428571428571rem; }
+        .bag_bar .list_product_bag .item_product a:hover {
+          text-decoration: none; }
+      .bag_bar .list_product_bag .item_product .img-holder {
+        height: 150px;
+        width: 150px;
+        margin: 0 auto 20px; }
+      .bag_bar .list_product_bag .item_product .title {
+        margin-bottom: 15px;
+        line-height: 1.2em;
+        font-family: "GothamPro-Bold", sans-serif;
+        text-transform: uppercase;
+        font-size: 0.7142857142857143rem; }
+      .bag_bar .list_product_bag .item_product .size {
+        line-height: 1em;
+        margin-bottom: 10px; }
+      .bag_bar .list_product_bag .item_product .price {
+        float: right;
+        font-family: "GothamPro-Bold", sans-serif; }
+      .bag_bar .list_product_bag .item_product .delete {
+        float: left;
+        width: 8px;
+        height: 8px;
+        background-size: 100%;
+        background: url("../img/icons/close.svg") no-repeat; }
 
 .about .text_block, .contacts .text_block, .stockists .text_block {
   float: left;
