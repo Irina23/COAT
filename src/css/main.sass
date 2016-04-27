@@ -652,3 +652,98 @@ body
         margin-bottom: 50px
         &:last-child
           margin-bottom: 0
+
+
+
+.media
+  .content
+    border-top: 1px solid #dedfe0
+    padding: 50px 28px
+    .list_media_items
+      //width: 1222px
+      margin: auto
+      //text-align: center
+      .media_item
+        padding: 0 10px 50px
+        display: inline-block
+        vertical-align: top
+        width: 33%
+        box-sizing: border-box
+
+        a
+          display: block
+          text-align: left
+          &:hover
+            text-decoration: none
+          .img-holder
+            width: 100%
+            height: auto
+            margin-bottom: 10px
+            img
+              width: 100%
+          .title
+            font-size: 1rem
+            line-height: 1.3em
+            color: #000
+            margin-bottom: 10px
+          .url
+            font-size: 0.8571428571428571rem
+            text-transform: uppercase
+            color: #000
+            font-family: "GothamPro-Bold", sans-serif
+
+
+.article
+  .content
+    border-top: 1px solid #dedfe0
+    .text_block
+      float: left
+      width: 40%
+      padding: 50px 70px
+      overflow: auto
+      box-sizing: border-box
+      height: calc( 100vh - 53px )
+      h1,h3
+        text-transform: uppercase
+        margin-bottom: 30px
+        color: #000
+        font-size: 1rem
+        line-height: 1em
+        font-family: "GothamPro-Bold", sans-serif
+        font-weight: normal
+      p
+        margin-bottom: 30px
+        font-size: 1rem
+        line-height: 1.5em
+        color: #000
+        strong,b
+          font-family: "GothamPro-Bold", sans-serif
+          font-style: italic
+      a
+
+        color: #000
+      //font-family: "GothamPro-Bold", sans-serif
+      ul,ol
+        margin-bottom: 30px
+        li
+          font-size: 1rem
+          line-height: 1.5em
+          color: #000
+          margin-left: 30px
+      ul
+        li
+          list-style-type: disc
+      ol
+        li
+          list-style-type: decimal
+    .img-holder
+      float: left
+      width: 60%
+      height: calc( 100vh - 53px )
+      overflow: hidden
+      div
+        height: 100%
+        width: 100%
+      .bx-controls
+        display: none
+

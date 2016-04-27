@@ -572,3 +572,85 @@ body {
       margin-bottom: 50px; }
       .stockists .text_block dd .info_stockists:last-child {
         margin-bottom: 0; }
+
+.media .content {
+  border-top: 1px solid #dedfe0;
+  padding: 50px 28px; }
+  .media .content .list_media_items {
+    margin: auto; }
+    .media .content .list_media_items .media_item {
+      padding: 0 10px 50px;
+      display: inline-block;
+      vertical-align: top;
+      width: 33%;
+      box-sizing: border-box; }
+      .media .content .list_media_items .media_item a {
+        display: block;
+        text-align: left; }
+        .media .content .list_media_items .media_item a:hover {
+          text-decoration: none; }
+        .media .content .list_media_items .media_item a .img-holder {
+          width: 100%;
+          height: auto;
+          margin-bottom: 10px; }
+          .media .content .list_media_items .media_item a .img-holder img {
+            width: 100%; }
+        .media .content .list_media_items .media_item a .title {
+          font-size: 1rem;
+          line-height: 1.3em;
+          color: #000;
+          margin-bottom: 10px; }
+        .media .content .list_media_items .media_item a .url {
+          font-size: 0.8571428571428571rem;
+          text-transform: uppercase;
+          color: #000;
+          font-family: "GothamPro-Bold", sans-serif; }
+
+.article .content {
+  border-top: 1px solid #dedfe0; }
+  .article .content .text_block {
+    float: left;
+    width: 40%;
+    padding: 50px 70px;
+    overflow: auto;
+    box-sizing: border-box;
+    height: calc( 100vh - 53px); }
+    .article .content .text_block h1, .article .content .text_block h3 {
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      color: #000;
+      font-size: 1rem;
+      line-height: 1em;
+      font-family: "GothamPro-Bold", sans-serif;
+      font-weight: normal; }
+    .article .content .text_block p {
+      margin-bottom: 30px;
+      font-size: 1rem;
+      line-height: 1.5em;
+      color: #000; }
+      .article .content .text_block p strong, .article .content .text_block p b {
+        font-family: "GothamPro-Bold", sans-serif;
+        font-style: italic; }
+    .article .content .text_block a {
+      color: #000; }
+    .article .content .text_block ul, .article .content .text_block ol {
+      margin-bottom: 30px; }
+      .article .content .text_block ul li, .article .content .text_block ol li {
+        font-size: 1rem;
+        line-height: 1.5em;
+        color: #000;
+        margin-left: 30px; }
+    .article .content .text_block ul li {
+      list-style-type: disc; }
+    .article .content .text_block ol li {
+      list-style-type: decimal; }
+  .article .content .img-holder {
+    float: left;
+    width: 60%;
+    height: calc( 100vh - 53px);
+    overflow: hidden; }
+    .article .content .img-holder div {
+      height: 100%;
+      width: 100%; }
+    .article .content .img-holder .bx-controls {
+      display: none; }

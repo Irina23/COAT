@@ -54,6 +54,16 @@ jQuery(document).ready(function() {
 
 
         });
+
+
+
+        jQuery('.list_media_items').masonry({
+            itemSelector: '.media_item',
+            //columnWidth: 240,
+            /*layoutPriorities: {
+                shelfOrder: 1
+            }*/
+        });
     });
 
 
