@@ -36,7 +36,7 @@ jQuery(document).ready(function() {
         //home img
         jQuery("#main_img").addClass("show");
 
-        jQuery('.slder_about, .slder_contacts').bxSlider({
+        jQuery('.slder_about, .slder_contacts, .slder_stockists').bxSlider({
             nextText: "",
             prevText: "",
             auto: true,

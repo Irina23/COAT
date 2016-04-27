@@ -4,30 +4,48 @@ html(lang="ru")
 
 
     body
-        .page_wrapper.about
+        .page_wrapper.stockists
             include ./header.jade
             .content
 
                     .text_block
+                        dl
+                            dt ONLINE
+                            dd
+                                h3 POSH
+                                p
+                                    a(href="https://posh.ua", target="_blank") https://posh.ua
+                            dt UKRAINE
+                            dd
 
-                            h3 Brand
-                            p Clothing
-                                b &nbsp;THE COAT&nbsp;
-                                | is not for "strong" women, I would say more -
-                                b &nbsp;for cool!&nbsp;
-                                | Cool - because they are good-looking, they raise their children, and in parallel defend master's works. They make their husbands romantic evenings in hotels, conquer wake board, run charity marathons, build businesses and prepare for the MBA in the sixth month of pregnancy.
-                            p I fall in love with these women, and they yavlyayutsya my inspiration!
-                            p Background on the collection of coats became sad stage in my personal life, which led to a sad and even depressed state of mind. Cold gray autumn especially did not have to change for the better. And then I decided that it was a warm coat and a bright color will fall to my liking. So it happened that negative experiences have launched something light, bright, and as it turned out successful.
-                            h3 KATYA SILCHENKO
-                            p Although there were people who tried to dissuade me from pink cashmere, arguing it was his alleged "nenosibelnostyu and extravagance." But I remained true to her decision and was confident in its correctness. Over time, everything will work and in their personal lives and in their work.
+                                div.info_stockists
+                                    h3 THE COAT
+                                    p Vozdvigenskaya str, 48 Kyiv, Ukraine
+                                    p
+                                        a(href="tel:+38 066 471 00 02") +38 066 471 00 02
+                                    p
+                                        a(href="mailto:info@thecoat.me") info@thecoat.me
+                                    p
+                                        a(href="mailto:thecoatsk@gmail.com") thecoatsk@gmail.com
+
+
+                                div.info_stockists
+                                    h3 GALLERY 48
+                                    p Antonovicha 48 str Kyiv, Ukraine
+                                    p
+                                        a(href="tel:+38 073 484 8403") +38 073 484 8403
+                                    p
+                                        a(href="mailto:info@gallery48.com.ua") info@gallery48.com.ua
+                                    p
+                                        a(href="http://gallery48.com.ua/" target="_blank") www.gallery48.com.ua
 
 
 
 
-                    #slder_about
-                        .slder_about
-                            li(style='background: url("../img/content/img_about.jpg") no-repeat top center #eaeaec; background-size: cover;')
-                            li(style='background: url("../img/content/img_about.jpg") no-repeat top center #eaeaec; background-size: cover;')
+                    #slder_stockists
+                            .slder_stockists
+                                li(style='background: url("../img/content/img_stockists.png") no-repeat top center #eaeaec; background-size: cover;')
+                                li(style='background: url("../img/content/img_stockists.png") no-repeat top center #eaeaec; background-size: cover;')
 
 
             include ./footer.jade

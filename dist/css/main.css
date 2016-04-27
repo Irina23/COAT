@@ -90,7 +90,9 @@ body {
     height: 52px;
     padding: 19px 40px 19px 25px;
     cursor: pointer;
-    float: left; }
+    float: left;
+    background: url("../img/icons/menu_icon.svg") no-repeat 25px center;
+    background-size: 18px 18px; }
     .top .menu-icon .icon-bar {
       height: 2px;
       background: #000;
@@ -240,11 +242,13 @@ body {
       .menu-bar .social li.instagram {
         border-right: 1px solid #2d2d2d; }
         .menu-bar .social li.instagram a {
-          background: url("../img/icons/inst_icon.png") no-repeat center #1d1d1f; }
+          background: url("../img/icons/instagram.svg") no-repeat center #1d1d1f;
+          background-size: 18px 18px; }
       .menu-bar .social li.facebook {
         border-left: 1px solid #2d2d2d; }
         .menu-bar .social li.facebook a {
-          background: url("../img/icons/fb_icon.png") no-repeat center #1d1d1f; }
+          background: url("../img/icons/fb.svg") no-repeat center #1d1d1f;
+          background-size: 18px 18px; }
       .menu-bar .social li a {
         display: block;
         -webkit-transition: all 0.5s;
@@ -264,6 +268,8 @@ body {
       width: 100%;
       line-height: 50px;
       text-align: center; }
+      .menu-bar .lang li.active {
+        display: none; }
       .menu-bar .lang li a {
         color: #bcbcbc;
         font-size: 1rem;
@@ -287,6 +293,9 @@ body {
       cursor: pointer;
       -webkit-transition: all 0.5s;
       transition: all 0.5s; }
+      .menu-bar .info .img-holder img {
+        width: 18px;
+        height: 18px; }
       .menu-bar .info .img-holder:hover {
         -webkit-transition: all 0.5s;
         transition: all 0.5s;
@@ -356,14 +365,14 @@ body {
       color: #fff;
       text-decoration: none; }
 
-.about .text_block, .contacts .text_block {
+.about .text_block, .contacts .text_block, .stockists .text_block {
   float: left;
   overflow: auto;
   width: 40%;
   box-sizing: border-box;
   padding: 50px 70px;
   height: calc( 100vh - 52px); }
-  .about .text_block h3, .contacts .text_block h3 {
+  .about .text_block h3, .contacts .text_block h3, .stockists .text_block h3 {
     text-transform: uppercase;
     margin-bottom: 40px;
     color: #000;
@@ -371,34 +380,34 @@ body {
     line-height: 1em;
     font-family: "GothamPro-Bold", sans-serif;
     font-weight: normal; }
-  .about .text_block p, .contacts .text_block p {
+  .about .text_block p, .contacts .text_block p, .stockists .text_block p {
     margin-bottom: 30px;
     font-size: 1rem;
     line-height: 1.5em;
     color: #000; }
-    .about .text_block p strong, .about .text_block p b, .contacts .text_block p strong, .contacts .text_block p b {
+    .about .text_block p strong, .about .text_block p b, .contacts .text_block p strong, .contacts .text_block p b, .stockists .text_block p strong, .stockists .text_block p b {
       font-family: "GothamPro-Bold", sans-serif;
       font-style: italic; }
-  .about .text_block a, .contacts .text_block a {
+  .about .text_block a, .contacts .text_block a, .stockists .text_block a {
     color: #000; }
-  .about .text_block ul, .about .text_block ol, .contacts .text_block ul, .contacts .text_block ol {
+  .about .text_block ul, .about .text_block ol, .contacts .text_block ul, .contacts .text_block ol, .stockists .text_block ul, .stockists .text_block ol {
     margin-bottom: 30px; }
-    .about .text_block ul li, .about .text_block ol li, .contacts .text_block ul li, .contacts .text_block ol li {
+    .about .text_block ul li, .about .text_block ol li, .contacts .text_block ul li, .contacts .text_block ol li, .stockists .text_block ul li, .stockists .text_block ol li {
       font-size: 1rem;
       line-height: 1.5em;
       color: #000;
       margin-left: 30px; }
-  .about .text_block ul li, .contacts .text_block ul li {
+  .about .text_block ul li, .contacts .text_block ul li, .stockists .text_block ul li {
     list-style-type: disc; }
-  .about .text_block ol li, .contacts .text_block ol li {
+  .about .text_block ol li, .contacts .text_block ol li, .stockists .text_block ol li {
     list-style-type: decimal; }
 
-.about #slder_about, .about #slder_contacts, .contacts #slder_about, .contacts #slder_contacts {
+.about #slder_about, .about #slder_contacts, .about #slder_stockists, .contacts #slder_about, .contacts #slder_contacts, .contacts #slder_stockists, .stockists #slder_about, .stockists #slder_contacts, .stockists #slder_stockists {
   width: 60%;
   float: right; }
-  .about #slder_about .bx-controls, .about #slder_contacts .bx-controls, .contacts #slder_about .bx-controls, .contacts #slder_contacts .bx-controls {
+  .about #slder_about .bx-controls, .about #slder_contacts .bx-controls, .about #slder_stockists .bx-controls, .contacts #slder_about .bx-controls, .contacts #slder_contacts .bx-controls, .contacts #slder_stockists .bx-controls, .stockists #slder_about .bx-controls, .stockists #slder_contacts .bx-controls, .stockists #slder_stockists .bx-controls {
     display: none; }
-  .about #slder_about li, .about #slder_contacts li, .contacts #slder_about li, .contacts #slder_contacts li {
+  .about #slder_about li, .about #slder_contacts li, .about #slder_stockists li, .contacts #slder_about li, .contacts #slder_contacts li, .contacts #slder_stockists li, .stockists #slder_about li, .stockists #slder_contacts li, .stockists #slder_stockists li {
     display: block;
     height: calc( 100vh - 52px); }
 
@@ -539,3 +548,27 @@ body {
 #blueimp-gallery.blueimp-gallery > .next {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
+
+.stockists .text_block {
+  padding: 0; }
+  .stockists .text_block dt {
+    background: #eaeaec;
+    padding: 43px 30px 43px 70px;
+    text-transform: uppercase;
+    color: #1d1d1f;
+    font-size: 1rem;
+    line-height: 1em;
+    font-family: "GothamPro-Bold", sans-serif; }
+  .stockists .text_block dd {
+    padding: 50px 30px 50px 70px; }
+    .stockists .text_block dd h3 {
+      font-size: 1rem;
+      margin-bottom: 20px; }
+    .stockists .text_block dd p {
+      margin-bottom: 0;
+      font-size: 1rem;
+      line-height: 1.3em; }
+    .stockists .text_block dd .info_stockists {
+      margin-bottom: 50px; }
+      .stockists .text_block dd .info_stockists:last-child {
+        margin-bottom: 0; }

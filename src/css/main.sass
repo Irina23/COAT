@@ -99,6 +99,9 @@ body
     padding: 19px 40px 19px 25px
     cursor: pointer
     float: left
+    background: url("../img/icons/menu_icon.svg") no-repeat 25px center
+    background-size: 18px 18px
+
 
     .icon-bar
       height: 2px
@@ -285,11 +288,13 @@ body
           &.instagram
             border-right: 1px solid #2d2d2d
             a
-              background: url("../img/icons/inst_icon.png") no-repeat center #1d1d1f
+              background: url("../img/icons/instagram.svg") no-repeat center #1d1d1f
+              background-size: 18px 18px
           &.facebook
             border-left: 1px solid #2d2d2d
             a
-              background: url("../img/icons/fb_icon.png") no-repeat center #1d1d1f
+              background: url("../img/icons/fb.svg") no-repeat center #1d1d1f
+              background-size: 18px 18px
           a
             display: block
             transition: all 0.5s
@@ -310,6 +315,8 @@ body
 
       line-height: 50px
       text-align: center
+      &.active
+        display: none
       a
         color: #bcbcbc
         font-size: 1rem
@@ -332,6 +339,9 @@ body
       text-align: center
       cursor: pointer
       transition: all 0.5s
+      img
+        width: 18px
+        height: 18px
       &:hover
           transition: all 0.5s
 
@@ -407,7 +417,7 @@ body
 
 
 
-.about, .contacts
+.about, .contacts, .stockists
   .text_block
     float: left
     overflow: auto
@@ -451,7 +461,7 @@ body
       li
         list-style-type: decimal
 
-  #slder_about, #slder_contacts
+  #slder_about, #slder_contacts, #slder_stockists
     width: 60%
     float: right
 
@@ -614,3 +624,31 @@ body
       transition: all 0.35s
   > .next
     transform: rotate(180deg)
+
+
+
+
+.stockists
+  .text_block
+    padding: 0
+    dt
+      background:  #eaeaec
+      padding: 43px 30px 43px 70px
+      text-transform: uppercase
+      color:  #1d1d1f
+      font-size: 1rem
+      line-height: 1em
+      font-family: "GothamPro-Bold", sans-serif
+    dd
+      padding: 50px 30px 50px 70px
+      h3
+        font-size: 1rem
+        margin-bottom: 20px
+      p
+        margin-bottom: 0
+        font-size: 1rem
+        line-height: 1.3em
+      .info_stockists
+        margin-bottom: 50px
+        &:last-child
+          margin-bottom: 0
