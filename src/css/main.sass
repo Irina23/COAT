@@ -379,6 +379,8 @@ body
           span
             top: -100%
             transition: all 0.35s
+
+
             &.hover
               top: 0
               transition: all 0.35s
@@ -390,18 +392,44 @@ body
     bottom: 0
     left: 0
     width: 100%
-    .img-holder
-      padding: 16px 0
+    //padding: 16px 0
+    a
+      display: block
       text-align: center
-      cursor: pointer
-      transition: all 0.5s
-      img
-        width: 18px
-        height: 18px
+      position: relative
+      transition: all 0.35s
+      height: 52px
+      overflow: hidden
+      span
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        display: block
+        transition: all 0.5s
+        height: 52px
+        img
+          width: 18px
+          height: 18px
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-top: -9px
+          margin-left: -9px
+        &.hover
+          top: 100%
+          transition: all 0.35s
+
       &:hover
           transition: all 0.5s
-
           background: #000
+          span
+            top: -100%
+            transition: all 0.35s
+            &.hover
+              top: 0
+              transition: all 0.35s
+
 
 
 
