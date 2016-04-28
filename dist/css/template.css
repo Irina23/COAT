@@ -167,7 +167,8 @@ img{
 
 .text_block::-webkit-scrollbar,
 .list_collections::-webkit-scrollbar,
-.list_product_bag::-webkit-scrollbar
+.list_product_bag::-webkit-scrollbar,
+.list_filters::-webkit-scrollbar
 {
     width: 5px;
     background-color: #fff;
@@ -175,7 +176,8 @@ img{
 
 .text_block::-webkit-scrollbar-thumb,
 .list_collections::-webkit-scrollbar-thumb,
-.list_product_bag::-webkit-scrollbar-thumb
+.list_product_bag::-webkit-scrollbar-thumb,
+.list_filters::-webkit-scrollbar-thumb
 {
     background: #1d1d1f;
 

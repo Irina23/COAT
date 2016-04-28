@@ -67,6 +67,67 @@ html(lang="ru")
                             .price $ 650
 
 
+                a.scrollTop(href="#")
+                .filter
+                    .title
+                        span Filter
+                        span.hover Filter
+                    form.block_filter
+                        .close
+                        .list_filters
+
+                            #attribute1
+                                .name PRODUCT
+                                .attribute_holder
+                                    .attribute
+                                        input(type="checkbox" name="option1" value="COATS" id="option1")
+                                        label(for="option1") COATS
+                                    .attribute
+                                        input(type="checkbox" name="option2" value="PANTS" id="option2" )
+                                        label(for="option2") PANTS
+                                    .attribute
+                                        input(type="checkbox" name="option3" value="DRESSES" id="option3" )
+                                        label(for="option3") DRESSES
+                                    .attribute
+                                        input(type="checkbox" name="option4" value="SKIRTS" id="option4" )
+                                        label(for="option4") SKIRTS
+                                    .attribute
+                                        input(type="checkbox" name="option5" value="SHIRTS" id="option5" )
+                                        label(for="option5") SHIRTS
+                                    .attribute
+                                        input(type="checkbox" name="option6" value="SHOES" id="option6" )
+                                        label(for="option6") SHOES
+                                    .attribute
+                                        input(type="checkbox" name="option7" value="ACCESORIES" id="option7" )
+                                        label(for="option7") ACCESORIES
+
+                            #attribute2
+                                .name SIZE  |   US   |   EU
+                                .attribute_holder
+                                    .attribute
+                                        input(type="checkbox" name="option8" value="XXS" id="option8")
+                                        label(for="option8") 38 | 32 | XXS
+                                    .attribute
+                                        input(type="checkbox" name="option9" value="XS" id="option9" )
+                                        label(for="option9") 40 | 34 | XS
+                                    .attribute
+                                        input(type="checkbox" name="option10" value="S" id="option10" )
+                                        label(for="option10") 42 | 36 | S
+                                    .attribute
+                                        input(type="checkbox" name="option11" value="M" id="option11" )
+                                        label(for="option11") 44 | 38 | M
+                                    .attribute
+                                        input(type="checkbox" name="option12" value="L" id="option12" )
+                                        label(for="option12") 46 | 40 | L
+
+                        button.clear(type="submit" value="clear")
+                            span clear
+                            span.hover clear
+                        button.apply(type="submit" value="apply")
+                            span apply
+                            span.hover apply
+
+
 
             footer
                 p.name THE COAT by KATYA SILCHENKO

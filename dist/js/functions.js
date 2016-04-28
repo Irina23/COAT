@@ -82,6 +82,17 @@ jQuery(document).ready(function() {
     });
  //end bar
 
+    jQuery(".filter .title").on("click", function(){
+        jQuery(this).next().slideToggle();
+
+    });
+    jQuery(".filter .close").on("click", function(){
+        jQuery(this).closest(".block_filter").slideUp();
+
+    });
+
+
+
 });
 
 window.onload = function(){
@@ -101,6 +112,19 @@ window.onload = function(){
 
 };
 
+jQuery(document).ready(function($){
 
+    var
+        speed = 500,
+        $scrollTop = $('.scrollTop');
+    $scrollTop.click(function(e){
+        e.preventDefault();
+
+        $( 'html:not(:animated),body:not(:animated)' ).animate({ scrollTop: 0}, speed );
+    });
+
+
+
+});
 
 
