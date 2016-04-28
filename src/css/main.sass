@@ -76,9 +76,11 @@ body
     float: right
     margin-top: 180px
     font-weight: 200
-
+.collections, .media, .article, .list_product_page, .contacts
+  .top
+    border-bottom: 1px solid #dedfe0
 .top
-  position: relative
+  position: fixed
   width: 100%
   left: 0
   transition: left .6s ease
@@ -186,9 +188,9 @@ body
   position: relative
   transition: left .6s ease
   left: 0
-
   width: 100%
-  height: calc( 100vh - 52px )
+  height: 100vh
+  padding-top: 52px
 
 
 
@@ -197,13 +199,13 @@ body
     left: 280px
     transition: left .6s ease
     overflow: hidden
-    height: calc( 100vh - 52px )!important
+    height: 100vh !important
   &.opened_right
     left: -280px
     //left: inherit
     transition: left .6s ease
     overflow: hidden
-    height: calc( 100vh - 52px )!important
+    height: 100vh!important
 
 
 
@@ -292,24 +294,48 @@ body
           width: 50%
           float: left
           box-sizing: border-box
-
           &.instagram
             border-right: 1px solid #2d2d2d
-            a
-              background: url("../img/icons/instagram.svg") no-repeat center #1d1d1f
-              background-size: 18px 18px
+
           &.facebook
             border-left: 1px solid #2d2d2d
-            a
-              background: url("../img/icons/fb.svg") no-repeat center #1d1d1f
-              background-size: 18px 18px
           a
             display: block
             transition: all 0.5s
             height: 50px
+            position: relative
+            overflow: hidden
+            span
+              position: absolute
+              width: 100%
+              height: 53px
+              top: 0
+              left: 0
+              transition: all 0.35s
+
+              &.hover
+                top: 100%
+                transition: all 0.35s
+            img
+              width: 18px
+              height: 18px
+              position: absolute
+              top: 50%
+              left: 50%
+              margin-left: -9px
+              margin-top: -9px
+
             &:hover
               transition: all 0.5s
-              background-color: #000
+              background: #000
+              span
+                top: -100%
+                transition: all 0.35s
+                &.hover
+                  top: 0
+                  transition: all 0.35s
+
+
 
 
   .lang
@@ -320,7 +346,6 @@ body
     width: 100%
     li
       width: 100%
-
       line-height: 50px
       text-align: center
       &.active
@@ -330,11 +355,34 @@ body
         font-size: 1rem
         display: block
         transition: all 0.5s
+        position: relative 
+        height: 50px 
+        overflow: hidden
+        span 
+          position: absolute
+          top: 0 
+          left: 0 
+          display: block 
+          line-height: 50px
+          transition: all 0.35s
+          width: 100%
+          &.hover
+            top: 100%
+            transition: all 0.35s
+
+
         &:hover
           transition: all 0.5s
           text-decoration: none
-          color: #fff
           background: #000
+
+          span
+            top: -100%
+            transition: all 0.35s
+            &.hover
+              top: 0
+              transition: all 0.35s
+         
 
 
   .info
@@ -417,11 +465,33 @@ body
     color: #eaeaec
     font-size: 0.8571428571428571rem
     transition: all 0.35s
+    position: relative 
+    width: 100% 
+    height: 52px
+    overflow: hidden
+    span
+      font-size: 0.8571428571428571rem
+      color: #eaeaec
+      display: block
+      text-align: center
+      padding: 19px 30px
+      position: absolute
+      width: 100%
+      top: 0
+      left: 0
+      transition: all 0.35s
+      &.hover
+        top: 100%
+        transition: all 0.35s
     &:hover
       transition: all 0.35s
-      background: #000
-      color: #fff
       text-decoration: none
+      span
+        top: -100%
+        transition: all 0.35s
+        &.hover
+          top: 0
+          transition: all 0.35s
 
   .list_product_bag
     height: calc( 100vh - 156px)
@@ -543,7 +613,7 @@ body
 
 .collections
 
-  .content
+  //.content
     border-top: 1px solid #dedfe0
 
   .collections_block
@@ -708,8 +778,8 @@ body
 
 .media
   .content
-    border-top: 1px solid #dedfe0
-    padding: 50px 28px
+    //border-top: 1px solid #dedfe0
+    padding: 103px 28px 50px
     .list_media_items
       //width: 1222px
       margin: auto
@@ -746,7 +816,7 @@ body
 
 .article
   .content
-    border-top: 1px solid #dedfe0
+    //border-top: 1px solid #dedfe0
     .text_block
       float: left
       width: 40%
@@ -803,8 +873,8 @@ body
 
 .list_product_page
   .content
-    border-top: 1px solid #dedfe0
-    padding: 50px 28px 85px
+    //border-top: 1px solid #dedfe0
+    padding: 103px 28px 85px
     height: auto
   .list_products
     font-size: 0
@@ -901,23 +971,45 @@ footer
       margin-right: 85px
       display: inline-block
       vertical-align: top
-      &.instagram
-        a
-          background: url("../img/icons/instagram.svg") no-repeat center #1d1d1f
-          background-size: 18px 18px
-      &.facebook
+      background: #1d1d1f
 
-        a
-          background: url("../img/icons/fb.svg") no-repeat center #1d1d1f
-          background-size: 18px 18px
 
       a
         display: block
         transition: all 0.5s
         height: 53px
+        position: relative
+        overflow: hidden
+        span
+          position: absolute
+          width: 100%
+          height: 53px
+          top: 0
+          left: 0
+          transition: all 0.35s
+
+          &.hover
+            top: 100%
+            transition: all 0.35s
+        img
+          width: 18px
+          height: 18px
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-left: -9px
+          margin-top: -9px
+
         &:hover
           transition: all 0.5s
-          background-color: #000
+          background: #000
+          span
+            top: -100%
+            transition: all 0.35s
+            &.hover
+              top: 0
+              transition: all 0.35s
+
       &:last-child
         margin-right: 0
 
