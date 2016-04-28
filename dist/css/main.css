@@ -170,12 +170,14 @@ body {
     left: 280px;
     -webkit-transition: left .6s ease;
     transition: left .6s ease;
-    overflow: hidden; }
+    overflow: hidden;
+    height: calc( 100vh - 52px) !important; }
   .content.opened_right {
     left: -280px;
     -webkit-transition: left .6s ease;
     transition: left .6s ease;
-    overflow: hidden; }
+    overflow: hidden;
+    height: calc( 100vh - 52px) !important; }
 
 #bar_opened {
   width: 100%;
@@ -768,6 +770,8 @@ footer {
   color: #eaeaec;
   line-height: 1em;
   font-size: 1rem; }
+  footer.opened {
+    display: none; }
   footer p {
     color: #eaeaec;
     line-height: 1.3em;
@@ -902,11 +906,11 @@ footer {
           text-indent: 0;
           -webkit-transition: all 0.35s;
           transition: all 0.35s;
-          position: relative; }
+          position: relative;
+          letter-spacing: 1px; }
           .filter .block_filter .list_filters [id^="attribut"] .attribute label:before {
             -webkit-transition: opacity 300ms ease;
             transition: opacity 300ms ease;
-            content: '\2219';
             width: 4px;
             height: 4px;
             border-radius: 4px;
@@ -915,7 +919,8 @@ footer {
             opacity: 0;
             left: 0;
             position: absolute;
-            top: 4px; }
+            top: 4px;
+            content: ""; }
           .filter .block_filter .list_filters [id^="attribut"] .attribute label:hover {
             text-indent: 10px;
             color: #FFF;
@@ -977,13 +982,28 @@ footer {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    background: url("../img/icons/close_w.svg") no-repeat center;
+    background: url("../img/icons/close_w.svg") no-repeat center right;
+    padding-left: 55px;
     background-size: 12px 12px;
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
     position: absolute;
     top: 10px;
     right: 10px; }
+    .filter .block_filter .close .label {
+      text-transform: uppercase;
+      font-family: "GothamPro-Bold", sans-serif;
+      color: #fff;
+      font-size: 0.7142857142857143rem;
+      line-height: 14px;
+      position: absolute;
+      top: 3px;
+      left: 0;
+      opacity: 0; }
     .filter .block_filter .close:hover {
       -webkit-transition: all 0.35s;
       transition: all 0.35s; }
+      .filter .block_filter .close:hover .label {
+        opacity: 1;
+        -webkit-animation: fadeInRight 1s;
+                animation: fadeInRight 1s; }

@@ -197,11 +197,13 @@ body
     left: 280px
     transition: left .6s ease
     overflow: hidden
+    height: calc( 100vh - 52px )!important
   &.opened_right
     left: -280px
     //left: inherit
     transition: left .6s ease
     overflow: hidden
+    height: calc( 100vh - 52px )!important
 
 
 
@@ -871,6 +873,8 @@ footer
   color: #eaeaec
   line-height: 1em
   font-size: 1rem
+  &.opened
+    display: none
   p
     color: #eaeaec
     line-height: 1.3em
@@ -1016,9 +1020,9 @@ footer
             text-indent: 0
             transition: all 0.35s
             position: relative
+            letter-spacing: 1px
             &:before
               transition: opacity 300ms ease
-              content: '\2219'
               width: 4px
               height: 4px
               border-radius: 4px
@@ -1028,11 +1032,13 @@ footer
               left: 0
               position: absolute
               top: 4px
+              content: ""
 
             &:hover
               text-indent: 10px
               color: #FFF
               transition: all 0.35s
+
 
 
 
@@ -1099,11 +1105,28 @@ footer
       width: 20px
       height: 20px
       cursor: pointer
-      background: url("../img/icons/close_w.svg") no-repeat center
+      background: url("../img/icons/close_w.svg") no-repeat center right
+      padding-left: 55px
       background-size: 12px 12px
       transition: all 0.35s
       position: absolute
       top: 10px
       right: 10px
+
+      .label
+        text-transform: uppercase
+        font-family: "GothamPro-Bold", sans-serif
+        color: #fff
+        font-size: 0.7142857142857143rem
+        line-height: 14px
+        position: absolute
+        top: 3px
+        left: 0
+        opacity: 0
+
+
       &:hover
         transition: all 0.35s
+        .label
+          opacity: 1
+          animation: fadeInRight 1s
