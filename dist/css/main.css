@@ -770,9 +770,41 @@ footer {
   font-size: 1rem; }
   footer p {
     color: #eaeaec;
-    line-height: 1em;
-    font-size: 1rem; }
+    line-height: 1.3em;
+    font-size: 1.142857142857143rem;
+    margin-bottom: 40px;
+    letter-spacing: 1px; }
+    footer p.name {
+      text-transform: uppercase;
+      margin-bottom: 25px; }
   footer a {
     color: #eaeaec;
     line-height: 1em;
-    font-size: 1rem; }
+    font-size: 1.142857142857143rem; }
+  footer .social {
+    text-align: center; }
+    footer .social li {
+      width: 55px;
+      height: 55px;
+      box-sizing: border-box;
+      border: 1px solid #29292a;
+      margin-right: 85px;
+      display: inline-block;
+      vertical-align: top; }
+      footer .social li.instagram a {
+        background: url("../img/icons/instagram.svg") no-repeat center #1d1d1f;
+        background-size: 18px 18px; }
+      footer .social li.facebook a {
+        background: url("../img/icons/fb.svg") no-repeat center #1d1d1f;
+        background-size: 18px 18px; }
+      footer .social li a {
+        display: block;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        height: 53px; }
+        footer .social li a:hover {
+          -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+          background-color: #000; }
+      footer .social li:last-child {
+        margin-right: 0; }

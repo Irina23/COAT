@@ -873,9 +873,46 @@ footer
   font-size: 1rem
   p
     color: #eaeaec
-    line-height: 1em
-    font-size: 1rem
+    line-height: 1.3em
+    font-size: 1.142857142857143rem
+    margin-bottom: 40px
+    letter-spacing: 1px
+
+    &.name
+      text-transform: uppercase
+      margin-bottom: 25px
+
+      //font-size: 1rem
   a
     color: #eaeaec
     line-height: 1em
-    font-size: 1rem
+    font-size: 1.142857142857143rem
+  .social
+    text-align: center
+    li
+      width: 55px
+      height: 55px
+      box-sizing: border-box
+      border: 1px solid #29292a
+      margin-right: 85px
+      display: inline-block
+      vertical-align: top
+      &.instagram
+        a
+          background: url("../img/icons/instagram.svg") no-repeat center #1d1d1f
+          background-size: 18px 18px
+      &.facebook
+
+        a
+          background: url("../img/icons/fb.svg") no-repeat center #1d1d1f
+          background-size: 18px 18px
+
+      a
+        display: block
+        transition: all 0.5s
+        height: 53px
+        &:hover
+          transition: all 0.5s
+          background-color: #000
+      &:last-child
+        margin-right: 0
