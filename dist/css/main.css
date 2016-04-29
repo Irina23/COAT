@@ -82,7 +82,7 @@ body {
   -webkit-transition: left .6s ease;
   transition: left .6s ease;
   background: #fff;
-  z-index: 2;
+  z-index: 5;
   border-bottom: 1px solid #dedfe0; }
   .top.opened {
     left: 280px;
@@ -571,26 +571,42 @@ body {
   box-sizing: border-box;
   width: 30%;
   float: left;
-  overflow: hidden;
-  height: calc( 100vh - 53px); }
-  .collections .collections_block .list_collections {
-    overflow: auto;
-    height: auto; }
-  .collections .collections_block .item.active a {
-    background: url("../img/icons/arrow_icon.png") no-repeat 80% center; }
+  overflow: auto; }
+  .collections .collections_block .item.active a span.color_bg {
+    background: #ebeef0;
+    opacity: 1;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s; }
   .collections .collections_block .item a {
     display: block;
-    padding: 40px 30px 40px 70px;
     text-transform: uppercase;
     color: #1d1d1f;
     font-size: 1rem;
     line-height: 1em;
-    font-family: "GothamPro-Bold", sans-serif; }
+    font-family: "GothamPro-Bold", sans-serif;
+    position: relative;
+    z-index: 2; }
+    .collections .collections_block .item a span {
+      z-index: 1;
+      position: relative;
+      display: block;
+      padding: 40px 30px 40px 70px; }
+      .collections .collections_block .item a span.color_bg {
+        opacity: 0;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        z-index: 0;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s; }
     .collections .collections_block .item a:hover {
-      text-decoration: none;
-      background: url("../img/icons/arrow_icon.png") no-repeat 80% center; }
-  .collections .collections_block .item:nth-child(2n+1) {
-    background: #eaeaec; }
+      text-decoration: none; }
+      .collections .collections_block .item a:hover span.color_bg {
+        background: #ebeef0;
+        opacity: 1;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s; }
 
 .collections .block_text_collections {
   width: 70%;

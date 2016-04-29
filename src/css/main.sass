@@ -85,7 +85,7 @@ body
   left: 0
   transition: left .6s ease
   background: #fff
-  z-index: 2
+  z-index: 5
   border-bottom: 1px solid #dedfe0
   &.opened
     left: 280px
@@ -635,35 +635,54 @@ body
     box-sizing: border-box
     width: 30%
     float: left
-    overflow: hidden
-    height: calc( 100vh - 53px)
+    overflow: auto
+    //height: calc( 100% - 53px)
 
-    .list_collections
-      overflow: auto
-      height: auto
+
 
     .item
       &.active 
-        a 
-          background: url("../img/icons/arrow_icon.png") no-repeat 80% center
+        a
+          span
+            &.color_bg
+              background: #ebeef0
+              opacity: 1
+              transition: opacity 0.35s
+
       a
         display: block
-        padding: 40px 30px 40px 70px
+        //padding: 40px 30px 40px 70px
         text-transform: uppercase
         color: #1d1d1f
         font-size: 1rem
         line-height: 1em
         font-family: "GothamPro-Bold", sans-serif
-        //transition: all 0.35s
+        position: relative
+        z-index: 2
+        span
+          z-index: 1
+          position: relative
+          display: block
+          padding: 40px 30px 40px 70px
+          &.color_bg
+            opacity: 0
+            width: 100%
+            position: absolute
+            height: 100%
+            left: 0
+            z-index: 0
+            transition: opacity 0.35s
+
+
 
         &:hover
           text-decoration: none
-          //transition: all 0.35s
-          background: url("../img/icons/arrow_icon.png") no-repeat 80% center
+          span
+            &.color_bg
+              background: #ebeef0
+              opacity: 1
+              transition: opacity 0.35s
 
-
-      &:nth-child(2n+1)
-        background: #eaeaec
   .block_text_collections
     width: 70%
     float: right
