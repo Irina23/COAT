@@ -65,7 +65,7 @@ jQuery(document).ready(function() {
         jQuery(".menu-bar").addClass("opened");
         jQuery("footer").addClass("opened");
     });
-    jQuery(".bag-icon").on("click", function(){
+    jQuery(".bag-icon, .add_button").on("click", function(){
         jQuery(".content").addClass("opened_right");
         jQuery(".top").addClass("opened_right");
         jQuery("#bar_opened").addClass("opened");
@@ -85,6 +85,7 @@ jQuery(document).ready(function() {
     });
  //end bar
 
+
     jQuery(".filter .title").on("click", function(){
         jQuery(this).next().slideToggle();
 
@@ -95,6 +96,47 @@ jQuery(document).ready(function() {
     });
 
 
+    //modal form
+    var overlay = $('#overlay');
+    var open_modal = $('.open_modal');
+    var close = $('.modal_close, #overlay');
+    var modal = $('.modal_div');
+
+    open_modal.click( function(event){
+        event.preventDefault();
+
+        var div = $(this).attr('href');
+        overlay.fadeIn(400,
+            function(){
+                $(div)
+                    .css('display', 'block')
+                    .animate({opacity: 1, top: '50%'}, 200);
+            });
+    });
+
+    close.click( function(){
+        modal
+            .animate({opacity: 0, top: '45%'}, 200,
+            function(){
+                $(this).css('display', 'none');
+                overlay.fadeOut(400);
+
+            }
+        );
+    });
+
+
+
+    //size
+    jQuery("#attribute_size .name").click(function(){
+        jQuery(this).next(".attribute_holder").slideToggle();
+        jQuery(this).toggleClass("open");
+    });
+    jQuery("#attribute_size label").click(function(){
+        var size_active = jQuery(this).text();
+        jQuery(".attribute_holder").slideUp();
+        jQuery("#attribute_size .name").text(size_active);
+    });
 
 });
 
@@ -129,5 +171,7 @@ jQuery(document).ready(function($){
 
 
 });
+
+
 
 

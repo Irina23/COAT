@@ -76,9 +76,9 @@ body
     float: right
     margin-top: 180px
     font-weight: 200
-.collections, .media, .article, .list_product_page, .contacts
+.home
   .top
-    border-bottom: 1px solid #dedfe0
+    border-bottom: 0
 .top
   position: fixed
   width: 100%
@@ -86,7 +86,7 @@ body
   transition: left .6s ease
   background: #fff
   z-index: 2
-
+  border-bottom: 1px solid #dedfe0
   &.opened
     left: 280px
     transition: left .6s ease
@@ -1250,3 +1250,287 @@ footer
         .label
           opacity: 1
           animation: fadeInRight 1s
+
+
+
+
+.product
+  .content
+    padding: 102px 0 0
+    height: auto
+    box-sizing: border-box
+    width: 1060px
+    margin: auto
+    .img-holder
+      //background: #e6e6e6
+      width: 560px
+      float: left
+      position: relative
+
+    .pdocut_info
+      float: right
+      margin-top: 45px
+      width: 350px
+      .label
+        margin-bottom: 30px
+        text-align: left
+        font-style: italic
+        text-transform: uppercase
+        color:  #333333
+        font-size: 1.285714285714286rem
+        font-family: "GothamPro", sans-serif
+
+
+      .title
+        text-transform: uppercase
+        margin-bottom: 25px
+        line-height: 1.285714285714286rem
+        font-size: 18px
+        color: #1d1d1f
+        font-family: "GothamPro-Bold", sans-serif
+      .article
+        margin-bottom: 50px
+        color: #333333
+        font-size: 1.142857142857143rem
+      .description
+        text-transform: uppercase
+        margin-bottom: 50px
+
+        p,ul
+          color:  #333333
+          line-height: 1.3em
+          font-size: 1rem
+          margin-bottom: 20px
+
+          b
+            font-weight: normal
+            font-family: "GothamPro-Bold", sans-serif
+            font-size: 1rem
+
+        p
+          &:first-child, &:last-child
+            margin-bottom: 0
+      .guide 
+        .title
+          color: #212121
+          text-transform: uppercase
+          font-size: 1rem
+          line-height: 1em
+          transition: all 0.35s
+          &:hover
+            transition: all 0.35s
+            text-decoration: none
+            color: #253137
+
+
+#overlay
+  z-index: 3
+  position: fixed
+  background: rgba(84, 110, 122, 0.89)
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  cursor: pointer
+  display: none
+
+
+.modal_div
+  position: fixed
+  background:  rgba(255, 255, 255, 0.95)
+  width: 570px
+  height: 350px
+  top: 50%
+  left: 50%
+  margin-top: -175px
+  margin-left: -285px
+  z-index: 5
+  display: none
+  opacity: 0
+  .modal_close
+    width: 20px
+    height: 20px
+    cursor: pointer
+    background: url("../img/icons/close.svg") no-repeat center right
+    padding-left: 55px
+    background-size: 12px 12px
+    transition: all 0.35s
+    position: absolute
+    top: 30px
+    right: 30px
+
+    .label
+      text-transform: uppercase
+      font-family: "GothamPro-Bold", sans-serif
+      color: #000
+      font-size: 0.7142857142857143rem
+      line-height: 14px
+      position: absolute
+      top: 3px
+      left: 0
+      opacity: 0
+
+
+    &:hover
+      transition: all 0.35s
+      .label
+        opacity: 1
+        animation: fadeInRight 1s
+
+  .content-holder
+    padding: 70px 70px 0
+    text-align: center
+    tr
+      border-bottom: 2px solid #eaeaec
+      th
+        color: #333333
+        font-family: "GothamPro-Bold", sans-serif
+        font-weight: normal
+        line-height: 1em
+        padding: 10px 0
+        width: 15%
+        &:first-child
+          width: 25%
+      td
+        font-size: 1rem
+        padding: 10px 0
+        line-height: 1em
+        color: #333333
+        font-family: "GothamPro", sans-serif
+        &:first-child
+          text-align: left
+
+
+
+.add_bag
+  position: fixed
+  right: 0
+  bottom: 0
+  width: 420px
+  #attribute_size
+    width: 210px
+    float: left
+    .name
+      height: 52px
+      background:  #eaeaec
+      cursor: pointer
+      text-align: center
+      padding: 20px 0
+      overflow: hidden
+      position: relative
+      transition: all 0.35s
+      text-transform: uppercase
+      color:  #1d1d1f
+      font-size: 0.8571428571428571rem
+      line-height: 1em
+      letter-spacing: 1px
+      font-weight: 400
+      &.open
+        &:after
+          background: url("../img/icons/up.svg") no-repeat
+          background-size: 100%
+      &:after 
+        position: absolute 
+        width: 10px 
+        height: 8px 
+        background: url("../img/icons/down.svg") no-repeat
+        background-size: 100%
+        content: ""
+        top: 50%
+        margin-top: -4px
+        right: 30px
+
+      &:hover
+        transition: all 0.35s
+        span
+          transition: all 0.35s
+          top: -100%
+          &.hover
+            top: 0
+            transition: all 0.35s
+      span
+        padding: 20px 0
+        height: 52px
+        position: absolute
+        top: 0
+        left: 0
+        display: block
+        width: 100%
+        transition: all 0.35s
+        &.hover
+          transition: all 0.35s
+          top: 100%
+
+
+    .attribute_holder
+      display: none
+      position: absolute
+      bottom: 52px
+      right: 0
+      width: 420px
+      height: calc( 100vh - 104px )
+      background: #1d1d1f
+      padding: 150px 0 0 160px
+      box-sizing: border-box
+      .attribute
+        margin-bottom: 25px
+        input[type="radio"]
+          display: none
+          &:checked
+            + label
+              color: #FFF
+              transition: all 0.35s
+
+        label
+          color: #bcbcbc
+          font-size: 0.8571428571428571rem
+          cursor: pointer
+          display: block
+          transition: all 0.35s
+          &:hover
+            transition: all 0.35s
+            color: #fff
+
+
+  .add_button
+    width: 210px
+    float: left
+    line-height: 1em
+    padding: 20px 0
+    color: #fff
+    font-size: 0.8571428571428571rem
+    text-align: center
+    text-transform: uppercase
+    background: #000
+    border: 0
+    box-shadow: none
+    cursor: pointer
+    position: relative
+    height: 52px
+    overflow: hidden
+    box-sizing: border-box
+    transition: all 0.35s
+    letter-spacing: 1px
+    &:hover
+      transition: all 0.35s
+      span
+        transition: all 0.35s
+        top: -100%
+        &.hover
+          top: 0
+          transition: all 0.35s
+
+    span
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      display: block
+      padding: 20px 0
+      transition: all 0.35s
+      &.hover
+        top: 100%
+        transition: all 0.35s
+
+
+
