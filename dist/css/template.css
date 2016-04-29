@@ -183,3 +183,17 @@ img{
 
 
 }
+
+
+
+#checkout input[type="text"]::-webkit-input-placeholder{
+    color: #90a4ae;
+}
+
+#checkout input[type="text"]::-moz-placeholder{
+    color: #90a4ae;
+}
+
+#checkout input[type="text"]::-moz-placeholder{
+    color: #90a4ae;
+}

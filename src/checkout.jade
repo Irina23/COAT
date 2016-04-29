@@ -1,0 +1,70 @@
+doctype html
+html(lang="ru")
+    include ./head.jade
+
+
+    body
+        .page_wrapper.checkout
+            include ./header.jade
+            .content
+
+                    .title_checkout THE COAT by KATYA SILCHENKO CHECKOUT
+                    form#checkout.cf
+                        h3 BILLING INFORMATION
+                        .row-form2.cf
+                            div
+                                input(type="text", placeholder="FIRST NAME", name="namef", minlength="2", data-validate="name")
+
+                            div
+                                input(type="text", placeholder="LAST NAME", name="namel", minlength="2", data-validate="name")
+
+                        .row-form2.cf
+
+                            div
+                                input(type="text", placeholder="email",name="email", data-validate="email")
+
+                            div
+                                input(type="text", placeholder="PHONE", name="phone", data-validate="phone" )
+
+                        .row-form1.cf
+
+
+                            div
+                                input(type="text", placeholder="ADDRESS",name="address", data-validate="empty" )
+
+
+
+                        .row-form1.cf
+
+                            div
+                                input(type="text", placeholder="city",name="city", data-validate="name" )
+                        .row-form2.cf
+
+                            div
+                                input(type="text", placeholder="country",name="country", data-validate="name")
+
+                            div
+                                input(type="text", placeholder="POSTAL CODE", name="code", data-validate="quantity" )
+
+                        .row-form2.cf
+
+                            div
+                                h3 DELIVERY
+                                input(type="text", placeholder="delivery",name="delivery", data-validate="name")
+
+                            div
+                                h3 PAYMENT
+                                input(type="text", placeholder="payment", name="payment", data-validate="quantity" )
+
+
+
+                        .btn.submit
+                            span CONTINUE PAYMENT
+                            span.hover CONTINUE PAYMENT
+
+
+
+            include ./footer.jade
+
+
+

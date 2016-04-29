@@ -891,6 +891,16 @@ body
       ol
         li
           list-style-type: decimal
+    #slder_article
+      width: 60%
+      float: right
+      &.left
+        float: left
+      .bx-controls
+        display: none
+      li
+        display: block
+        height: calc( 100vh - 52px)
     .img-holder
       float: left
       width: 60%
@@ -1540,3 +1550,91 @@ footer
 
 
 
+
+
+.checkout
+  .title_checkout
+    background: #546e7a
+    text-align: center
+    text-transform: uppercase
+    color: #eaeaec
+    padding: 95px 0
+    line-height: 1em
+    font-size: 1.142857142857143rem
+    letter-spacing: 1px
+
+  .content
+    background: #eaeaec
+    height: auto
+  #checkout
+    width: 850px
+    margin: auto
+    padding: 100px 0 270px
+    h3
+      line-height: 1em
+      text-transform: uppercase
+      font-weight: normal
+      color: #1d1d1f
+      font-size: 1.142857142857143rem
+      margin-bottom: 60px
+    [class^="row-form"]
+      margin-bottom: 15px
+      h3
+        margin-bottom: 40px
+        margin-top: 70px
+
+      >div
+        float: left
+        width: 400px
+        &:first-child
+          margin-right: 50px
+        &.error
+          input[type="text"]
+            border-color: red
+      input[type="text"]
+        width: 100%
+        background: none
+        padding: 25px 0
+        text-transform: uppercase
+        border: 0
+        border-bottom: 1px solid #263238
+        line-height: 1em
+        color: #90a4ae
+        font-size: 0.8571428571428571rem
+
+
+    .submit
+      color: #ffffff
+      font-size: 0.8571428571428571rem
+      line-height: 1em
+      background: #5f7c8a
+      position: relative
+      width: 400px
+      float: right
+      padding: 20px 0
+      overflow: hidden
+      height: 52px
+      text-align: center
+      cursor: pointer
+      span
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        padding: 20px 0
+        display: block
+        transition: all 0.35s
+        &.hover
+          top: 100%
+          transition: all 0.35s
+      &:hover
+        span
+          transition: all 0.35s
+          top: -100%
+          &.hover
+            top: 0
+            transition: all 0.35s
+
+    .row-form1
+      >div
+        width: 100%

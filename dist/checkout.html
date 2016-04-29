@@ -23,7 +23,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
   </head>
   <body>
-    <div class="page_wrapper article">
+    <div class="page_wrapper checkout">
       <div id="bar_opened"></div>
       <header>
         <div class="top cf">
@@ -77,35 +77,55 @@
         </div>
       </header>
       <div class="content">
-        <div id="slder_article">
-          <div class="slder_article">
-            <li style="background: url(&quot;../img/content/delivery_img.jpg&quot;) no-repeat top center #eaeaec; background-size: cover;"></li>
-            <li style="background: url(&quot;../img/content/delivery_img.jpg&quot;) no-repeat top center #eaeaec; background-size: cover;"></li>
+        <div class="title_checkout">THE COAT by KATYA SILCHENKO CHECKOUT</div>
+        <form id="checkout" class="cf">
+          <h3>BILLING INFORMATION</h3>
+          <div class="row-form2 cf">
+            <div>
+              <input type="text" placeholder="FIRST NAME" name="namef" minlength="2" data-validate="name">
+            </div>
+            <div>
+              <input type="text" placeholder="LAST NAME" name="namel" minlength="2" data-validate="name">
+            </div>
           </div>
-        </div>
-        <div class="text_block">
-          <h3>DELIVERY RULES</h3>
-          <p>In Kiev delivery of the order is carried out by the courier of the COAT to the address specified by the Client in time from 1 to 5 working days. Free of charge.</p>
-          <p>Within Ukraine a courier of NOVAPOSHTA delivers an order to the specified address in a period from 1 to 5 working days. Delivery cost up to 100 hrn.</p>
-          <p>Within SNG a courier of …(firm) delivers an order to the specified address in a period from 2 to 6 working days. Delivery cost up to 50$.</p>
-          <p>The delivery of an order in other countries is carried out by DHL courier to the specified address in a period from 3 to 7 days. Delivery cost up to 80 €.</p>
-          <p>Delivery cost is specified in accordance with the tariffs of the delivery service that has been chosen by the Client when ordering.</p>
-          <p>* Detailed information on delivery is provided to the Client by e-mail in the letter-confirmation of an order. If you have any questions on payment and delivery, please contact the representatives of our company buy@thecoat.me</p>
-          <h3>PAYMENT RULES</h3>
-          <p>The payment of an order is made in several methods:</p>
-          <ul>
-            <li>Money transfer Western Union. For an order receipt, the Client makes pre-payment via Western Union, MeneyGram. When ordering online, the amount of fees for money transfer services (3%) is deducted from the total amount of the Client order. The fee is paid by the Client when sending a money transfer. This payment method is available at all branches of Western Union, MoneyGram worldwide</li>
-            <li>Cash on Delivery Nova Poshta. Upon receipt of an order through a delivery service of New Mail the Client pays to a courier of New Mail. This payment method is available within Ukraine.</li>
-            <li>Cash payment to the courier of the COAT. This payment method is only available for delivery within Kiev. The customer pays cash to the courier upon receipt of an order.</li>
-          </ul>
-          <p>* Explanations on the chosen method of payment is provided to the Client by e-mail in the letter-confirmation of the order. The additional costs that may arise in the course of delivery are paid by the seller.</p>
-          <h3>Online payment by credit card VISA / MasterCard:</h3>
-          <p>For the order receipt the Client pays by credit card via the electronic payment system LiqPay when ordering online.</p>
-          <p>Electronic payment system LiqPay guarantees a high level of security thanks to technology OTP (One-time Password - OTP) and 3D secure code. All operations are supported by a one-time password, which is sent via SMS. Reliability of LiqPay is proved by certificates GoDaddy Secure Web Site, Verified by Visa and MasterCard SecureCode.</p>
-          <p>After successful payment and transfer of money to the seller, the Client receives an e-mail confirmation letter with the details of the terms and conditions of delivery of an order.</p>
-          <p>* If you pay by credit card, a refund is made only to the same card with which the payment was made.</p>
-          <p>For any questions on the payment, please contact buy@thecoat.me</p>
-        </div>
+          <div class="row-form2 cf">
+            <div>
+              <input type="text" placeholder="email" name="email" data-validate="email">
+            </div>
+            <div>
+              <input type="text" placeholder="PHONE" name="phone" data-validate="phone">
+            </div>
+          </div>
+          <div class="row-form1 cf">
+            <div>
+              <input type="text" placeholder="ADDRESS" name="address" data-validate="empty">
+            </div>
+          </div>
+          <div class="row-form1 cf">
+            <div>
+              <input type="text" placeholder="city" name="city" data-validate="name">
+            </div>
+          </div>
+          <div class="row-form2 cf">
+            <div>
+              <input type="text" placeholder="country" name="country" data-validate="name">
+            </div>
+            <div>
+              <input type="text" placeholder="POSTAL CODE" name="code" data-validate="quantity">
+            </div>
+          </div>
+          <div class="row-form2 cf">
+            <div>
+              <h3>DELIVERY</h3>
+              <input type="text" placeholder="delivery" name="delivery" data-validate="name">
+            </div>
+            <div>
+              <h3>PAYMENT</h3>
+              <input type="text" placeholder="payment" name="payment" data-validate="quantity">
+            </div>
+          </div>
+          <div class="btn submit"><span>CONTINUE PAYMENT</span><span class="hover">CONTINUE PAYMENT</span></div>
+        </form>
       </div>
       <div id="overlay"></div>
       <script src="bower_components/jquery/dist/jquery.js"></script>
