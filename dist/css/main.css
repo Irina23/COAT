@@ -23,7 +23,7 @@ html {
   font-size: 14px; }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "GothamPro", sans-serif;
   font-weight: 400;
   padding: 0;
   margin: 0;
@@ -197,9 +197,6 @@ body {
     display: block;
     z-index: 3; }
 
-.page_wrapper.about .content, .page_wrapper.contacts .content {
-  background: #eaeaec; }
-
 .menu-bar {
   width: 280px;
   position: absolute;
@@ -231,7 +228,7 @@ body {
       .menu-bar .menu .nav li a {
         color: #bcbcbc;
         text-transform: uppercase;
-        font-size: 1rem;
+        font-size: 0.8571428571428571rem;
         text-indent: 0;
         display: block;
         -webkit-transition: all .6s ease;
@@ -310,7 +307,7 @@ body {
         display: none; }
       .menu-bar .lang li a {
         color: #bcbcbc;
-        font-size: 1rem;
+        font-size: 0.8571428571428571rem;
         display: block;
         -webkit-transition: all 0.5s;
         transition: all 0.5s;
@@ -534,7 +531,8 @@ body {
     margin-bottom: 30px;
     font-size: 1rem;
     line-height: 1.5em;
-    color: #000; }
+    color: #000;
+    text-align: justify; }
     .about .text_block p strong, .about .text_block p b, .contacts .text_block p strong, .contacts .text_block p b, .stockists .text_block p strong, .stockists .text_block p b {
       font-family: "GothamPro-Bold", sans-serif;
       font-style: italic; }
@@ -562,16 +560,9 @@ body {
     height: calc( 100vh - 52px); }
 
 .contacts .text_block {
-  width: 30%;
-  padding: 50px; }
+  width: 30%; }
   .contacts .text_block h3 {
-    margin-bottom: 5px;
-    font-size: 1.15rem; }
-  .contacts .text_block p {
-    font-size: 1.15rem;
-    line-height: 1.5em; }
-  .contacts .text_block ul li, .contacts .text_block ol li {
-    font-size: 1.15rem; }
+    margin-bottom: 10px; }
 
 .contacts #slder_contacts {
   width: 70%; }
@@ -721,7 +712,8 @@ body {
         margin-bottom: 0; }
 
 .media .content {
-  padding: 103px 28px 50px; }
+  padding: 103px 28px 50px;
+  height: auto; }
   .media .content .list_media_items {
     margin: auto; }
     .media .content .list_media_items .media_item {
@@ -847,9 +839,9 @@ body {
           letter-spacing: 1px;
           font-family: "GothamPro", sans-serif; }
       .list_product_page .list_products .item_product a .title {
-        font-size: 1rem;
+        font-size: 0.8571428571428571rem;
         line-height: 1.3em;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         -webkit-transition: opacity 0.5s ease;
         transition: opacity 0.5s ease; }
       .list_product_page .list_products .item_product a .price {
@@ -864,38 +856,38 @@ body {
         font-family: "GothamPro-Bold", sans-serif; }
 
 footer {
-  background: #1b1b1f;
+  background: #90a4ae;
   padding: 100px 0 75px;
   text-align: center;
-  color: #eaeaec;
+  color: #fff;
   line-height: 1em;
   font-size: 1rem; }
   footer.opened {
     display: none; }
   footer p {
-    color: #eaeaec;
+    color: #fff;
     line-height: 1.3em;
-    font-size: 1.142857142857143rem;
+    font-size: 1rem;
     margin-bottom: 40px;
     letter-spacing: 1px; }
     footer p.name {
       text-transform: uppercase;
       margin-bottom: 25px; }
   footer a {
-    color: #eaeaec;
+    color: #fff;
     line-height: 1em;
-    font-size: 1.142857142857143rem; }
+    font-size: 1rem; }
   footer .social {
     text-align: center; }
     footer .social li {
       width: 55px;
       height: 55px;
       box-sizing: border-box;
-      border: 1px solid #29292a;
+      border: 1px solid #c3ccd1;
       margin-right: 85px;
       display: inline-block;
       vertical-align: top;
-      background: #1d1d1f; }
+      background: #90a4ae; }
       footer .social li a {
         display: block;
         -webkit-transition: all 0.5s;
@@ -925,8 +917,7 @@ footer {
           margin-top: -9px; }
         footer .social li a:hover {
           -webkit-transition: all 0.5s;
-          transition: all 0.5s;
-          background: #000; }
+          transition: all 0.5s; }
           footer .social li a:hover span {
             top: -100%;
             -webkit-transition: all 0.35s;
@@ -956,7 +947,7 @@ footer {
   position: fixed;
   right: 0;
   bottom: 0;
-  font-size: 1rem;
+  font-size: 0.8571428571428571rem;
   line-height: 1em;
   padding: 18px 80px;
   letter-spacing: 1px;
@@ -972,7 +963,7 @@ footer {
     height: 100%;
     display: block;
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: 0.8571428571428571rem;
     line-height: 1em;
     padding: 18px 80px;
     -webkit-transition: all 0.35s;
@@ -1172,12 +1163,11 @@ footer {
       .product .content .pdocut_info .description p, .product .content .pdocut_info .description ul {
         color: #333333;
         line-height: 1.3em;
-        font-size: 1rem;
+        font-size: 0.8571428571428571rem;
         margin-bottom: 20px; }
         .product .content .pdocut_info .description p b, .product .content .pdocut_info .description ul b {
           font-weight: normal;
-          font-family: "GothamPro-Bold", sans-serif;
-          font-size: 1rem; }
+          font-family: "GothamPro-Bold", sans-serif; }
       .product .content .pdocut_info .description p:first-child, .product .content .pdocut_info .description p:last-child {
         margin-bottom: 0; }
     .product .content .pdocut_info .guide .title {
