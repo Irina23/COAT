@@ -1504,3 +1504,17 @@ footer {
         transition: all 0.35s; }
   .checkout #checkout .row-form1 > div {
     width: 100%; }
+  .checkout #checkout .cart .list_cart .title {
+    line-height: 1em;
+    font-size: 0.8571428571428571rem;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #263238; }
+    .checkout #checkout .cart .list_cart .title > div {
+      float: left;
+      width: 170px; }
+      .checkout #checkout .cart .list_cart .title > div:first-child {
+        width: 400px; }
+      .checkout #checkout .cart .list_cart .title > div:last-child {
+        width: 110px;
+        text-align: right; }
