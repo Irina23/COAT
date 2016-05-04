@@ -523,7 +523,7 @@ body {
     text-transform: uppercase;
     margin-bottom: 40px;
     color: #000;
-    font-size: 0.8571428571428571rem;
+    font-size: 1rem;
     line-height: 1em;
     font-family: "GothamPro-Bold", sans-serif;
     font-weight: normal; }
@@ -758,7 +758,7 @@ body {
           color: #000;
           margin-bottom: 10px; }
         .media .content .list_media_items .media_item a .url {
-          font-size: 0.8571428571428571rem;
+          font-size: 1rem;
           text-transform: uppercase;
           color: #000;
           font-family: "GothamPro-Bold", sans-serif; }
@@ -1163,7 +1163,12 @@ footer {
   .product .content .img-holder {
     width: 560px;
     float: left;
-    position: relative; }
+    position: relative;
+    height: calc(100vh - 102px);
+    overflow: auto; }
+    .product .content .img-holder a {
+      display: block;
+      margin-bottom: 30px; }
   .product .content .pdocut_info {
     float: right;
     margin-top: 45px;
@@ -1179,8 +1184,8 @@ footer {
     .product .content .pdocut_info .title {
       text-transform: uppercase;
       margin-bottom: 25px;
-      line-height: 1.285714285714286rem;
-      font-size: 18px;
+      line-height: 1em;
+      font-size: 1.428571428571429rem;
       color: #1d1d1f;
       font-family: "GothamPro-Bold", sans-serif; }
     .product .content .pdocut_info .article {

@@ -8,9 +8,15 @@ html(lang="ru")
             include ./header.jade
             .content.cf
 
-                .img-holder
+                .img-holder.img_product
 
-                    img(src="img/content/product.png")
+                    a.item(href="img/content/product.png")
+                        img(src="img/content/product.png")
+                    a.item(href="img/content/product.png")
+                        img(src="img/content/product.png")
+                    a.item(href="img/content/product.png")
+                        img(src="img/content/product.png")
+
                 .pdocut_info
                     .label NEW
                     .title Grey coat with fur
@@ -106,6 +112,10 @@ html(lang="ru")
 
 
             include ./footer.jade
-
+            #blueimp-gallery.blueimp-gallery
+                .slides
+                a.prev
+                a.next
+                a.close
 
 

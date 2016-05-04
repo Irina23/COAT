@@ -149,7 +149,7 @@ img{
 }
 
 
-
+/*
 .menu-bar::-webkit-scrollbar
 {
     width: 5px;
@@ -187,7 +187,7 @@ img{
 
 
 }
-
+*/
 
 
 #checkout input[type="text"]::-webkit-input-placeholder{

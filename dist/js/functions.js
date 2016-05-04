@@ -55,6 +55,14 @@ jQuery(document).ready(function() {
 
 
         });
+
+        $(" .menu-bar, .text_block, .collections_block, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
+            theme:"dark"
+        });
+
+        $(".img_product").mCustomScrollbar({
+            theme: "dark"
+        });
     });
 
 
@@ -143,17 +151,17 @@ jQuery(document).ready(function() {
 
 window.onload = function(){
 
-    jQuery('.gallery').each(function () {
+    jQuery('.gallery, .img_product').each(function () {
         this.onclick = function (event) {
             event = event || window.event;
             var target = event.target || event.srcElement,
                 link = target.src ? target.parentNode : target,
                 options = {index: link, event: event},
                 links = this.getElementsByTagName('a');
+                console.log(links);
             blueimp.Gallery(links, options);
         };
     });
-
 
 
 };
