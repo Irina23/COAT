@@ -168,7 +168,9 @@ img{
 .text_block::-webkit-scrollbar,
 .collections_block::-webkit-scrollbar,
 .list_product_bag::-webkit-scrollbar,
-.list_filters::-webkit-scrollbar
+.list_filters::-webkit-scrollbar,
+.modal_div .content-holder::-webkit-scrollbar,
+.selectbox .dropdown::-webkit-scrollbar
 {
     width: 5px;
     background-color: #fff;
@@ -177,7 +179,9 @@ img{
 .text_block::-webkit-scrollbar-thumb,
 .collections_block::-webkit-scrollbar-thumb,
 .list_product_bag::-webkit-scrollbar-thumb,
-.list_filters::-webkit-scrollbar-thumb
+.list_filters::-webkit-scrollbar-thumb,
+.modal_div .content-holder::-webkit-scrollbar-thumb,
+.selectbox .dropdown::-webkit-scrollbar-thumb
 {
     background: #1d1d1f;
 

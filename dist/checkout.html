@@ -108,7 +108,12 @@
           </div>
           <div class="row-form2 cf">
             <div>
-              <input type="text" placeholder="country" name="country" data-validate="name">
+              <!--input(type="text", placeholder="country",name="country", data-validate="name")-->
+              <select>
+                <option selected value="default" disabled>country</option>
+                <option value="ukraine">Ukraine</option>
+                <option value="russia">Russia</option>
+              </select>
             </div>
             <div>
               <input type="text" placeholder="POSTAL CODE" name="code" data-validate="quantity">
@@ -116,49 +121,103 @@
           </div>
           <div class="row-form2 cf">
             <div>
-              <h3>DELIVERY</h3>
-              <input type="text" placeholder="delivery" name="delivery" data-validate="name">
+              <h3>DELIVERY<a href="#info_delivery" class="open_modal info_icon"></a></h3>
+              <!--input(type="text", placeholder="delivery",name="delivery", data-validate="name")-->
+              <select>
+                <option selected value="default" disabled>delivery</option>
+                <option value="dhl">DHL</option>
+              </select>
             </div>
             <div>
-              <h3>PAYMENT</h3>
-              <input type="text" placeholder="payment" name="payment" data-validate="quantity">
+              <h3>PAYMENT<a href="#info_payment" class="open_modal info_icon"></a></h3>
+              <input type="text" placeholder="VISA/MASTERCARD" name="payment" data-validate="quantity">
             </div>
           </div>
-          <div class="row-form1 cf">
-            <div class="cart">
-              <h3>YOUR ORDER</h3>
-              <div class="list_cart">
-                <div class="title cf">
-                  <div>PRODUCT</div>
-                  <div>size</div>
-                  <div>qty</div>
-                  <div>price</div>
-                </div>
-                <div class="item">
-                  <div class="product">
+          <div class="row-form1 cart cf">
+            <h3>YOUR ORDER</h3>
+            <div class="list_cart">
+              <div class="title cf">
+                <div>PRODUCT</div>
+                <div>size</div>
+                <div>qty</div>
+                <div>price</div>
+              </div>
+              <div class="item cf">
+                <div class="product"><a href="#">
                     <div class="img-holder"><img src="img/content/product.png"></div>
-                    <div class="name">Grey coat with fur</div>
-                  </div>
-                  <div class="size">S</div>
-                  <div class="qty">1</div>
-                  <div class="price">$ 450.00</div>
-                </div>
+                    <div class="name">Grey coat with fur</div></a></div>
+                <div class="size">S</div>
+                <div class="qty">1</div>
+                <div class="price">$ 450.00</div>
+              </div>
+              <div class="item cf">
+                <div class="product"><a href="#">
+                    <div class="img-holder"><img src="img/content/product.png"></div>
+                    <div class="name">Grey coat with fur</div></a></div>
+                <div class="size">S</div>
+                <div class="qty">1</div>
+                <div class="price">$ 450.00</div>
+              </div>
+            </div>
+            <div class="subtotal_price">
+              <div>
+                <div class="name">SUBTOTAL</div>
+                <div class="price">$ 450.00</div>
+              </div>
+              <div>
+                <div class="name">SHIPPING</div>
+                <div class="price">$ 50.00</div>
+              </div>
+              <div class="grand">
+                <div class="name">GRAND TOTAL</div>
+                <div class="price">$ 500.00</div>
               </div>
             </div>
           </div>
           <div class="btn submit"><span>CONTINUE PAYMENT</span><span class="hover">CONTINUE PAYMENT</span></div>
         </form>
       </div>
-      <div id="overlay"></div>
-      <script src="bower_components/jquery/dist/jquery.js"></script>
-      <script src="js/functions.js"></script>
-      <script src="js/bootstrap_tabs.min.js"></script>
-      <script src="js/alexValidate.js"></script>
-      <script src="bower_components/jquery.bxslider/jquery.bxslider.js"></script>
-      <script src="bower_components/Gallery-2.20.0/js/blueimp-gallery.js"></script>
-      <!--script(src="js/masonry.pkgd.min.js" )-->
-      <!--script(src="js/jquery.masonry.ordered.js" )-->
-      
+      <div id="info_delivery" class="modal_div">
+        <div class="modal_close">
+          <div class="label">Close</div>
+        </div>
+        <div class="content-holder">
+          <h3>DELIVERY RULES</h3>
+          <p>In Kiev delivery of the order is carried out by the courier of the COAT to the address specified by the Client in time from 1 to 5 working days. Free of charge.</p>
+          <p>Within Ukraine a courier of NOVAPOSHTA delivers an order to the specified address in a period from 1 to 5 working days. Delivery cost up to 100 hrn.</p>
+          <p>Within SNG a courier of …(firm) delivers an order to the specified address in a period from 2 to 6 working days. Delivery cost up to 50$.</p>
+          <p>The delivery of an order in other countries is carried out by DHL courier to the specified address in a period from 3 to 7 days. Delivery cost up to 80 €.</p>
+          <p>Delivery cost is specified in accordance with the tariffs of the delivery service that has been chosen by the Client when ordering.</p>
+          <p>* Detailed information on delivery is provided to the Client by e-mail in the letter-confirmation of an order. If you have any questions on payment and delivery, please contact the representatives of our company buy@thecoat.me</p>
+        </div>
+      </div>
+      <div id="info_payment" class="modal_div">
+        <div class="modal_close">
+          <div class="label">Close</div>
+        </div>
+        <div class="content-holder">
+          <h3>PAYMENT RULES</h3>
+          <p>The payment of an order is made in several methods:</p>
+          <ul>
+            <li>Cash on Delivery Nova Poshta. Upon receipt of an order through a delivery service of New Mail the Client pays to a courier of New Mail. This payment method is available within Ukraine.</li>
+          </ul>
+          <p>Online payment by credit card VISA / MasterCard:</p>
+          <p>For the order receipt the Client pays by credit card via the electronic payment system LiqPay when ordering online.</p>
+          <p>Electronic payment system LiqPay guarantees a high level of security thanks to technology OTP (One-time Password - OTP) and 3D secure code. All operations are supported by a one-time password, which is sent via SMS. Reliability of LiqPay is proved by certificates GoDaddy Secure Web Site, Verified by Visa and MasterCard SecureCode.</p>
+          <p>After successful payment and transfer of money to the seller, the Client receives an e-mail confirmation letter with the details of the terms and conditions of delivery of an order.</p>
+          <p>* If you pay by credit card, a refund is made only to the same card with which the payment was made.</p>
+          <p>For any questions on the payment, please contact buy@thecoat.me</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
+<div id="overlay"></div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/bootstrap_tabs.min.js"></script>
+<script src="js/alexValidate.js"></script>
+<script src="bower_components/jquery.bxslider/jquery.bxslider.js"></script>
+<script src="bower_components/Gallery-2.20.0/js/blueimp-gallery.js"></script>
+<script src="js/jquery.selectbox.min.js"></script>
+<!--script(src="js/jquery.masonry.ordered.js" )-->

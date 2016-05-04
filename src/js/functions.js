@@ -33,6 +33,7 @@ jQuery(document).ready(function() {
 
 
     jQuery(window).load(function() {
+        jQuery('#checkout select').selectbox();
         //home img
         jQuery("#main_img").addClass("show");
 
