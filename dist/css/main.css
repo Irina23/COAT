@@ -73,11 +73,10 @@ body {
     color: #fefefe;
     font-size: 3.428571428571429rem;
     line-height: 1em;
-    letter-spacing: 4px;
-    font-style: italic;
+    letter-spacing: 2px;
     float: right;
     margin-top: 180px;
-    font-weight: 200;
+    font-weight: normal;
     font-family: "GothamPro-LightItalic", sans-serif; }
 
 .home .top {
@@ -1671,3 +1670,86 @@ footer {
         list-style-type: disc; }
         #info_delivery .content-holder ul li:last-child, #info_payment .content-holder ul li:last-child {
           margin-bottom: 0; }
+
+@media screen and (max-width: 1199px) {
+  #main_img .wrap {
+    width: 100%;
+    padding: 0 25px;
+    box-sizing: border-box; }
+  #main_img .block_text {
+    margin-top: 125px; }
+  .contacts #slder_contacts,
+  .contacts .text_block,
+  .about #slder_about, .about #slder_contacts, .about #slder_stockists,
+  .contacts #slder_about, .contacts #slder_stockists,
+  .stockists #slder_about, .stockists #slder_contacts, .stockists #slder_stockists,
+  .about .text_block, .contacts .text_block, .stockists .text_block,
+  .article .content #slder_article, .article .content .text_block {
+    width: 100%; }
+  .about .text_block, .contacts .text_block, .stockists .text_block,
+  .article .content .text_block {
+    height: auto; }
+  .about #slder_about li, .about #slder_contacts li, .about #slder_stockists li,
+  .contacts #slder_about li, .contacts #slder_contacts li,
+  .contacts #slder_stockists li, .stockists #slder_about li,
+  .stockists #slder_contacts li, .stockists #slder_stockists li,
+  .article .content #slder_article li {
+    height: 400px; } }
+
+@media screen and (max-width: 959px) {
+  body {
+    min-width: 320px; } }
+
+@media screen and (max-width: 900px) {
+  .media .content .list_media_items .media_item {
+    width: 49%;
+    padding: 0 10px 40px; } }
+
+@media screen and (max-width: 719px) {
+  #main_img .block_text {
+    display: none; } }
+
+@media screen and (max-width: 500px) {
+  .media .content .list_media_items .media_item {
+    width: 100%;
+    padding: 0 0 40px; }
+    .media .content .list_media_items .media_item:last-child {
+      padding: 0; } }
+
+@media screen and (max-width: 480px) {
+  .menu-bar .menu {
+    padding: 150px 50px; }
+  .about .text_block, .contacts .text_block,
+  .article .content .text_block {
+    padding: 50px; }
+  .stockists .text_block dt {
+    padding: 43px 30px 43px 50px; }
+  .stockists .text_block dd {
+    padding: 50px 30px 50px 50px; }
+  .about #slder_about li, .about #slder_contacts li, .about #slder_stockists li,
+  .contacts #slder_about li, .contacts #slder_contacts li,
+  .contacts #slder_stockists li, .stockists #slder_about li,
+  .stockists #slder_contacts li, .stockists #slder_stockists li,
+  .article .content #slder_article li {
+    height: 250px; } }
+
+@media screen and (max-width: 480px) and (max-height: 600px) {
+  .menu-bar .menu {
+    padding: 60px 50px; } }
+
+@media screen and (max-width: 399px) {
+  .top .menu-icon .label,
+  .top .bag-icon .label {
+    display: none; }
+  .top .menu-icon {
+    padding: 19px 15px;
+    width: 48px;
+    background: url("../img/icons/menu_icon.svg") no-repeat 15px center;
+    background-size: 18px 18px; }
+  .top .bag-icon {
+    padding: 13px 15px; }
+  .about .text_block, .contacts .text_block,
+  .stockists .text_block dt,
+  .stockists .text_block dd,
+  .article .content .text_block {
+    padding: 30px; } }
