@@ -672,11 +672,9 @@ body {
     height: 100%; }
     .collections .block_text_collections .block_left .bx-wrapper .bx-viewport {
       height: calc(100vh - 102px) !important; }
-    .collections .block_text_collections .block_left .gallery {
-      height: 100%; }
-      .collections .block_text_collections .block_left .gallery a {
-        display: block;
-        margin-bottom: 15px; }
+    .collections .block_text_collections .block_left .gallery a {
+      display: block;
+      margin-bottom: 15px; }
   .collections .block_text_collections .block_right {
     overflow: hidden;
     padding-right: 40px; }

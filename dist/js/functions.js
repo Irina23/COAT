@@ -62,6 +62,7 @@ jQuery(document).ready(function() {
 
             var delta = e.originalEvent.deltaY || e.originalEvent.detail || e.originalEvent.wheelDelta;
 
+
             if (delta > 0) {
 
                 productSlederBx.goToNextSlide();
@@ -74,13 +75,32 @@ jQuery(document).ready(function() {
 
         });
 
-        jQuery('.gallery').bxSlider({
+        var gallerySlederBx = jQuery('.gallery').bxSlider({
             nextText: "",
             prevText: "",
             controls: false,
             mode: 'vertical',
             pagerCustom: '.gallery-icons'
 
+
+        });
+
+        $('.collections .gallery').on('wheel', function (e) {
+
+            e.preventDefault();
+
+            var delta = e.originalEvent.deltaY || e.originalEvent.detail || e.originalEvent.wheelDelta;
+
+
+            if (delta > 0) {
+
+                gallerySlederBx.goToNextSlide();
+
+            } else {
+
+                gallerySlederBx.goToPrevSlide();
+
+            }
 
         });
 
