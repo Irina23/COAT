@@ -1690,6 +1690,10 @@ footer {
         #info_delivery .content-holder ul li:last-child, #info_payment .content-holder ul li:last-child {
           margin-bottom: 0; }
 
+@media screen and (min-width: 1199px) and (max-height: 900px) {
+  .product .content .img-holder a img {
+    width: auto; } }
+
 @media screen and (max-width: 1199px) {
   #main_img .wrap {
     width: 100%;
