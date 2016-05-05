@@ -104,7 +104,7 @@ jQuery(document).ready(function() {
 
         });
 
-        $(" .menu-bar, .text_block, .collections_block .collections, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
+        $(".text_block, .collections_block .collections, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
             theme:"dark"
         });
 
@@ -115,6 +115,11 @@ jQuery(document).ready(function() {
         });
 
 
+        jQuery(".bag_bar .delete").on("click", function(e){
+            e.preventDefault();
+        //    TODO here is delete handler
+
+        });
 
     });
 
