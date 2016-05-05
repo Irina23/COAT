@@ -104,7 +104,7 @@ jQuery(document).ready(function() {
 
         });
 
-        $(".text_block, .collections_block .collections, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
+        $(" .menu-bar .menu-block, .text_block, .collections_block .collections, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
             theme:"dark"
         });
 

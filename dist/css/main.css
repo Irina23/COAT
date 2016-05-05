@@ -1,3 +1,11 @@
+.chromeperfectpixel-initial-block iframe,
+#chromeperfectpixel-supported-by {
+  display: none !important; }
+
+#__bs_notify__ {
+  display: none !important;
+  opacity: 0 !important; }
+
 @font-face {
   font-family: "GothamPro";
   src: url("../fonts/GothamPro.eot");
@@ -225,20 +233,22 @@ body {
     right: 0;
     left: 0;
     width: 100%;
-    height: 100%; }
+    height: calc( 100vh - 156px); }
   .menu-bar .menu {
     display: table;
     width: 100%;
     box-sizing: border-box;
     height: 100%; }
-    .menu-bar .menu .menu-block {
+    .menu-bar .menu .menu-holder {
       display: table-cell;
       vertical-align: middle;
       width: 100%;
       height: 100%; }
-      .menu-bar .menu .menu-block .menu-block {
+      .menu-bar .menu .menu-holder .menu-block {
         display: table-cell;
-        padding: 0 50px; }
+        padding: 0 50px;
+        max-height: 310px;
+        overflow: auto; }
     .menu-bar .menu .title {
       margin-bottom: 60px;
       font-size: 1rem;

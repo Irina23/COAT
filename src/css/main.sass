@@ -2,6 +2,12 @@ $main-color: #ff4504
 $color-grey: #727272
 
 
+.chromeperfectpixel-initial-block iframe,
+#chromeperfectpixel-supported-by
+  display: none !important
+#__bs_notify__
+  display: none !important
+  opacity: 0 !important
 
 
 
@@ -261,14 +267,14 @@ body
     right: 0
     left: 0
     width: 100%
-    height: 100%
+    height: calc( 100vh - 156px)
   .menu
 
     display: table
     width: 100%
     box-sizing: border-box
     height: 100%
-    .menu-block
+    .menu-holder
       display: table-cell
       vertical-align: middle
       width: 100%
@@ -276,6 +282,8 @@ body
       .menu-block
         display: table-cell
         padding: 0 50px
+        max-height: 310px
+        overflow: auto
 
     .title
       margin-bottom: 60px
