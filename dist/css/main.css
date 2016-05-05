@@ -55,13 +55,13 @@ body {
   background: #ffe5ed;
   position: fixed;
   width: 100%;
-  -webkit-transition: all 1s;
-  transition: all 1s; }
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s; }
   #main_img.show {
     -webkit-transform: scale(1) translate3d(0, 0, 0);
             transform: scale(1) translate3d(0, 0, 0);
-    -webkit-transition: all 1s;
-    transition: all 1s; }
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s; }
   #main_img a {
     display: block;
     width: 100%;
