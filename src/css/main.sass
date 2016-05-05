@@ -646,7 +646,17 @@ body
     float: left
     overflow: auto
     //height: calc( 100% - 53px)
-
+    position: relative
+    z-index: 2
+    .active_collections
+      display: none
+      padding: 40px 25px
+      text-transform: uppercase
+      color: #1d1d1f
+      font-size: 1rem
+      line-height: 1em
+      font-family: "GothamPro-Bold", sans-serif
+      cursor: pointer
 
 
     .item
@@ -698,6 +708,9 @@ body
     padding-left: 25px
     padding-top: 50px
     box-sizing: border-box
+
+    &.mobile
+      display: none
     h3
       text-transform: uppercase
       margin-bottom: 30px
@@ -711,12 +724,14 @@ body
       font-size: 1rem
       line-height: 1.5em
       color: #000
+      text-align: justify
       strong,b
         font-family: "GothamPro-Bold", sans-serif
         font-style: italic
     a
 
       color: #000
+      display: block
     //font-family: "GothamPro-Bold", sans-serif
     ul,ol
       margin-bottom: 30px
@@ -1903,6 +1918,65 @@ footer
       box-sizing: border-box
 
 
+  .collections .collections_block,
+  .collections .block_text_collections
+    width: 100%
+
+  .collections .block_text_collections
+    display: none
+    padding: 50px 25px
+    &.mobile
+      display: block
+      .block_right
+        margin: 0 auto 60px
+        padding: 0
+        p
+          margin-bottom: 30px
+          &:last-child
+            margin-bottom: 0
+
+      .block_left
+        width: 100%
+        padding: 0
+
+
+    a
+      width: 50%
+      display: inline-block
+      vertical-align: top
+      font-size: 0
+      margin-bottom: 30px
+      box-sizing: border-box
+      &:nth-child(2n+1)
+        padding-right: 15px
+      &:nth-child(2n)
+        padding-left: 15px
+
+      img
+        width: 100%
+
+
+  .collections .collections_block
+    height: auto
+    overflow: visible
+    .active_collections
+      display: block
+      + div
+        display: none
+        position: absolute
+        width: 100%
+        background: #fff
+
+        .item
+          &.active
+            display: none
+
+
+  .product .content .img-holder a img
+    width: auto
+
+
+
 @media screen and (max-width: 959px)
   body
     min-width: 320px
@@ -1936,6 +2010,15 @@ footer
   .checkout #checkout .submit,
   .checkout #checkout .cart .subtotal_price
     width: 300px
+
+
+  .checkout .title_checkout
+    padding: 95px 25px
+
+
+
+  .collections .collections_block .item a span
+    padding: 40px 25px
 
 @media screen and (max-width: 900px)
   .media .content .list_media_items .media_item
@@ -2039,6 +2122,10 @@ footer
     margin-bottom: 0
 
 
+  .collections .block_text_collections a
+    width: 100%
+    padding: 0!important
+
 @media screen and (max-width: 500px)
   .media .content .list_media_items .media_item
     width: 100%
@@ -2117,6 +2204,7 @@ footer
 
 
 @media screen and (max-width: 399px)
+
   .top .menu-icon .label,
   .top .bag-icon .label
     display: none

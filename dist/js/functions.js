@@ -55,6 +55,7 @@ jQuery(document).ready(function() {
 
 
         });
+
         jQuery('.gallery').bxSlider({
             nextText: "",
             prevText: "",
@@ -65,9 +66,17 @@ jQuery(document).ready(function() {
 
         });
 
-        $(" .menu-bar, .text_block, .collections_block, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
+        $(" .menu-bar, .text_block, .collections_block .collections, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
             theme:"dark"
         });
+
+        jQuery(".collections .item.active").each( function(){
+            var collections_active = jQuery(this).find("span").attr("data-color");
+            //console.log(collections_active);
+            jQuery(".collections .active_collections").css("background", collections_active);
+        });
+
+
 
     });
 
@@ -102,6 +111,10 @@ jQuery(document).ready(function() {
 
 
     jQuery(".filter .title").on("click", function(){
+        jQuery(this).next().slideToggle();
+
+    });
+    jQuery(".active_collections").on("click", function(){
         jQuery(this).next().slideToggle();
 
     });
@@ -157,7 +170,7 @@ jQuery(document).ready(function() {
 
 window.onload = function(){
 
-    jQuery('.gallery, .img_product').each(function () {
+    jQuery('.gallery, .img_product, .gallery_mobile').each(function () {
         this.onclick = function (event) {
             event = event || window.event;
             var target = event.target || event.srcElement,

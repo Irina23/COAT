@@ -578,7 +578,18 @@ body {
   box-sizing: border-box;
   width: 30%;
   float: left;
-  overflow: auto; }
+  overflow: auto;
+  position: relative;
+  z-index: 2; }
+  .collections .collections_block .active_collections {
+    display: none;
+    padding: 40px 25px;
+    text-transform: uppercase;
+    color: #1d1d1f;
+    font-size: 1rem;
+    line-height: 1em;
+    font-family: "GothamPro-Bold", sans-serif;
+    cursor: pointer; }
   .collections .collections_block .item.active a span.color_bg {
     background: #ebeef0;
     opacity: 1;
@@ -621,6 +632,8 @@ body {
   padding-left: 25px;
   padding-top: 50px;
   box-sizing: border-box; }
+  .collections .block_text_collections.mobile {
+    display: none; }
   .collections .block_text_collections h3 {
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -633,12 +646,14 @@ body {
     margin-bottom: 60px;
     font-size: 1rem;
     line-height: 1.5em;
-    color: #000; }
+    color: #000;
+    text-align: justify; }
     .collections .block_text_collections p strong, .collections .block_text_collections p b {
       font-family: "GothamPro-Bold", sans-serif;
       font-style: italic; }
   .collections .block_text_collections a {
-    color: #000; }
+    color: #000;
+    display: block; }
   .collections .block_text_collections ul, .collections .block_text_collections ol {
     margin-bottom: 30px; }
     .collections .block_text_collections ul li, .collections .block_text_collections ol li {
@@ -1725,7 +1740,52 @@ footer {
     #info_delivery .content-holder,
     #info_payment .content-holder {
       padding: 70px;
-      box-sizing: border-box; } }
+      box-sizing: border-box; }
+  .collections .collections_block,
+  .collections .block_text_collections {
+    width: 100%; }
+  .collections .block_text_collections {
+    display: none;
+    padding: 50px 25px; }
+    .collections .block_text_collections.mobile {
+      display: block; }
+      .collections .block_text_collections.mobile .block_right {
+        margin: 0 auto 60px;
+        padding: 0; }
+        .collections .block_text_collections.mobile .block_right p {
+          margin-bottom: 30px; }
+          .collections .block_text_collections.mobile .block_right p:last-child {
+            margin-bottom: 0; }
+      .collections .block_text_collections.mobile .block_left {
+        width: 100%;
+        padding: 0; }
+    .collections .block_text_collections a {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 0;
+      margin-bottom: 30px;
+      box-sizing: border-box; }
+      .collections .block_text_collections a:nth-child(2n+1) {
+        padding-right: 15px; }
+      .collections .block_text_collections a:nth-child(2n) {
+        padding-left: 15px; }
+      .collections .block_text_collections a img {
+        width: 100%; }
+  .collections .collections_block {
+    height: auto;
+    overflow: visible; }
+    .collections .collections_block .active_collections {
+      display: block; }
+      .collections .collections_block .active_collections + div {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background: #fff; }
+        .collections .collections_block .active_collections + div .item.active {
+          display: none; }
+  .product .content .img-holder a img {
+    width: auto; } }
 
 @media screen and (max-width: 959px) {
   body {
@@ -1753,7 +1813,11 @@ footer {
     width: 50%; }
   .checkout #checkout .submit,
   .checkout #checkout .cart .subtotal_price {
-    width: 300px; } }
+    width: 300px; }
+  .checkout .title_checkout {
+    padding: 95px 25px; }
+  .collections .collections_block .item a span {
+    padding: 40px 25px; } }
 
 @media screen and (max-width: 900px) {
   .media .content .list_media_items .media_item {
@@ -1828,7 +1892,10 @@ footer {
   .checkout #checkout .cart h3 {
     margin-top: 35px; }
   .checkout #checkout [class^="row-form"] {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .collections .block_text_collections a {
+    width: 100%;
+    padding: 0 !important; } }
 
 @media screen and (max-width: 500px) {
   .media .content .list_media_items .media_item {
