@@ -995,7 +995,7 @@ body
 
 footer
   background: #90a4ae
-  padding: 100px 0 75px
+  padding: 105px 0 100px
   text-align: center
   color: #fff
   line-height: 1em
@@ -1004,14 +1004,14 @@ footer
     display: none
   p
     color: #fff
-    line-height: 1.3em
+    line-height: 1.1em
     font-size: 1rem
-    margin-bottom: 40px
+    margin-bottom: 30px
     letter-spacing: 1px
 
     &.name
       text-transform: uppercase
-      margin-bottom: 25px
+
 
       //font-size: 1rem
   a
@@ -1133,6 +1133,7 @@ footer
     bottom: 0
     background: #1b1b1f
     color: #bcbcbc
+    z-index: 2
     .list_filters
       padding: 45px 40px 45px 70px
       overflow: auto
@@ -1285,28 +1286,38 @@ footer
 
 .product
   .content
-    padding: 102px 0 0
+    padding: 102px 70px 0 0
     height: auto
     box-sizing: border-box
-    width: 1060px
+    //width: 1060px
     margin: auto
     .img-holder
       //background: #e6e6e6
-      width: 560px
+      //width: 560px
+      //height: 590px
+      margin-left: 140px
+      width: calc( 100vw - 700px)
+      height: auto
+      padding-bottom: 35px
       float: left
       position: relative
-      height: calc(100vh - 102px)
-      overflow: auto
+      //height: calc(100vh - 102px)
+      //overflow: auto
       a
         display: block
         margin-bottom: 30px
+        img
+          width: 800px
+          margin: auto
+
+          max-height: calc( 100vh - 140px)
 
 
 
 
     .pdocut_info
       float: right
-      margin-top: 45px
+      //margin-top: 45px
       width: 350px
       .label
         margin-bottom: 30px
@@ -1801,6 +1812,8 @@ footer
     overflow: auto
     max-height: 625px
     box-sizing: border-box
+    height: 100%
+
     h3
       text-transform: uppercase
       font-family: "GothamPro-Bold", sans-serif
@@ -1861,6 +1874,33 @@ footer
 
 
 
+  .product .content
+    width: 100%
+    padding: 102px 50px 85px
+    .img-holder
+      display: block
+      margin: 0 auto 20px
+      float: none
+      width: 100%
+    .pdocut_info
+      float: none
+      display: block
+      text-align: center
+      width: 100%
+      margin: 0 auto
+      .label
+        text-align: center
+      .title
+        font-size: 1.285714285714286rem
+
+  #info_delivery,
+  #info_payment
+    width: 100% 
+    margin-left: 0
+    left: 0
+    .content-holder
+      padding: 70px
+      box-sizing: border-box
 
 
 @media screen and (max-width: 959px)
@@ -1868,16 +1908,136 @@ footer
     min-width: 320px
 
 
+  .list_product_page
+    .content
+      padding: 103px 28px 60px
+    .list_products .item_product
+      width: 50%
+      padding: 0 12px 50px
+      a .img-holder .label
+        font-size: 0.8571428571428571rem
+
+
+  footer .social li
+    margin-right: 70px
+
+  .checkout #checkout .cart .list_cart .title > div:first-child,
+  .checkout #checkout .cart .list_cart .item > div:first-child
+    width: 30%
+  .checkout #checkout .cart .list_cart .title > div,
+  .checkout #checkout .cart .list_cart .item > div
+    width: 25%
+  .checkout #checkout .cart .list_cart .title > div:last-child,
+  .checkout #checkout .cart .list_cart .item > div:last-child
+    width: 18%
+  .checkout #checkout .cart .list_cart .item .product .name
+    margin-left: 15px
+    width: 50%
+  .checkout #checkout .submit,
+  .checkout #checkout .cart .subtotal_price
+    width: 300px
+
 @media screen and (max-width: 900px)
   .media .content .list_media_items .media_item
     width: 49%
     padding: 0 10px 40px
 
 
+  .checkout #checkout
+    width: 100%
+    box-sizing: border-box
+    padding: 100px 70px
+  .checkout #checkout [class^="row-form"] > div:first-child
+    margin-right: 25px
+
+  .checkout #checkout [class^="row-form"] > div
+    width: calc( (100vw - 165px)/2)
+  .checkout #checkout .row-form1 > div
+    width: 100%
+  .checkout #checkout [class^="row-form"] .selectbox .select .text
+    width: calc( (100vw - 165px)/2 - 10px)
+
+
+
+@media screen and (max-width: 770px)
+  .checkout #checkout .cart .list_cart .title > div, .checkout #checkout .cart .list_cart .item > div
+    width: 20%
+  .checkout #checkout .cart .list_cart .title > div:first-child, .checkout #checkout .cart .list_cart .item > div:first-child
+    width: 40%
+
+
+
+
 
 @media screen and (max-width: 719px)
   #main_img .block_text
     display: none
+
+@media screen and (max-width: 700px)
+  .checkout #checkout .cart .list_cart .title > div, .checkout #checkout .cart .list_cart .item > div
+    width: 15%
+  .checkout #checkout .cart .list_cart .title > div:last-child, .checkout #checkout .cart .list_cart .item > div:last-child
+    width: 14%
+  .checkout #checkout .cart .list_cart .title > div:first-child, .checkout #checkout .cart .list_cart .item > div:first-child
+    width: 53%
+
+
+
+@media screen and (max-width: 659px)
+  .product .content .img-holder
+    width: 100%
+
+
+
+
+@media screen and (max-width: 600px)
+  .list_product_page .list_products .item_product
+    width: 100%
+
+  .modal_div
+    width: calc( 100vw - 40px)
+    margin-left: 0
+    left: 20px
+    height: 370px
+    margin-top: -180px
+    .content-holder
+      padding: 70px 25px 0
+
+
+  #info_delivery , #info_payment
+    height: 420px
+    top: 55px!important
+    margin-top: 0
+    left: 20px
+    width: calc( 100vw - 40px)
+
+    .content-holder
+      padding: 70px 15px
+
+  .checkout #checkout
+    padding: 100px 25px 75px
+
+  .checkout #checkout [class^="row-form"] > div:first-child
+    margin-right: 0
+    margin-bottom: 15px
+
+
+  .checkout #checkout [class^="row-form"] > div
+    margin-bottom: 15px
+
+
+  .checkout #checkout [class^="row-form"] > div,
+  .checkout #checkout .submit, .checkout #checkout .cart .subtotal_price
+    width: 100%
+
+  .checkout #checkout [class^="row-form"] .selectbox .select .text
+    width: calc( 100vw - 60px)
+
+  .checkout #checkout .cart h3
+    margin-top: 35px
+  .checkout #checkout [class^="row-form"]
+    margin-bottom: 0
+
 
 @media screen and (max-width: 500px)
   .media .content .list_media_items .media_item
@@ -1906,10 +2066,53 @@ footer
   .article .content #slder_article li
     height: 250px
 
+  .filter .block_filter, .add_bag,
+  .add_bag #attribute_size .attribute_holder
+    width: 100%
+  .filter .block_filter button, .add_bag .add_button,
+  .add_bag #attribute_size
+    width: 50%
+  .add_bag #attribute_size .attribute_holder
+    padding: 0
+    text-align: center
+    padding-top: 150px
 
 @media screen and (max-width: 480px) and (max-height: 600px)
   .menu-bar .menu
     padding: 60px 50px
+
+@media screen and (max-width: 455px)
+  .checkout #checkout .cart .list_cart .title > div,
+  .checkout #checkout .cart .list_cart .item > div
+    width: 15%
+
+  .checkout #checkout .cart .list_cart .title > div:last-child,
+  .checkout #checkout .cart .list_cart .item > div:last-child
+    width: 18%
+
+  .checkout #checkout .cart .list_cart .title > div:first-child,
+  .checkout #checkout .cart .list_cart .item > div:first-child
+    width: 45%
+  .checkout #checkout .cart .list_cart .item .product .name
+    width: 45%
+
+
+
+@media screen and (max-width: 430px)
+  .checkout #checkout .cart .list_cart .title > div,
+  .checkout #checkout .cart .list_cart .item > div
+    width: 15%
+
+  .checkout #checkout .cart .list_cart .title > div:last-child,
+  .checkout #checkout .cart .list_cart .item > div:last-child
+    width: 18%
+
+  .checkout #checkout .cart .list_cart .title > div:first-child,
+  .checkout #checkout .cart .list_cart .item > div:first-child
+    width: 47%
+  .checkout #checkout .cart .list_cart .item .product .name
+    width: 40%
+    margin-left: 5px
 
 
 
@@ -1936,3 +2139,11 @@ footer
 
 
 
+  .checkout #checkout .cart .list_cart .item .product .img-holder
+    width: 50%
+
+  .checkout #checkout .cart .list_cart .title > div:first-child, .checkout #checkout .cart .list_cart .item > div:first-child
+    width: 45%
+
+  .checkout #checkout .cart .list_cart .title > div:last-child, .checkout #checkout .cart .list_cart .item > div:last-child
+    width: 21%

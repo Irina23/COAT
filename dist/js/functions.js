@@ -37,7 +37,7 @@ jQuery(document).ready(function() {
         //home img
         jQuery("#main_img").addClass("show");
 
-        jQuery('.slder_about, .slder_contacts, .slder_stockists, .slder_article, .img_product').bxSlider({
+        jQuery('.slder_about, .slder_contacts, .slder_stockists, .slder_article').bxSlider({
             nextText: "",
             prevText: "",
             auto: true,
@@ -46,6 +46,15 @@ jQuery(document).ready(function() {
 
         });
 
+        jQuery('.img_product').bxSlider({
+            nextText: "",
+            prevText: "",
+            auto: true,
+            controls: false,
+            mode: 'vertical'
+
+
+        });
         jQuery('.gallery').bxSlider({
             nextText: "",
             prevText: "",
