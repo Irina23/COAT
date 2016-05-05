@@ -46,13 +46,31 @@ jQuery(document).ready(function() {
 
         });
 
-        jQuery('.img_product').bxSlider({
+         var productSlederBx = jQuery('.img_product').bxSlider({
             nextText: "",
             prevText: "",
             auto: true,
             controls: false,
             mode: 'vertical'
 
+
+        });
+
+        $('.img_product').on('wheel', function (e) {
+
+            e.preventDefault();
+
+            var delta = e.originalEvent.deltaY || e.originalEvent.detail || e.originalEvent.wheelDelta;
+
+            if (delta > 0) {
+
+                productSlederBx.goToNextSlide();
+
+            } else {
+
+                productSlederBx.goToPrevSlide();
+
+            }
 
         });
 
@@ -79,7 +97,6 @@ jQuery(document).ready(function() {
 
 
     });
-
 
 ///bar
     jQuery(".menu-icon").on("click", function(){
