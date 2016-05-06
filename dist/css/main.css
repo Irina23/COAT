@@ -273,21 +273,28 @@ body {
       .menu-bar .menu .nav li:last-child {
         margin-bottom: 0; }
       .menu-bar .menu .nav li.active a {
-        text-indent: 5px;
+        -webkit-transform: translateX(5px);
+                transform: translateX(5px);
         color: #FFF; }
       .menu-bar .menu .nav li a {
         color: #bcbcbc;
         text-transform: uppercase;
         font-size: 0.8571428571428571rem;
-        text-indent: 0;
         display: block;
-        -webkit-transition: all .6s ease;
-        transition: all .6s ease; }
+        -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        -webkit-transform: translateX(0);
+                transform: translateX(0); }
         .menu-bar .menu .nav li a:hover {
-          text-indent: 5px;
           color: #FFF;
-          -webkit-transition: all .6s ease;
-          transition: all .6s ease;
+          -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          -webkit-transform: translateX(5px);
+                  transform: translateX(5px);
           text-decoration: none; }
   .menu-bar .social {
     border-top: 2px solid #2d2d2d;
@@ -1103,7 +1110,12 @@ footer {
         .filter .block_filter .list_filters [id^="attribut"] .attribute input[type="checkbox"] {
           display: none; }
           .filter .block_filter .list_filters [id^="attribut"] .attribute input[type="checkbox"]:checked + label {
-            text-indent: 10px;
+            -webkit-transition: -webkit-transform 0.35ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            transition: -webkit-transform 0.35ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            transition: transform 0.35ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            transition: transform 0.35ms cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.35ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            -webkit-transform: translateX(10px);
+                    transform: translateX(10px);
             color: #FFF; }
             .filter .block_filter .list_filters [id^="attribut"] .attribute input[type="checkbox"]:checked + label:before {
               opacity: 1;
@@ -1116,10 +1128,14 @@ footer {
           line-height: 1em;
           cursor: pointer;
           text-indent: 0;
-          -webkit-transition: all 0.35s;
-          transition: all 0.35s;
           position: relative;
-          letter-spacing: 1px; }
+          letter-spacing: 1px;
+          -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          -webkit-transform: translateX(0);
+                  transform: translateX(0); }
           .filter .block_filter .list_filters [id^="attribut"] .attribute label:before {
             -webkit-transition: opacity 300ms ease;
             transition: opacity 300ms ease;
@@ -1129,15 +1145,18 @@ footer {
             background: #fff;
             margin: 0;
             opacity: 0;
-            left: 0;
+            left: -10px;
             position: absolute;
             top: 4px;
             content: ""; }
           .filter .block_filter .list_filters [id^="attribut"] .attribute label:hover {
-            text-indent: 10px;
             color: #FFF;
-            -webkit-transition: all 0.35s;
-            transition: all 0.35s; }
+            -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            -webkit-transform: translateX(10px);
+                    transform: translateX(10px); }
   .filter .block_filter button {
     box-shadow: none;
     background: #eaeaec;
