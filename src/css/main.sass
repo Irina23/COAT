@@ -137,7 +137,9 @@ body
     &:hover
       .label
         opacity: 1
-        animation: fadeInLeft 1s
+        transition: all 250ms cubic-bezier(.55,.085,.68,.53)
+        transform: translateX(4px)
+        //animation: fadeInLeft 0.5s
     .label
       text-transform: uppercase
       font-family: "GothamPro-Bold", sans-serif
@@ -148,7 +150,8 @@ body
       top: 19px
       right: 0
       opacity: 0
-      //transition: all 0.35s
+      transform: translateX(0)
+      transition: all 250ms cubic-bezier(.55,.085,.68,.53)
 
 
   .logo 
@@ -181,9 +184,11 @@ body
         //transition: all 0.35s
         //animation-duration: 1s
         //animation-fill-mode: both
-        animation: fadeInRight 1s
+        //animation: fadeInRight 1s
         //animation-play-state: running
         opacity: 1
+        transform: translateX(0)
+        transition: all 250ms cubic-bezier(.55,.085,.68,.53)
 
 
     .label
@@ -198,6 +203,8 @@ body
       opacity: 0
       //transition: all 0.35s
       line-height: 26px
+      transform: translateX(4px)
+      transition: all 250ms cubic-bezier(.55,.085,.68,.53)
 
 .content
   position: relative
@@ -268,6 +275,7 @@ body
     left: 0
     width: 100%
     height: calc( 100vh - 156px)
+    overflow: auto
   .menu
 
     display: table
@@ -281,7 +289,7 @@ body
       height: 100%
       .menu-block
         display: table-cell
-        padding: 0 50px
+        padding: 30px 50px
         max-height: 310px
         overflow: auto
 
@@ -1005,8 +1013,8 @@ body
             transition: opacity 0.5s ease
           .price
             opacity: 1
-            transition: all 0.5s ease
-            bottom: 0
+            transition: all 0.5s  0.5s ease
+            transform: translateY(0)
         .img-holder
           margin-bottom: 15px
           width: 100%
@@ -1026,17 +1034,18 @@ body
           font-size: 0.8571428571428571rem
           line-height: 1.3em
           letter-spacing: 1px
-          transition: opacity 0.5s ease
+          transition: opacity 0.5s 0.5s ease
           //font-family: "GothamPro-Bold", sans-serif
         .price
           position: absolute
-          bottom: -10%
+          bottom: 0
           width: 100%
           opacity: 0
           transition: all 0.5s ease
           font-size: 1.142857142857143rem
           line-height: 1em
           font-family: "GothamPro-Bold", sans-serif
+          transform: translateY(15px)
 
 
 
@@ -1051,7 +1060,7 @@ footer
     display: none
   p
     color: #fff
-    line-height: 1.1em
+    line-height: 1.3em
     font-size: 1rem
     margin-bottom: 30px
     letter-spacing: 1px
