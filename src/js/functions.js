@@ -122,6 +122,18 @@ jQuery(document).ready(function() {
 
         });
 
+
+
+        jQuery('#preloader').fadeOut('slow',function(){
+            if (location.hash) {
+                //console.log(location.hash)
+                //    TODO
+                jQuery('html, body').animate({ scrollTop:  jQuery(location.hash).offset().top - 52 }, 1000);
+            }
+            jQuery(this).remove();
+        });
+
+
     });
 
 ///bar
@@ -227,19 +239,98 @@ window.onload = function(){
 
 
 };
-
+//up
 jQuery(document).ready(function($){
 
-    var
+    /*var
         speed = 500,
         $scrollTop = $('.scrollTop');
     $scrollTop.click(function(e){
         e.preventDefault();
 
         $( 'html:not(:animated),body:not(:animated)' ).animate({ scrollTop: 0}, speed );
+    });*/
+
+
+
+    var goUp = (function () {
+
+        var $el = $('.scrollTop'),
+            speed = 500,
+            timingFunction = 'swing',
+            state = false,
+            paused = false,
+            plg = {
+                up: function () {
+
+                    paused = true;
+                    state = true;
+
+                    $("html, body").stop().animate({scrollTop:0}, speed, timingFunction, function () {
+
+                        paused = false;
+
+                    }).one('touchstart mousewheel DOMMouseScroll wheel', function () {
+
+                        $(this).stop(false, false).off('touchstart mousewheel DOMMouseScroll wheel');
+                        paused = false;
+
+                    });
+
+                    plg.hide();
+
+                },
+                show: function () {
+
+                    if (!state && !paused) {
+
+                        $el.addClass('opened');
+
+                        state = true;
+
+                    }
+
+                },
+                hide: function () {
+
+                    if (state) {
+
+                        $el.removeClass('opened');
+
+                        state = false;
+
+                    }
+
+                },
+                $el: $el
+            };
+
+        $el.on('click', function () {
+
+            plg.up();
+
+        });
+
+        return plg;
+
+    })();
+
+// init
+    $(document).on('scroll', function () {
+
+        var top = $(this).scrollTop();
+
+        // top > than we neet show arrow
+        if (top > 150) {
+
+            $('.scrollTop').show();
+
+        } else {
+
+            $('.scrollTop').hide();
+
+        }
     });
-
-
 
 });
 

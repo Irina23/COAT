@@ -19,17 +19,14 @@
 			var plg = {
 				init: function () {
 					DOM.$fields = $self.find('[data-validate]');
-					//$self.on('submit', plg.submit);
 					$self.find('.btn.submit').on('click', plg.submit);
-					//DOM.$fields.on('blur keyup', function () {
-					// 	plg.validate( $(this) );
-					// });
 					DOM.$fields.on('focus', function () {
 						plg.removeLabel( $(this) );
 					})
 				},
 
 				test: function (data, type) {
+
 					switch (type) {
 						case 'name':
 							return /^[а-яіїєґёА-ЯІЇЄҐЁa-zA-Z\-]+\s{0,1}[а-яіїєґёА-ЯІЇЄҐЁa-zA-Z\-]{0,}$/.test(data);
@@ -41,6 +38,8 @@
 							return /^[0-9]/.test(data);
 						case 'empty':
 							return /^[а-яіїєґёА-ЯІЇЄҐЁa-zA-Z0-9]+/.test(data);
+						case 'select':
+							return !(data === null || data === "null" || data === "false" || data === "0" || data === "undefined");
 						case 'quantity':
 							return /^[1-9]/.test(data);
 						default:

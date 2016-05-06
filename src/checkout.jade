@@ -42,8 +42,8 @@ html(lang="ru")
 
                             div
                                 //input(type="text", placeholder="country",name="country", data-validate="name")
-                                select
-                                    option(selected value="default" disabled) country
+                                select(data-validate="select")
+                                    option(selected value="0" disabled) country
                                     option(value="ukraine") Ukraine
                                     option(value="russia") Russia
 
@@ -58,8 +58,8 @@ html(lang="ru")
                                 h3 DELIVERY
                                     a(href="#info_delivery" class="open_modal info_icon")
                                 //input(type="text", placeholder="delivery",name="delivery", data-validate="name")
-                                select
-                                    option(selected value="default" disabled) delivery
+                                select(data-validate="select")
+                                    option(selected value="0" disabled) delivery
                                     option(value="dhl") DHL
                                     option(value="nova_poshta") nova poshta
 
