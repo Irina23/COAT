@@ -109,11 +109,11 @@ jQuery(document).ready(function() {
 
         });
 
-        jQuery(".collections .item.active").each( function(){
+        /*jQuery(".collections .item.active").each( function(){
             var collections_active = jQuery(this).find("span").attr("data-color");
             //console.log(collections_active);
             jQuery(".collections .active_collections").css("background", collections_active);
-        });
+        });*/
 
 
         jQuery(".bag_bar .delete").on("click", function(e){
