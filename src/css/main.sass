@@ -1056,6 +1056,13 @@ body
             font-size: 0.7142857142857143rem
             letter-spacing: 1px
             font-family: "GothamPro", sans-serif
+            top: 0
+            right: 0
+            + .label
+              top: 20px
+              + .label
+                top: 40px
+              
         .title
           font-size: 0.8571428571428571rem
           line-height: 1.3em
@@ -1088,18 +1095,22 @@ footer
     color: #fff
     line-height: 1.3em
     font-size: 1rem
-    margin-bottom: 30px
+    //margin-bottom: 30px
     letter-spacing: 1px
+    width: 200px
+    margin: 0 auto 30px
 
     &.name
       text-transform: uppercase
+      width: 100%
 
 
       //font-size: 1rem
   a
     color: #fff
-    line-height: 1em
+    line-height: 1.3em
     font-size: 1rem
+    display: block
   .social
     text-align: center
     li
