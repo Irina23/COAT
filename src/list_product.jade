@@ -8,6 +8,9 @@ html(lang="ru")
             include ./header.jade
             .content
                 .list_products
+                    .error_product Not found products
+                //.list_products
+                    .error_product Not found products
                     .item_product
                         a(href="product.html")
                             .img-holder
@@ -124,7 +127,7 @@ html(lang="ru")
                                         input(type="checkbox" name="option12" value="L" id="option12" )
                                         label(for="option12") L
 
-                        button.clear(type="submit" value="clear")
+                        a.clear(href="#")
                             span clear
                             span.hover clear
                         button.apply(type="submit" value="apply")

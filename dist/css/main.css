@@ -914,10 +914,16 @@ body {
 
 .list_product_page .content {
   padding: 103px 28px 85px;
-  height: auto; }
+  height: calc( 100vh - 440px); }
 
 .list_product_page .list_products {
   font-size: 0; }
+  .list_product_page .list_products .error_product {
+    color: #000;
+    font-size: 1rem;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase; }
   .list_product_page .list_products .item_product {
     padding: 0 12px 25px;
     display: inline-block;
@@ -1186,7 +1192,7 @@ footer {
             transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
             -webkit-transform: translateX(10px);
                     transform: translateX(10px); }
-  .filter .block_filter button {
+  .filter .block_filter button, .filter .block_filter a {
     box-shadow: none;
     background: #eaeaec;
     border: 0;
@@ -1204,15 +1210,15 @@ footer {
     height: 50px;
     width: 210px;
     overflow: hidden; }
-    .filter .block_filter button:hover span {
+    .filter .block_filter button:hover span, .filter .block_filter a:hover span {
       top: -100%;
       -webkit-transition: all 0.35s;
       transition: all 0.35s; }
-      .filter .block_filter button:hover span.hover {
+      .filter .block_filter button:hover span.hover, .filter .block_filter a:hover span.hover {
         top: 0;
         -webkit-transition: all 0.35s;
         transition: all 0.35s; }
-    .filter .block_filter button span {
+    .filter .block_filter button span, .filter .block_filter a span {
       position: absolute;
       top: 0;
       left: 0;
@@ -1225,17 +1231,17 @@ footer {
       line-height: 1em;
       -webkit-transition: all 0.35s;
       transition: all 0.35s; }
-      .filter .block_filter button span.hover {
+      .filter .block_filter button span.hover, .filter .block_filter a span.hover {
         top: 100%;
         -webkit-transition: all 0.35s;
         transition: all 0.35s; }
-    .filter .block_filter button:hover {
+    .filter .block_filter button:hover, .filter .block_filter a:hover {
       -webkit-transition: all 0.35s;
       transition: all 0.35s; }
-    .filter .block_filter button.apply {
+    .filter .block_filter button.apply, .filter .block_filter a.apply {
       background: #000;
       color: #fff; }
-      .filter .block_filter button.apply:hover {
+      .filter .block_filter button.apply:hover, .filter .block_filter a.apply:hover {
         -webkit-transition: all 0.35s;
         transition: all 0.35s; }
   .filter .block_filter .close {
@@ -2045,7 +2051,8 @@ footer {
   .filter .block_filter, .add_bag,
   .add_bag #attribute_size .attribute_holder {
     width: 100%; }
-  .filter .block_filter button, .add_bag .add_button,
+  .filter .block_filter button, .filter .block_filter a,
+  .add_bag .add_button,
   .add_bag #attribute_size {
     width: 50%; }
   .add_bag #attribute_size .attribute_holder {
