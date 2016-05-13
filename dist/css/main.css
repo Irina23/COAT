@@ -912,6 +912,12 @@ body {
   .article .content .img-holder .bx-controls {
     display: none; }
 
+.bag_null {
+  text-align: center;
+  color: #000;
+  font-size: 1rem;
+  line-height: 1em; }
+
 .list_product_page .content {
   padding: 103px 28px 85px;
   min-height: calc( 100vh - 440px);
