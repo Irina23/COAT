@@ -184,12 +184,33 @@ jQuery(document).ready(function() {
 
 
 
-        } else{
-            //console.log('Error!');
         }
 
 
     });
+
+    if(jQuery(".bag_bar .bag_null").length != 0) {
+        console.log("555");
+        jQuery(".checkout").removeAttr("disabled");
+    } else{
+
+        console.log("666");
+
+    }
+    jQuery(".bag_bar").change(function(){
+        if(jQuery(".bag_bar .bag_null").length != 0) {
+            console.log("555");
+            jQuery(".checkout").removeAttr("disabled");
+        } else{
+
+            console.log("666");
+
+        }
+
+
+    });
+
+
 
 
 
