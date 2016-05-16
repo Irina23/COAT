@@ -621,13 +621,9 @@ body
         height: 8px
         background-size: 100% 
         background: url("../img/icons/close.svg") no-repeat
-
-
-
-
-
-
-
+        border: 0
+        box-shadow: none
+        cursor: pointer
 
 
 .about, .contacts, .stockists
@@ -1682,6 +1678,14 @@ footer
     box-sizing: border-box
     transition: all 0.35s
     letter-spacing: 1px
+    &:disabled
+      color: rgba(255,255,255,.5)
+      &:hover
+        span
+          top: 0
+          &.hover
+            top: 100%
+
     &:hover
       transition: all 0.35s
       span
