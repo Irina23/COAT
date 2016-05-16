@@ -523,13 +523,13 @@ body {
     height: 52px;
     overflow: hidden;
     border: 0; }
-    .bag_bar .checkout:disabled span {
+    .bag_bar .checkout.disabled span {
       color: rgba(255, 255, 255, 0.5);
       cursor: default; }
-    .bag_bar .checkout:disabled:hover span {
+    .bag_bar .checkout.disabled:hover span {
       color: rgba(255, 255, 255, 0.5);
       top: 0; }
-      .bag_bar .checkout:disabled:hover span.hover {
+      .bag_bar .checkout.disabled:hover span.hover {
         top: 100%; }
     .bag_bar .checkout span {
       font-size: 0.8571428571428571rem;

@@ -191,18 +191,28 @@ jQuery(document).ready(function() {
 
     if(jQuery(".bag_bar .bag_null").length != 0) {
         console.log("555");
-        jQuery(".checkout").removeAttr("disabled");
-    } else{
+        //jQuery(".checkout").removeAttr("disabled");
+        jQuery(".checkout").on("click", function(e){
+            jQuery(".content").removeClass("disabled");
+            e.preventDefault();
 
+        });
+    } else{
+        jQuery(".content").addClass("disabled");
         console.log("666");
 
     }
     jQuery(".bag_bar").change(function(){
         if(jQuery(".bag_bar .bag_null").length != 0) {
             console.log("555");
-            jQuery(".checkout").removeAttr("disabled");
-        } else{
+            //jQuery(".checkout").removeAttr("disabled");
+            jQuery(".checkout").on("click", function(e){
+                jQuery(".content").removeClass("disabled");
+                e.preventDefault();
 
+            });
+        } else{
+            jQuery(".content").addClass("disabled");
             console.log("666");
 
         }
