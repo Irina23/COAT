@@ -179,7 +179,7 @@ jQuery(document).ready(function() {
                 jQuery("#bar_opened").addClass("opened");
                 jQuery(".bag_bar").addClass("opened");
                 jQuery("footer").addClass("opened");
-
+                jQuery(".checkout").removeClass("disabled");
             });
 
 
@@ -190,36 +190,26 @@ jQuery(document).ready(function() {
     });
 
     if(jQuery(".bag_bar .bag_null").length != 0) {
-        console.log("555");
-        //jQuery(".checkout").removeAttr("disabled");
+
         jQuery(".checkout").addClass("disabled");
         jQuery(".checkout").on("click", function(e){
-
             e.preventDefault();
-
         });
     } else{
         jQuery(".checkout").removeClass("disabled");
-        console.log("666");
+
 
     }
-    jQuery(".form_bag").change(function(){
-        console.log("1111");
-        if(jQuery(".bag_bar .bag_null").length != 0) {
-            console.log("555");
-            //jQuery(".checkout").removeAttr("disabled");
+    jQuery(".bag_bar .item_product .delete").on("click", function(){
+        if(jQuery(".bag_bar .item_product").length != 0) {
+            jQuery(".checkout").removeClass("disabled");
+        } else{
             jQuery(".checkout").addClass("disabled");
             jQuery(".checkout").on("click", function(e){
-
                 e.preventDefault();
-
             });
-        } else{
-            jQuery(".checkout").removeClass("disabled");
-            console.log("666");
 
         }
-
 
     });
 
