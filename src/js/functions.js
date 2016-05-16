@@ -192,27 +192,30 @@ jQuery(document).ready(function() {
     if(jQuery(".bag_bar .bag_null").length != 0) {
         console.log("555");
         //jQuery(".checkout").removeAttr("disabled");
+        jQuery(".checkout").addClass("disabled");
         jQuery(".checkout").on("click", function(e){
-            jQuery(".content").removeClass("disabled");
+
             e.preventDefault();
 
         });
     } else{
-        jQuery(".content").addClass("disabled");
+        jQuery(".checkout").removeClass("disabled");
         console.log("666");
 
     }
-    jQuery(".bag_bar").change(function(){
+    jQuery(".form_bag").change(function(){
+        console.log("1111");
         if(jQuery(".bag_bar .bag_null").length != 0) {
             console.log("555");
             //jQuery(".checkout").removeAttr("disabled");
+            jQuery(".checkout").addClass("disabled");
             jQuery(".checkout").on("click", function(e){
-                jQuery(".content").removeClass("disabled");
+
                 e.preventDefault();
 
             });
         } else{
-            jQuery(".content").addClass("disabled");
+            jQuery(".checkout").removeClass("disabled");
             console.log("666");
 
         }
