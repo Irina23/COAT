@@ -1554,7 +1554,8 @@ footer {
     transition: all 0.35s;
     letter-spacing: 1px; }
     .add_bag .add_button:disabled {
-      color: rgba(255, 255, 255, 0.5); }
+      color: rgba(255, 255, 255, 0.5);
+      cursor: default; }
       .add_bag .add_button:disabled:hover span {
         top: 0; }
         .add_bag .add_button:disabled:hover span.hover {
