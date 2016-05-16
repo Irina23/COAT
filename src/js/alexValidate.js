@@ -41,7 +41,7 @@
 						case 'select':
 							return !(data === null || data === "null" || data === "false" || data === "0" || data === "undefined");
 						case 'radio':
-							return !$('input[name=size]:checked').val();
+							return $('input[name=size]:checked').length<=0;
 						case 'quantity':
 							return /^[1-9]/.test(data);
 						default:
