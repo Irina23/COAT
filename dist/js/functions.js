@@ -46,7 +46,7 @@ jQuery(document).ready(function() {
 
         });
 
-         var productSlederBx = jQuery('.img_product').bxSlider({
+        var productSlederBx = jQuery('.img_product').bxSlider({
             nextText: "",
             prevText: "",
             auto: true,
@@ -110,17 +110,13 @@ jQuery(document).ready(function() {
         });
 
         /*jQuery(".collections .item.active").each( function(){
-            var collections_active = jQuery(this).find("span").attr("data-color");
-            //console.log(collections_active);
-            jQuery(".collections .active_collections").css("background", collections_active);
-        });*/
+         var collections_active = jQuery(this).find("span").attr("data-color");
+         //console.log(collections_active);
+         jQuery(".collections .active_collections").css("background", collections_active);
+         });*/
 
 
-        jQuery(".bag_bar .delete").on("click", function(e){
-            e.preventDefault();
-        //    TODO here is delete handler
 
-        });
 
 
 
@@ -168,22 +164,14 @@ jQuery(document).ready(function() {
         var filter_data, $el;
         $el = $( this );
         filter_data = $el.serialize();
-        //console.log(filter_data.length);
         if(filter_data.length !== 0) {
-            jQuery(".add_button").removeAttr("disabled");
-            
-            //console.log(filter_data);
-            jQuery(".add_button").on("click", function(){
-                jQuery(".content").addClass("opened_right");
-                jQuery(".top").addClass("opened_right");
-                jQuery("#bar_opened").addClass("opened");
-                jQuery(".bag_bar").addClass("opened");
-                jQuery("footer").addClass("opened");
-                jQuery(".checkout").removeClass("disabled");
-            });
-
-
-
+            jQuery(".add_button")
+                .removeAttr("disabled")
+                .on("click", function(){
+                    jQuery(".content, .top").addClass("opened_right");
+                    jQuery("#bar_opened, .bag_bar, footer").addClass("opened");
+                    jQuery(".checkout").removeClass("disabled");
+                });
         }
 
 
@@ -192,25 +180,26 @@ jQuery(document).ready(function() {
     if(jQuery(".bag_bar .bag_null").length != 0) {
 
         jQuery(".checkout").addClass("disabled");
-        jQuery(".checkout").on("click", function(e){
-            e.preventDefault();
-        });
+
     } else{
         jQuery(".checkout").removeClass("disabled");
 
 
     }
-    jQuery(".bag_bar .item_product .delete").on("click", function(){
-        if(jQuery(".bag_bar .item_product").length != 0) {
+    jQuery(".bag_bar").on("click", ".delete", function() {
+        //e.preventDefault();
+        //console.log(jQuery(".bag_bar").find('.item_product').length);
+        if(jQuery(".bag_bar .item_product").length != 1) {
             jQuery(".checkout").removeClass("disabled");
+            if (jQuery(".page_wrapper").hasClass(".checkout")){
+                $(location).attr('href', '/');
+            }
         } else{
             jQuery(".checkout").addClass("disabled");
-            jQuery(".checkout").on("click", function(e){
-                e.preventDefault();
-            });
-
         }
-
+    });
+    jQuery(".bag_bar").on("click", ".checkout", function(e) {
+        if ($(this).hasClass('disabled')) e.preventDefault();
     });
 
 
@@ -219,7 +208,8 @@ jQuery(document).ready(function() {
 
 
 
- //end bar
+
+    //end bar
 
 
     jQuery(".filter .title").on("click", function(){
@@ -257,12 +247,12 @@ jQuery(document).ready(function() {
     close.click( function(){
         modal
             .animate({opacity: 0, top: '45%'}, 200,
-            function(){
-                $(this).css('display', 'none');
-                overlay.fadeOut(400);
+                function(){
+                    $(this).css('display', 'none');
+                    overlay.fadeOut(400);
 
-            }
-        );
+                }
+            );
     });
 
 
@@ -289,7 +279,7 @@ window.onload = function(){
                 link = target.src ? target.parentNode : target,
                 options = {index: link, event: event},
                 links = this.getElementsByTagName('a');
-                console.log(links);
+            console.log(links);
             blueimp.Gallery(links, options);
         };
     });
@@ -300,13 +290,13 @@ window.onload = function(){
 jQuery(document).ready(function($){
 
     /*var
-        speed = 500,
-        $scrollTop = $('.scrollTop');
-    $scrollTop.click(function(e){
-        e.preventDefault();
+     speed = 500,
+     $scrollTop = $('.scrollTop');
+     $scrollTop.click(function(e){
+     e.preventDefault();
 
-        $( 'html:not(:animated),body:not(:animated)' ).animate({ scrollTop: 0}, speed );
-    });*/
+     $( 'html:not(:animated),body:not(:animated)' ).animate({ scrollTop: 0}, speed );
+     });*/
 
 
 
@@ -390,7 +380,3 @@ jQuery(document).ready(function($){
     });
 
 });
-
-
-
-
