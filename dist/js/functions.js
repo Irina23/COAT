@@ -163,33 +163,38 @@ jQuery(document).ready(function() {
 
     });
 
-    jQuery(" .add_button").on("click", function(e){
-        e.preventDefault();
+    jQuery(".add_bag").change(function(){
+        //e.preventDefault();
         var filter_data, $el;
-        $el = $( ".add_bag" );
+        $el = $( this );
         filter_data = $el.serialize();
-        // console.log(filter_data.length);
+        //console.log(filter_data.length);
         if(filter_data.length !== 0) {
-            jQuery(".content").addClass("opened_right");
-            jQuery(".top").addClass("opened_right");
-            jQuery("#bar_opened").addClass("opened");
-            jQuery(".bag_bar").addClass("opened");
-            jQuery("footer").addClass("opened");
-            console.log(filter_data);
+            jQuery(".add_button").removeAttr("disabled");
+            
+            //console.log(filter_data);
+            jQuery(".add_button").on("click", function(){
+                jQuery(".content").addClass("opened_right");
+                jQuery(".top").addClass("opened_right");
+                jQuery("#bar_opened").addClass("opened");
+                jQuery(".bag_bar").addClass("opened");
+                jQuery("footer").addClass("opened");
+
+            });
 
 
 
-        } /*else{
-            console.log('Error!');
-
-            $('.add_bag').on('ajaxBeforeSend', function(e) {
-                console.log('Error!');
-                e.preventDefault();
-            })
-        }*/
+        } else{
+            //console.log('Error!');
+        }
 
 
     });
+
+
+
+
+
  //end bar
 
 
