@@ -40,8 +40,8 @@
 							return /^[а-яіїєґёА-ЯІЇЄҐЁa-zA-Z0-9]+/.test(data);
 						case 'select':
 							return !(data === null || data === "null" || data === "false" || data === "0" || data === "undefined");
-						case 'radio':
-							return $('input[type="radio"]:checked').length!=0;
+						//case 'radio':
+							//return $('input[type="radio"]:checked').length==0;
 							//return $('input[type="radio"]:checked').val();
 						case 'quantity':
 							return /^[1-9]/.test(data);

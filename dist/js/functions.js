@@ -144,7 +144,7 @@ jQuery(document).ready(function() {
         jQuery(".menu-bar").addClass("opened");
         jQuery("footer").addClass("opened");
     });
-    jQuery(".bag-icon, .add_button").on("click", function(){
+    jQuery(".bag-icon").on("click", function(){
         jQuery(".content").addClass("opened_right");
         jQuery(".top").addClass("opened_right");
         jQuery("#bar_opened").addClass("opened");
@@ -160,6 +160,34 @@ jQuery(document).ready(function() {
         jQuery(".menu-bar").removeClass("opened");
         jQuery(".bag_bar").removeClass("opened");
         jQuery("footer").removeClass("opened");
+
+    });
+
+    jQuery(" .add_button").on("click", function(e){
+        e.preventDefault();
+        var filter_data, $el;
+        $el = $( ".add_bag" );
+        filter_data = $el.serialize();
+        // console.log(filter_data.length);
+        if(filter_data.length !== 0) {
+            jQuery(".content").addClass("opened_right");
+            jQuery(".top").addClass("opened_right");
+            jQuery("#bar_opened").addClass("opened");
+            jQuery(".bag_bar").addClass("opened");
+            jQuery("footer").addClass("opened");
+            console.log(filter_data);
+
+
+
+        } /*else{
+            console.log('Error!');
+
+            $('.add_bag').on('ajaxBeforeSend', function(e) {
+                console.log('Error!');
+                e.preventDefault();
+            })
+        }*/
+
 
     });
  //end bar
