@@ -112,7 +112,7 @@ jQuery(document).ready(function() {
                 .on("click", function(){
                     jQuery(".content, .top").addClass("opened_right");
                     jQuery("#bar_opened, .bag_bar, footer").addClass("opened");
-                    jQuery(".checkout").removeClass("disabled");
+                    jQuery(".checkout").removeClass("disabled").attr('href', "/checkout");
                 });
         }
 
@@ -138,7 +138,8 @@ jQuery(document).ready(function() {
                 jQuery(".delivery_price").text($delivery);
                 var $price = parseFloat($dataprice) + parseFloat($datadelivery);
                 $price = '$ ' + $price.toString();
-                jQuery(".grand_price").text($price);
+
+                jQuery(".grand_price").text(number_format($price, 0, '', ' '));
             }
 
         }
@@ -148,27 +149,60 @@ jQuery(document).ready(function() {
     });
 
 
+    function number_format( number, decimals, dec_point, thousands_sep ) {
+
+        var i, kw, kd;
+
+        if( isNaN(decimals = Math.abs(decimals)) ){
+            decimals = 2;
+        }
+        if( dec_point == undefined ){
+            dec_point = ",";
+        }
+        if( thousands_sep == undefined ){
+            thousands_sep = ".";
+        }
+
+        i = parseInt(number = (+number || 0).toFixed(decimals)) + "";
+
+        kw = i.split( /(?=(?:\d{3})+$)/ ).join( thousands_sep );
+
+        kd = (decimals ? dec_point + Math.abs(number - i).toFixed(decimals).replace(/-/, 0).slice(2) : "");
+
+
+        return kw + kd;
+    }
+
+
+
+
     if(jQuery(".bag_bar .bag_null").length != 0) {
-        jQuery(".checkout").addClass("disabled");
+        jQuery(".checkout").addClass("disabled").attr('href', "javascript:void(0)");
+
     } else{
-        jQuery(".checkout").removeClass("disabled");
+        jQuery(".checkout").removeClass("disabled").attr('href', "/checkout");
+
     }
 
     jQuery(".bag_bar").on("click", ".delete", function() {
         if(jQuery(".bag_bar .item_product").length != 1) {
-            jQuery(".checkout").removeClass("disabled");
-            if (jQuery(".page_wrapper").hasClass(".checkout")){
+            jQuery(".checkout").removeClass("disabled").attr('href', "/checkout");
+            var hrefcheckout = location.href.replace(/http:\/\/[a-zA-Z.]+\//, '');
+            //console.log(test);
+            console.log(test.match("checkout"));
+            if (hrefcheckout.match("checkout").length){
                 //$(location).attr('href', '/');
+                //$('a').attr('href', "/");
                 location.href = '/';
             }
         } else{
-            jQuery(".checkout").addClass("disabled");
+            jQuery(".checkout").addClass("disabled").attr('href', "javascript:void(0)");
         }
     });
 
-    jQuery(".bag_bar").on("click", ".checkout", function(e) {
-        if ($(this).hasClass('disabled')) e.preventDefault();
-    });
+    // jQuery(".bag_bar").on("click", ".checkout", function(e) {
+    //     if ($(this).hasClass('disabled')) e.preventDefault();
+    // });
 
     //end bar
 
