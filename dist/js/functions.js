@@ -18,17 +18,9 @@ jQuery(document).ready(function() {
             },
             address:{
                 required: true
-
             }
-
-
         }
-
     });
-
-
-
-
 
 
 
@@ -56,74 +48,36 @@ jQuery(document).ready(function() {
 
         });
 
-        $('.img_product').on('wheel', function (e) {
-
+        $('.img_product, .collections .gallery').on('wheel', function (e) {
             e.preventDefault();
-
             var delta = e.originalEvent.deltaY || e.originalEvent.detail || e.originalEvent.wheelDelta;
-
-
             if (delta > 0) {
-
                 productSlederBx.goToNextSlide();
-
             } else {
-
                 productSlederBx.goToPrevSlide();
-
             }
-
         });
 
-        var gallerySlederBx = jQuery('.gallery').bxSlider({
+
+        jQuery('.gallery').bxSlider({
             nextText: "",
             prevText: "",
             controls: false,
             mode: 'vertical',
             pagerCustom: '.gallery-icons'
-
-
         });
 
-        $('.collections .gallery').on('wheel', function (e) {
 
-            e.preventDefault();
-
-            var delta = e.originalEvent.deltaY || e.originalEvent.detail || e.originalEvent.wheelDelta;
-
-
-            if (delta > 0) {
-
-                gallerySlederBx.goToNextSlide();
-
-            } else {
-
-                gallerySlederBx.goToPrevSlide();
-
-            }
-
-        });
 
         $(".menu-bar .nav-menu-wrapper, .text_block, .collections_block .collections, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
             theme:"dark"
 
         });
 
-        /*jQuery(".collections .item.active").each( function(){
-         var collections_active = jQuery(this).find("span").attr("data-color");
-         //console.log(collections_active);
-         jQuery(".collections .active_collections").css("background", collections_active);
-         });*/
-
-
-
-
 
 
         jQuery('#preloader').fadeOut('slow',function(){
             if (location.hash) {
-                //console.log(location.hash)
-                //    TODO
                 jQuery('html, body').animate({ scrollTop:  jQuery(location.hash).offset().top - 52 }, 1000);
             }
             jQuery(this).remove();
@@ -134,29 +88,17 @@ jQuery(document).ready(function() {
 
 ///bar
     jQuery(".menu-icon").on("click", function(){
-        jQuery(".content").addClass("opened");
-        jQuery(".top").addClass("opened");
-        jQuery("#bar_opened").addClass("opened");
-        jQuery(".menu-bar").addClass("opened");
-        jQuery("footer").addClass("opened");
+        jQuery(".content, .top, #bar_opened, .menu-bar, footer").addClass("opened");
+
     });
     jQuery(".bag-icon").on("click", function(){
-        jQuery(".content").addClass("opened_right");
-        jQuery(".top").addClass("opened_right");
-        jQuery("#bar_opened").addClass("opened");
-        jQuery(".bag_bar").addClass("opened");
-        jQuery("footer").addClass("opened");
+        jQuery(".content, .top").addClass("opened_right");
+        jQuery("#bar_opened, .bag_bar, footer").addClass("opened");
     });
     jQuery("#bar_opened").click(function(){
-        jQuery(".content").removeClass("opened");
-        jQuery(".top").removeClass("opened");
-        jQuery(".content").removeClass("opened_right");
-        jQuery(".top").removeClass("opened_right");
-        jQuery("#bar_opened").removeClass("opened");
-        jQuery(".menu-bar").removeClass("opened");
-        jQuery(".bag_bar").removeClass("opened");
-        jQuery("footer").removeClass("opened");
-
+        jQuery(".content, .top, #bar_opened, .menu-bar, .bag_bar, footer").removeClass("opened");
+        jQuery(".content, .top").removeClass("opened_right");
+        
     });
 
     jQuery(".add_bag").change(function(){
@@ -173,22 +115,45 @@ jQuery(document).ready(function() {
                     jQuery(".checkout").removeClass("disabled");
                 });
         }
+        
+    });
+
+    jQuery("#checkout select").change(function(){
+        /*var filter_data, $el;
+        $el = $( this );
+        filter_data = $el.serialize();*/
+        var $datacountry = jQuery(".country option:checked").attr('data-country');
+        var $datadelivery = jQuery(".delivery option:checked").attr('data-price');
+        var $dataprice = jQuery(".subtotal_product_price").attr('data-product-price');
+        console.log($datadelivery);
+        if($datacountry === 'ukraine'){
+            jQuery(".delivery_price").text('$ 0');
+            var $price = '$ '+ $dataprice;
+            jQuery(".grand_price").text($price);
+        } else{
+
+
+            if(!(typeof($datadelivery) === "undefined")){
+                var $delivery = '$ '+ $datadelivery;
+                jQuery(".delivery_price").text($delivery);
+                var $price = parseFloat($dataprice) + parseFloat($datadelivery);
+                jQuery(".grand_price").text($price);
+            }
+
+        }
+
 
 
     });
+    
 
     if(jQuery(".bag_bar .bag_null").length != 0) {
-
         jQuery(".checkout").addClass("disabled");
-
     } else{
         jQuery(".checkout").removeClass("disabled");
-
-
     }
+    
     jQuery(".bag_bar").on("click", ".delete", function() {
-        //e.preventDefault();
-        //console.log(jQuery(".bag_bar").find('.item_product').length);
         if(jQuery(".bag_bar .item_product").length != 1) {
             jQuery(".checkout").removeClass("disabled");
             if (jQuery(".page_wrapper").hasClass(".checkout")){
@@ -198,28 +163,19 @@ jQuery(document).ready(function() {
             jQuery(".checkout").addClass("disabled");
         }
     });
+    
     jQuery(".bag_bar").on("click", ".checkout", function(e) {
         if ($(this).hasClass('disabled')) e.preventDefault();
     });
 
-
-
-
-
-
-
-
     //end bar
 
 
-    jQuery(".filter .title").on("click", function(){
+    jQuery(".filter .title, .active_collections").on("click", function(){
         jQuery(this).next().slideToggle();
 
     });
-    jQuery(".active_collections").on("click", function(){
-        jQuery(this).next().slideToggle();
-
-    });
+   
     jQuery(".filter .close").on("click", function(){
         jQuery(this).closest(".block_filter").slideUp();
 

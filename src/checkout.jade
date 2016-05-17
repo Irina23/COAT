@@ -14,63 +14,42 @@ html(lang="ru")
                         .row-form2.cf
                             div
                                 input(type="text", placeholder="FIRST NAME", name="namef", minlength="2", data-validate="name")
-
                             div
                                 input(type="text", placeholder="LAST NAME", name="namel", minlength="2", data-validate="name")
-
                         .row-form2.cf
-
                             div
                                 input(type="text", placeholder="email",name="email", data-validate="email")
-
                             div
                                 input(type="text", placeholder="PHONE", name="phone", data-validate="phone" )
-
                         .row-form1.cf
-
-
                             div
                                 input(type="text", placeholder="ADDRESS",name="address", data-validate="empty" )
-
-
-
                         .row-form1.cf
-
                             div
                                 input(type="text", placeholder="city",name="city", data-validate="name" )
                         .row-form2.cf
-
                             div
-                                //input(type="text", placeholder="country",name="country", data-validate="name")
-                                select(data-validate="select")
+                                select.country(data-validate="select" name="country" data-group="country")
                                     option(selected value="0" disabled) country
-                                    option(value="ukraine") Ukraine
-                                    option(value="russia") Russia
-
-
-
+                                    option(value="ukraine" data-country="ukraine") Ukraine
+                                    option(value="russia" data-country="russia") Russia
                             div
                                 input(type="text", placeholder="POSTAL CODE", name="code", data-validate="quantity" )
-
                         .row-form2.cf
-
                             div
                                 h3 DELIVERY
                                     a(href="#info_delivery" class="open_modal info_icon")
-                                //input(type="text", placeholder="delivery",name="delivery", data-validate="name")
-                                select(data-validate="select")
+                                select.delivery(data-validate="select" name="delivery" data-group="delivery")
                                     option(selected value="0" disabled) delivery
-                                    option(value="dhl") DHL
-                                    option(value="nova_poshta") nova poshta
-
-
+                                    option(value="dhl" data-price="50") DHL
+                                    option(value="nova_poshta" data-price="30") nova poshta
                             div
                                 h3 PAYMENT
                                     a(href="#info_payment" class="open_modal info_icon")
-                                input(type="text", placeholder="VISA/MASTERCARD", name="payment", data-validate="quantity" )
+                                select.payment(data-validate="select" name="payment" data-group="payment")
+                                    option(selected value="0" disabled) payment
+                                    option(value="LiqPay") LiqPay
                         .row-form1.cart.cf
-
-
                                 h3 YOUR ORDER
                                 .list_cart
                                     .title.cf
@@ -87,7 +66,7 @@ html(lang="ru")
 
                                         .size S
                                         .qty 1
-                                        .price $ 450.00
+                                        .price $ 450
                                     .item.cf
                                         .product
                                             a(href="#")
@@ -97,25 +76,24 @@ html(lang="ru")
 
                                         .size S
                                         .qty 1
-                                        .price $ 450.00
+                                        .price $ 450
 
                                 .subtotal_price
                                     div
                                         .name SUBTOTAL
-                                        .price $ 450.00
+                                        .price.subtotal_product_price(data-product-price="450") $ 450
+
                                     div
                                         .name SHIPPING
-                                        .price $ 50.00
+                                        .price.delivery_price $ 50
                                     div.grand
                                         .name GRAND TOTAL
-                                        .price $ 500.00
+                                        .price.grand_price $ 500
 
 
                         .btn.submit
                             span CONTINUE PAYMENT
                             span.hover CONTINUE PAYMENT
-
-
             #info_delivery.modal_div
                 .modal_close
                     .label Close
@@ -142,7 +120,6 @@ html(lang="ru")
                     p After successful payment and transfer of money to the seller, the Client receives an e-mail confirmation letter with the details of the terms and conditions of delivery of an order.
                     p * If you pay by credit card, a refund is made only to the same card with which the payment was made.
                     p For any questions on the payment, please contact buy@thecoat.me
-
 
 
 include ./footer.jade
