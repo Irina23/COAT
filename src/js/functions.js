@@ -126,7 +126,7 @@ jQuery(document).ready(function() {
         var $datadelivery = jQuery(".delivery option:checked").attr('data-price');
         var $dataprice = jQuery(".subtotal_product_price").attr('data-product-price');
         console.log($datadelivery);
-        if($datacountry === 'ukraine'){
+        if($datacountry === 'true'){
             jQuery(".delivery_price").text('$ 0');
             var $price = '$ '+ $dataprice;
             jQuery(".grand_price").text($price);
