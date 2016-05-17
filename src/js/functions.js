@@ -98,7 +98,7 @@ jQuery(document).ready(function() {
     jQuery("#bar_opened").click(function(){
         jQuery(".content, .top, #bar_opened, .menu-bar, .bag_bar, footer").removeClass("opened");
         jQuery(".content, .top").removeClass("opened_right");
-        
+
     });
 
     jQuery(".add_bag").change(function(){
@@ -115,18 +115,18 @@ jQuery(document).ready(function() {
                     jQuery(".checkout").removeClass("disabled");
                 });
         }
-        
+
     });
 
     jQuery("#checkout select").change(function(){
         /*var filter_data, $el;
-        $el = $( this );
-        filter_data = $el.serialize();*/
+         $el = $( this );
+         filter_data = $el.serialize();*/
         var $datacountry = jQuery(".country option:checked").attr('data-country');
         var $datadelivery = jQuery(".delivery option:checked").attr('data-price');
         var $dataprice = jQuery(".subtotal_product_price").attr('data-product-price');
         console.log($datadelivery);
-        if($datacountry === 'true'){
+        if($datacountry === '1'){
             jQuery(".delivery_price").text('$ 0');
             var $price = '$ '+ $dataprice;
             jQuery(".grand_price").text($price);
@@ -137,6 +137,7 @@ jQuery(document).ready(function() {
                 var $delivery = '$ '+ $datadelivery;
                 jQuery(".delivery_price").text($delivery);
                 var $price = parseFloat($dataprice) + parseFloat($datadelivery);
+                $price = '$ ' + $price.toString();
                 jQuery(".grand_price").text($price);
             }
 
@@ -145,25 +146,26 @@ jQuery(document).ready(function() {
 
 
     });
-    
+
 
     if(jQuery(".bag_bar .bag_null").length != 0) {
         jQuery(".checkout").addClass("disabled");
     } else{
         jQuery(".checkout").removeClass("disabled");
     }
-    
+
     jQuery(".bag_bar").on("click", ".delete", function() {
         if(jQuery(".bag_bar .item_product").length != 1) {
             jQuery(".checkout").removeClass("disabled");
             if (jQuery(".page_wrapper").hasClass(".checkout")){
-                $(location).attr('href', '/');
+                //$(location).attr('href', '/');
+                location.href = '/';
             }
         } else{
             jQuery(".checkout").addClass("disabled");
         }
     });
-    
+
     jQuery(".bag_bar").on("click", ".checkout", function(e) {
         if ($(this).hasClass('disabled')) e.preventDefault();
     });
@@ -175,7 +177,7 @@ jQuery(document).ready(function() {
         jQuery(this).next().slideToggle();
 
     });
-   
+
     jQuery(".filter .close").on("click", function(){
         jQuery(this).closest(".block_filter").slideUp();
 
