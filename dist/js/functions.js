@@ -35,7 +35,6 @@ jQuery(document).ready(function() {
             auto: true,
             controls: false,
             pause: 10000
-            //speed: 1000
 
 
         });
@@ -47,7 +46,6 @@ jQuery(document).ready(function() {
             controls: false,
             mode: 'vertical',
             pause: 10000
-            //speed: 10000
 
 
         });
@@ -133,7 +131,7 @@ jQuery(document).ready(function() {
 
     });
 
-    //checkout form change
+    //jQuery(".delivery_select >div.default").siblings().addClass('hidden');
     jQuery("#checkout").change(function(e){
         /*var checkout_data, $el;
          $el = $(this);
