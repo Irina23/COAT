@@ -33,7 +33,9 @@ jQuery(document).ready(function() {
             nextText: "",
             prevText: "",
             auto: true,
-            controls: false
+            controls: false,
+            pause: 10000
+            //speed: 1000
 
 
         });
@@ -43,7 +45,9 @@ jQuery(document).ready(function() {
             prevText: "",
             auto: true,
             controls: false,
-            mode: 'vertical'
+            mode: 'vertical',
+            pause: 10000
+            //speed: 10000
 
 
         });
@@ -62,7 +66,8 @@ jQuery(document).ready(function() {
             prevText: "",
             controls: false,
             mode: 'vertical',
-            pagerCustom: '.gallery-icons'
+            pagerCustom: '.gallery-icons',
+            pause: 10000
         });
         $(' .collections .gallery').on('wheel', function (e) {
             e.preventDefault();
