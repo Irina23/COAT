@@ -35,6 +35,7 @@ jQuery(document).ready(function() {
             auto: true,
             controls: false
 
+
         });
 
         var productSlederBx = jQuery('.img_product').bxSlider({
@@ -47,7 +48,7 @@ jQuery(document).ready(function() {
 
         });
 
-        $('.img_product, .collections .gallery').on('wheel', function (e) {
+        $('.img_product').on('wheel', function (e) {
             e.preventDefault();
             var delta = e.originalEvent.deltaY || e.originalEvent.detail || e.originalEvent.wheelDelta;
             if (delta > 0) {
@@ -56,15 +57,28 @@ jQuery(document).ready(function() {
                 productSlederBx.goToPrevSlide();
             }
         });
-
-
-        jQuery('.gallery').bxSlider({
+        var gallerySlederBx = jQuery('.gallery').bxSlider({
             nextText: "",
             prevText: "",
             controls: false,
             mode: 'vertical',
             pagerCustom: '.gallery-icons'
         });
+        $(' .collections .gallery').on('wheel', function (e) {
+            e.preventDefault();
+            var delta = e.originalEvent.deltaY || e.originalEvent.detail || e.originalEvent.wheelDelta;
+            if (delta > 0) {
+                gallerySlederBx.goToNextSlide();
+            } else {
+                gallerySlederBx.goToPrevSlide();
+            }
+        });
+
+
+
+
+
+
 
 
 
@@ -114,31 +128,64 @@ jQuery(document).ready(function() {
 
     });
 
-    jQuery("#checkout").change(function(){
+    //checkout form change
+    jQuery("#checkout").change(function(e){
         /*var checkout_data, $el;
          $el = $(this);
          checkout_data = $el.serialize();
          console.log(checkout_data);*/
         var $datacountry = jQuery(".country option:checked").attr('data-country');
-        var $datadelivery = jQuery(".delivery option:checked").attr('data-price');
         var $dataprice = jQuery(".subtotal_product_price").attr('data-product-price');
-        console.log($datadelivery);
-        if($datacountry !== '0'){
-            jQuery(".delivery_price").text('$ 0');
-            var $price = '$ '+ number_format($dataprice, 0, '', ' ');
-            jQuery(".grand_price").text($price);
-        } else{
 
-            if(!(typeof($datadelivery) === "undefined")){
-                var $delivery = '$ '+ $datadelivery;
-                jQuery(".delivery_price").text($delivery);
-                var $price = parseFloat($dataprice) + parseFloat($datadelivery);
-                $price = number_format($price, 0, '', ' ');
-                $price = '$ ' + $price.toString();
-                jQuery(".grand_price").text($price);
-            }
+        if($datacountry !== '0'){
+            jQuery(".delivery_select>div").each( function () {
+
+                if(jQuery(this).attr('data-country')===$datacountry){
+                    jQuery(this).removeClass('hidden');
+                    //jQuery(".delivery_select ").show();
+
+                }else{
+                    jQuery(this).addClass('hidden');
+                    //console.log($datacountry);
+
+
+                }
+            });
+
+            jQuery(".delivery_select select").each( function () {
+
+                if(jQuery(this).attr('data-country')===$datacountry){
+                    jQuery(this).attr("name", "delivery");
+                    jQuery(this).attr("data-validate", "select");
+                    //jQuery(".delivery_select ").show();
+
+
+                }else{
+                    //jQuery(this).hide();
+                    //console.log($datacountry);
+                    jQuery(this).attr("name", "");
+                    jQuery(this).attr("data-validate", "");
+
+                }
+            });
+            jQuery(".delivery_select select").each(function(){
+                if(jQuery(this).attr('data-country')===$datacountry) {
+                    var $datadelivery = jQuery(this).find("option:checked").attr('data-price');
+                    console.log(this);
+
+                    if (!(typeof($datadelivery) === "undefined")) {
+                        var $delivery = '$ ' + $datadelivery;
+                        jQuery(".delivery_price").text($delivery);
+                        var $price = parseFloat($dataprice) + parseFloat($datadelivery);
+                        $price = number_format($price, 0, '', ' ');
+                        $price = '$ ' + $price.toString();
+                        jQuery(".grand_price").text($price);
+                    }
+                }
+            });
 
         }
+
 
 
 
