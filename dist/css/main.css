@@ -1744,7 +1744,7 @@ footer {
         .checkout #checkout .cart .list_cart .title > div:first-child, .checkout #checkout .cart .list_cart .item > div:first-child {
           width: 400px; }
         .checkout #checkout .cart .list_cart .title > div:last-child, .checkout #checkout .cart .list_cart .item > div:last-child {
-          width: 109px;
+          width: 105px;
           text-align: right;
           white-space: nowrap; }
     .checkout #checkout .cart .list_cart .item {
@@ -1996,8 +1996,10 @@ footer {
   .checkout #checkout .cart .list_cart .item > div:last-child {
     width: 18%; }
   .checkout #checkout .cart .list_cart .item .product .name {
-    margin-left: 15px;
-    width: 50%; }
+    margin-left: 1%;
+    width: 49%; }
+  .checkout #checkout .cart .list_cart .item .product .img-holder {
+    width: 48%; }
   .checkout #checkout .submit,
   .checkout #checkout .cart .subtotal_price {
     width: 300px; }
@@ -2171,4 +2173,6 @@ footer {
   .checkout #checkout .cart .list_cart .title > div:first-child, .checkout #checkout .cart .list_cart .item > div:first-child {
     width: 45%; }
   .checkout #checkout .cart .list_cart .title > div:last-child, .checkout #checkout .cart .list_cart .item > div:last-child {
-    width: 21%; } }
+    width: 20%; }
+  .checkout #checkout .cart .list_cart .item .product .name {
+    font-size: 10px; } }
