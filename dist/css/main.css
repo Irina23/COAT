@@ -1632,8 +1632,8 @@ footer {
         margin-right: 50px; }
       .checkout #checkout [class^="row-form"] > div.error input[type="text"] {
         border-color: red; }
-      .checkout #checkout [class^="row-form"] > div.error .selectbox .select {
-        border-color: red; }
+    .checkout #checkout [class^="row-form"] div.error > .selectbox .select {
+      border-color: red; }
     .checkout #checkout [class^="row-form"] input[type="text"] {
       width: 100%;
       background: none;
