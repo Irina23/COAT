@@ -93,7 +93,8 @@ jQuery(document).ready(function() {
         });
 
         $(".menu-bar .nav-menu-wrapper, .text_block, .collections_block .collections, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
-            theme:"dark"
+            theme:"dark",
+            mouseWheelPixels: 150
 
         });
 
