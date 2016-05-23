@@ -65,7 +65,8 @@ jQuery(document).ready(function() {
             controls: false,
             mode: 'vertical',
             pagerCustom: '.gallery-icons',
-            pause: 10000
+            pause: 10000,
+            speed: 2000
         });
         $(' .collections .gallery').on('wheel', function (e) {
             e.preventDefault();
@@ -92,11 +93,11 @@ jQuery(document).ready(function() {
             jQuery(this).remove();
         });
 
-        $(".menu-bar .nav-menu-wrapper, .text_block, .collections_block .collections, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
+        /*$(".menu-bar .nav-menu-wrapper, .text_block, .collections_block .collections, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
             theme:"dark",
             mouseWheelPixels: 150
 
-        });
+        });*/
 
     });
 
@@ -105,11 +106,12 @@ jQuery(document).ready(function() {
         jQuery(".content, .top, #bar_opened, .menu-bar, footer").addClass("opened");
 
     });
-    jQuery(".bag-icon").on("click", function(){
+    jQuery(".top .bag-icon").on("click", function(){
         jQuery(".content, .top").addClass("opened_right");
         jQuery("#bar_opened, .bag_bar, footer").addClass("opened");
     });
-    jQuery("#bar_opened").click(function(){
+
+    jQuery("#bar_opened, .bag_bar .bag-icon").click(function(){
         jQuery(".content, .top, #bar_opened, .menu-bar, .bag_bar, footer").removeClass("opened");
         jQuery(".content, .top").removeClass("opened_right");
 

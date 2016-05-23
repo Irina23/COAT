@@ -209,7 +209,6 @@ body {
   transition: left .6s ease;
   left: 0;
   width: 100%;
-  height: 100vh;
   padding-top: 52px; }
   .content.opened {
     left: 280px;
@@ -284,7 +283,8 @@ body {
       font-size: 1rem;
       font-family: "GothamPro-Bold", sans-serif;
       color: #fff;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      letter-spacing: 1px; }
     .menu-bar .menu .nav li {
       display: block;
       margin-bottom: 30px; }
@@ -304,7 +304,8 @@ body {
         transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
         transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
         -webkit-transform: translateX(0);
-                transform: translateX(0); }
+                transform: translateX(0);
+        letter-spacing: 1px; }
         .menu-bar .menu .nav li a:hover {
           color: #FFF;
           -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -487,7 +488,7 @@ body {
       border-radius: 26px;
       background: #1d1d1f;
       text-align: center;
-      line-height: 26px;
+      line-height: 27px;
       width: 26px;
       height: 26px;
       display: block; }
@@ -561,7 +562,7 @@ body {
           -webkit-transition: all 0.35s;
           transition: all 0.35s; }
   .bag_bar .list_product_bag {
-    height: calc( 100vh - 156px);
+    height: calc( 100vh - 154px);
     overflow: auto;
     clear: both; }
     .bag_bar .list_product_bag .item_product {
@@ -601,11 +602,11 @@ body {
 
 .about .text_block, .contacts .text_block, .stockists .text_block {
   float: left;
-  overflow: auto;
   width: 40%;
   box-sizing: border-box;
-  padding: 50px 70px;
   height: calc( 100vh - 52px); }
+  .about .text_block .overflow-block, .contacts .text_block .overflow-block, .stockists .text_block .overflow-block {
+    padding: 50px 70px; }
   .about .text_block h3, .contacts .text_block h3, .stockists .text_block h3 {
     text-transform: uppercase;
     margin-bottom: 40px;
@@ -656,7 +657,7 @@ body {
 
 .collections .collections_block {
   box-sizing: border-box;
-  width: 30%;
+  width: calc(( 100vw - 385px )/2);
   float: left;
   overflow: auto;
   position: relative;
@@ -670,11 +671,13 @@ body {
     line-height: 1em;
     font-family: "GothamPro-Bold", sans-serif;
     cursor: pointer; }
-  .collections .collections_block .item.active a span.color_bg {
-    background: #ebeef0;
-    opacity: 1;
-    -webkit-transition: opacity 0.35s;
-    transition: opacity 0.35s; }
+  .collections .collections_block .item.active a span {
+    color: #1d1d1f; }
+    .collections .collections_block .item.active a span.color_bg {
+      background: #ebeef0;
+      opacity: 1;
+      -webkit-transition: opacity 0.35s;
+      transition: opacity 0.35s; }
   .collections .collections_block .item a {
     display: block;
     text-transform: uppercase;
@@ -688,7 +691,10 @@ body {
       z-index: 1;
       position: relative;
       display: block;
-      padding: 40px 30px 40px 70px; }
+      padding: 40px 30px 40px 70px;
+      color: #bcbcbc;
+      -webkit-transform: all 0.35s;
+              transform: all 0.35s; }
       .collections .collections_block .item a span.color_bg {
         opacity: 0;
         width: 100%;
@@ -700,14 +706,18 @@ body {
         transition: opacity 0.35s; }
     .collections .collections_block .item a:hover {
       text-decoration: none; }
-      .collections .collections_block .item a:hover span.color_bg {
-        background: #ebeef0;
-        opacity: 1;
-        -webkit-transition: opacity 0.35s;
-        transition: opacity 0.35s; }
+      .collections .collections_block .item a:hover span {
+        color: #1d1d1f;
+        -webkit-transform: all 0.35s;
+                transform: all 0.35s; }
+        .collections .collections_block .item a:hover span.color_bg {
+          background: #ebeef0;
+          opacity: 1;
+          -webkit-transition: opacity 0.35s;
+          transition: opacity 0.35s; }
 
 .collections .block_text_collections {
-  width: 70%;
+  width: calc(( 100vw - 385px )/2 + 370px);
   float: right;
   padding-left: 25px;
   padding-top: 50px;
@@ -869,10 +879,10 @@ body {
 .article .content .text_block {
   float: left;
   width: 40%;
-  padding: 50px 70px;
-  overflow: auto;
   box-sizing: border-box;
   height: calc( 100vh - 53px); }
+  .article .content .text_block .overflow-block {
+    padding: 50px 70px; }
   .article .content .text_block h1, .article .content .text_block h3 {
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -1016,7 +1026,8 @@ footer {
   text-align: center;
   color: #fff;
   line-height: 1em;
-  font-size: 1rem; }
+  font-size: 1rem;
+  position: relative; }
   footer.opened {
     display: none; }
   footer p {
