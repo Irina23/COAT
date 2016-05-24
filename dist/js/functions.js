@@ -1,3 +1,4 @@
+
 jQuery(document).ready(function() {
 
     //form validate
@@ -65,8 +66,7 @@ jQuery(document).ready(function() {
             controls: false,
             mode: 'vertical',
             pagerCustom: '.gallery-icons',
-            pause: 10000,
-            speed: 2000
+            pause: 10000
         });
         $(' .collections .gallery').on('wheel', function (e) {
             e.preventDefault();
@@ -98,6 +98,11 @@ jQuery(document).ready(function() {
             mouseWheelPixels: 150
 
         });*/
+        $(".menu-bar .nav-menu-wrapper, .list_filters, .list_product_bag, .attribute_holder, .modal_div .content-holder").mCustomScrollbar({
+            theme:"dark",
+            mouseWheelPixels: 150
+
+        });
 
     });
 
@@ -110,7 +115,6 @@ jQuery(document).ready(function() {
         jQuery(".content, .top").addClass("opened_right");
         jQuery("#bar_opened, .bag_bar, footer").addClass("opened");
     });
-
     jQuery("#bar_opened, .bag_bar .bag-icon").click(function(){
         jQuery(".content, .top, #bar_opened, .menu-bar, .bag_bar, footer").removeClass("opened");
         jQuery(".content, .top").removeClass("opened_right");
@@ -442,4 +446,12 @@ jQuery(document).ready(function($){
         }
     });
 
+
+
+    $('.article .content > .close').click(function () {
+        location.href = '/articles';
+    });
+    $('.product .content > .close').click(function () {
+        location.href = '/products';
+    });
 });

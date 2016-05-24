@@ -965,6 +965,15 @@ body
 .article
   .content
     //border-top: 1px solid #dedfe0
+    position: relative
+    .close
+      position: absolute
+      top: 60px
+      right: 10px
+      width: 30px
+      height: 30px
+      background: url("../img/icons/close.svg") no-repeat
+      cursor: pointer
     .text_block
       float: left
       width: 40%
@@ -1429,6 +1438,14 @@ footer
     box-sizing: border-box
     //width: 1060px
     margin: auto
+    .close
+      position: absolute
+      top: 60px
+      right: 10px
+      width: 30px
+      height: 30px
+      background: url("../img/icons/close.svg") no-repeat
+      cursor: pointer
     .img-holder
       //background: #e6e6e6
       //width: 560px
@@ -1551,7 +1568,7 @@ footer
       font-family: "GothamPro-Bold", sans-serif
       color: #000
       font-size: 0.7142857142857143rem
-      line-height: 14px
+      line-height: 18px
       position: absolute
       top: 3px
       left: 0
@@ -1666,6 +1683,7 @@ footer
       background: #1d1d1f
       padding: 150px 0 0 160px
       box-sizing: border-box
+      overflow: auto
       .attribute
         margin-bottom: 25px
         input[type="radio"]
