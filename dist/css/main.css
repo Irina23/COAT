@@ -2026,6 +2026,10 @@ footer {
   body {
     min-width: 320px;
     max-width: 959px; }
+  .bag_bar, .menu-bar {
+    display: none; }
+    .bag_bar.opened, .menu-bar.opened {
+      display: block; }
   .list_product_page .content {
     padding: 103px 28px 60px; }
   .list_product_page .list_products .item_product {
