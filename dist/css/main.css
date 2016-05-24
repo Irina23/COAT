@@ -208,7 +208,7 @@ body {
   -webkit-transition: left .6s ease;
   transition: left .6s ease;
   left: 0;
-  width: 100%;
+  width: 100vw;
   padding-top: 52px; }
   .content.opened {
     left: 280px;
