@@ -105,7 +105,7 @@ body {
 
 .top {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   left: 0;
   -webkit-transition: left .6s ease;
   transition: left .6s ease;
