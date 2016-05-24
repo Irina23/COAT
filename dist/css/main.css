@@ -881,10 +881,10 @@ body {
   .article .content .close {
     position: absolute;
     top: 60px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    background: url("../img/icons/close.svg") no-repeat;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    background: url("../img/icons/close_round.svg") no-repeat;
     cursor: pointer; }
   .article .content .text_block {
     float: left;
@@ -1106,14 +1106,27 @@ footer {
         margin-right: 0; }
 
 .scrollTop {
-  width: 50px;
+  width: 80px;
   height: 50px;
   position: fixed;
   bottom: 0;
   left: 0;
-  background: url("../img/icons/arrow_icon.png") no-repeat center #eaeaec;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg); }
+  background: #eaeaec;
+  color: #000;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 30px; }
+  .scrollTop:before {
+    position: absolute;
+    content: "";
+    background: url("../img/icons/up.svg") no-repeat center;
+    width: 15px;
+    height: 15px;
+    top: 10px;
+    left: 50%;
+    margin-left: -7px; }
+  .scrollTop:hover {
+    text-decoration: none; }
 
 .filter .title {
   background: #eaeaec;
@@ -1294,7 +1307,7 @@ footer {
     transition: all 0.35s;
     position: absolute;
     top: 10px;
-    right: 10px; }
+    right: 28px; }
     .filter .block_filter .close .label {
       text-transform: uppercase;
       font-family: "GothamPro-Bold", sans-serif;
@@ -1327,10 +1340,10 @@ footer {
   .product .content .close {
     position: absolute;
     top: 60px;
-    right: 10px;
+    right: 20px;
     width: 30px;
     height: 30px;
-    background: url("../img/icons/close.svg") no-repeat;
+    background: url("../img/icons/close_round.svg") no-repeat;
     cursor: pointer; }
   .product .content .img-holder {
     margin-left: 140px;
@@ -2001,7 +2014,9 @@ footer {
         .collections .collections_block .active_collections + div .item.active {
           display: none; }
   .product .content .img-holder a img {
-    width: auto; } }
+    width: auto; }
+  .article .content .close {
+    top: 460px; } }
 
 @media screen and (max-width: 959px) {
   body {
@@ -2123,8 +2138,8 @@ footer {
 @media screen and (max-width: 480px) {
   .menu-bar .menu {
     padding: 150px 50px; }
-  .about .text_block, .contacts .text_block,
-  .article .content .text_block {
+  .about .text_block, .contacts .text_block .overflow-block,
+  .article .content .text_block .overflow-block {
     padding: 50px; }
   .stockists .text_block dt {
     padding: 43px 30px 43px 50px; }
@@ -2148,7 +2163,9 @@ footer {
     text-align: center;
     padding-top: 150px; }
   #preloader {
-    background-size: 50%; } }
+    background-size: 50%; }
+  .article .content .close {
+    top: 310px; } }
 
 @media screen and (max-width: 480px) and (max-height: 600px) {
   .menu-bar .menu {
@@ -2192,10 +2209,10 @@ footer {
     background-size: 18px 18px; }
   .top .bag-icon {
     padding: 13px 15px; }
-  .about .text_block, .contacts .text_block,
+  .about .text_block, .contacts .text_block .overflow-block,
   .stockists .text_block dt,
   .stockists .text_block dd,
-  .article .content .text_block {
+  .article .content .text_block .overflow-block {
     padding: 30px; }
   .checkout #checkout .cart .list_cart .item .product .img-holder {
     width: 50%; }
