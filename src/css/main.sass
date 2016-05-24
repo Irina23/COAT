@@ -268,7 +268,7 @@ body
 
 
 .menu-bar
-  //display: none
+  opacity: 0
   width: 280px
   position: absolute
   left: -280px
@@ -283,6 +283,7 @@ body
   &.opened
     left: 0
     transition: all .6s ease
+    opacity: 1
   .nav-menu-wrapper
     position: absolute
     top: 0
@@ -505,7 +506,7 @@ body
 
 
 .bag_bar
-  //display: none
+  opacity: 0
   width: 280px
   position: absolute
   right: -280px
@@ -514,9 +515,12 @@ body
   background: #eaeaec
   top: 0
   z-index: 7
+
   &.opened
     right: 0
     transition: all .6s ease
+    opacity: 1
+
   .bag-icon
     float: right
     padding: 13px 23px 13px 30px
@@ -2208,6 +2212,7 @@ footer
 @media screen and (max-width: 959px)
   body
     min-width: 320px
+    max-width: 959px
 
 
   .list_product_page
