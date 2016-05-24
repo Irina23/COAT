@@ -969,10 +969,10 @@ body
     .close
       position: absolute
       top: 60px
-      right: 10px
-      width: 30px
-      height: 30px
-      background: url("../img/icons/close.svg") no-repeat
+      right: 20px
+      width: 25px
+      height: 25px
+      background: url("../img/icons/close_round.svg") no-repeat
       cursor: pointer
     .text_block
       float: left
@@ -1212,15 +1212,28 @@ footer
 
 
 .scrollTop
-  width: 50px
+  width: 80px
   height: 50px
   position: fixed
   bottom: 0
   left: 0
-  background: url("../img/icons/arrow_icon.png") no-repeat center #eaeaec
-  transform: rotate(-90deg)
-
-
+  background: #eaeaec
+  color: #000
+  text-align: center
+  box-sizing: border-box
+  padding-top: 30px
+  //transform: rotate(-90deg)
+  &:before
+    position: absolute
+    content: ""
+    background: url("../img/icons/up.svg") no-repeat center
+    width: 15px
+    height: 15px
+    top: 10px
+    left: 50%
+    margin-left: -7px
+  &:hover
+    text-decoration: none
 
 .filter
 
@@ -1273,6 +1286,7 @@ footer
     background: #1b1b1f
     color: #bcbcbc
     z-index: 2
+    //padding: 0 40px 0 0
     .list_filters
       padding: 45px 40px 45px 70px
       overflow: auto
@@ -1405,7 +1419,7 @@ footer
       transition: all 0.35s
       position: absolute
       top: 10px
-      right: 10px
+      right: 28px
 
       .label
         text-transform: uppercase
@@ -1441,10 +1455,10 @@ footer
     .close
       position: absolute
       top: 60px
-      right: 10px
+      right: 20px
       width: 30px
       height: 30px
-      background: url("../img/icons/close.svg") no-repeat
+      background: url("../img/icons/close_round.svg") no-repeat
       cursor: pointer
     .img-holder
       //background: #e6e6e6
@@ -2188,6 +2202,8 @@ footer
     width: auto
 
 
+  .article .content .close
+    top: 460px
 
 @media screen and (max-width: 959px)
   body
@@ -2356,8 +2372,8 @@ footer
 @media screen and (max-width: 480px)
   .menu-bar .menu
     padding: 150px 50px
-  .about .text_block, .contacts .text_block,
-  .article .content .text_block
+  .about .text_block, .contacts .text_block .overflow-block,
+  .article .content .text_block .overflow-block
     padding: 50px
 
   .stockists .text_block dt
@@ -2387,7 +2403,8 @@ footer
   #preloader
     background-size: 50%
 
-
+  .article .content .close
+    top: 310px
 
 @media screen and (max-width: 480px) and (max-height: 600px)
   .menu-bar .menu
@@ -2444,10 +2461,10 @@ footer
   .top .bag-icon
     padding: 13px 15px
 
-  .about .text_block, .contacts .text_block,
+  .about .text_block, .contacts .text_block .overflow-block,
   .stockists .text_block dt,
   .stockists .text_block dd,
-  .article .content .text_block
+  .article .content .text_block .overflow-block
     padding: 30px
 
 
