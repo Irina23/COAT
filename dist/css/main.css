@@ -1804,7 +1804,12 @@ footer {
       .checkout #checkout [class^="row-form"] .selectbox .dropdown {
         width: 100%;
         background: #546e7a;
-        box-sizing: border-box; }
+        top: 64px !important;
+        bottom: 0 !important;
+        box-sizing: border-box;
+        height: 200px !important;
+        -webkit-transform: all 0.35s;
+                transform: all 0.35s; }
         .checkout #checkout [class^="row-form"] .selectbox .dropdown li {
           text-transform: uppercase;
           color: #90a4ae;
