@@ -93,16 +93,16 @@ jQuery(document).ready(function() {
             jQuery(this).remove();
         });
 
-        /*$(".menu-bar .nav-menu-wrapper, .text_block, .collections_block .collections, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
-            theme:"dark",
-            mouseWheelPixels: 150
-
-        });*/
-        $(".menu-bar .nav-menu-wrapper, .list_filters, .list_product_bag, .attribute_holder, .modal_div .content-holder").mCustomScrollbar({
+        $(".menu-bar .nav-menu-wrapper, .collections_block .collections, .list_product_bag, .block_filters2, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
             theme:"dark",
             mouseWheelPixels: 150
 
         });
+        /*$(".menu-bar .nav-menu-wrapper, .list_filters, .list_product_bag, .attribute_holder, .modal_div .content-holder").mCustomScrollbar({
+            theme:"dark",
+            mouseWheelPixels: 150
+
+        });*/
 
     });
 
