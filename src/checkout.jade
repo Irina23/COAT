@@ -5,6 +5,7 @@ html(lang="ru")
 
     body
         .page_wrapper.checkout
+            #preloader
             include ./header.jade
             .content
 
@@ -98,28 +99,30 @@ html(lang="ru")
                 .modal_close
                     .label Close
                 .content-holder
-                    h3 DELIVERY RULES
-                    p In Kiev delivery of the order is carried out by the courier of the COAT to the address specified by the Client in time from 1 to 5 working days. Free of charge.
-                    p Within Ukraine a courier of NOVAPOSHTA delivers an order to the specified address in a period from 1 to 5 working days. Delivery cost up to 100 hrn.
-                    p Within SNG a courier of …(firm) delivers an order to the specified address in a period from 2 to 6 working days. Delivery cost up to 50$.
-                    p The delivery of an order in other countries is carried out by DHL courier to the specified address in a period from 3 to 7 days. Delivery cost up to 80 €.
-                    p Delivery cost is specified in accordance with the tariffs of the delivery service that has been chosen by the Client when ordering.
-                    p * Detailed information on delivery is provided to the Client by e-mail in the letter-confirmation of an order. If you have any questions on payment and delivery, please contact the representatives of our company buy@thecoat.me
+                    .block_text
+                        h3 DELIVERY RULES
+                        p In Kiev delivery of the order is carried out by the courier of the COAT to the address specified by the Client in time from 1 to 5 working days. Free of charge.
+                        p Within Ukraine a courier of NOVAPOSHTA delivers an order to the specified address in a period from 1 to 5 working days. Delivery cost up to 100 hrn.
+                        p Within SNG a courier of …(firm) delivers an order to the specified address in a period from 2 to 6 working days. Delivery cost up to 50$.
+                        p The delivery of an order in other countries is carried out by DHL courier to the specified address in a period from 3 to 7 days. Delivery cost up to 80 €.
+                        p Delivery cost is specified in accordance with the tariffs of the delivery service that has been chosen by the Client when ordering.
+                        p * Detailed information on delivery is provided to the Client by e-mail in the letter-confirmation of an order. If you have any questions on payment and delivery, please contact the representatives of our company buy@thecoat.me
 
             #info_payment.modal_div
                 .modal_close
                     .label Close
                 .content-holder
-                    h3 PAYMENT RULES
-                    p The payment of an order is made in several methods:
-                    ul
-                        li Cash on Delivery Nova Poshta. Upon receipt of an order through a delivery service of New Mail the Client pays to a courier of New Mail. This payment method is available within Ukraine.
-                    p Online payment by credit card VISA / MasterCard:
-                    p For the order receipt the Client pays by credit card via the electronic payment system LiqPay when ordering online.
-                    p Electronic payment system LiqPay guarantees a high level of security thanks to technology OTP (One-time Password - OTP) and 3D secure code. All operations are supported by a one-time password, which is sent via SMS. Reliability of LiqPay is proved by certificates GoDaddy Secure Web Site, Verified by Visa and MasterCard SecureCode.
-                    p After successful payment and transfer of money to the seller, the Client receives an e-mail confirmation letter with the details of the terms and conditions of delivery of an order.
-                    p * If you pay by credit card, a refund is made only to the same card with which the payment was made.
-                    p For any questions on the payment, please contact buy@thecoat.me
+                    .block_text
+                        h3 PAYMENT RULES
+                        p The payment of an order is made in several methods:
+                        ul
+                            li Cash on Delivery Nova Poshta. Upon receipt of an order through a delivery service of New Mail the Client pays to a courier of New Mail. This payment method is available within Ukraine.
+                        p Online payment by credit card VISA / MasterCard:
+                        p For the order receipt the Client pays by credit card via the electronic payment system LiqPay when ordering online.
+                        p Electronic payment system LiqPay guarantees a high level of security thanks to technology OTP (One-time Password - OTP) and 3D secure code. All operations are supported by a one-time password, which is sent via SMS. Reliability of LiqPay is proved by certificates GoDaddy Secure Web Site, Verified by Visa and MasterCard SecureCode.
+                        p After successful payment and transfer of money to the seller, the Client receives an e-mail confirmation letter with the details of the terms and conditions of delivery of an order.
+                        p * If you pay by credit card, a refund is made only to the same card with which the payment was made.
+                        p For any questions on the payment, please contact buy@thecoat.me
 
 
 include ./footer.jade

@@ -86,7 +86,7 @@ jQuery(document).ready(function() {
 
 
 
-        jQuery('#preloader').fadeOut('slow',function(){
+        jQuery('#preloader, #preloader_blue, #preloader_pink, #preloader_green').fadeOut('slow',function(){
             if (location.hash) {
                 jQuery('html, body').animate({ scrollTop:  jQuery(location.hash).offset().top - 52 }, 1000);
             }
