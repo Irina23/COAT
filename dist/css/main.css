@@ -239,8 +239,10 @@ body {
     overflow: hidden;
     height: 100vh !important; }
     .content.opened #slder_about, .content.opened #slder_article, .content.opened #slder_contacts, .content.opened #slder_stockists {
-      position: relative;
-      top: inherit; }
+      -webkit-transform: translate(280px, 0);
+              transform: translate(280px, 0);
+      -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
   .content.opened_right {
     left: -280px;
     -webkit-transition: left .6s ease;
@@ -248,8 +250,10 @@ body {
     overflow: hidden;
     height: 100vh !important; }
     .content.opened_right #slder_about, .content.opened_right #slder_article, .content.opened_right #slder_contacts, .content.opened_right #slder_stockists {
-      position: relative;
-      top: inherit; }
+      -webkit-transform: translate(-280px, 0);
+              transform: translate(-280px, 0);
+      -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 #bar_opened {
   width: 100%;
@@ -677,7 +681,11 @@ body {
   float: right;
   position: fixed;
   top: 53px;
-  right: 0; }
+  right: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0); }
   .about #slder_about .bx-controls, .about #slder_contacts .bx-controls, .about #slder_stockists .bx-controls, .contacts #slder_about .bx-controls, .contacts #slder_contacts .bx-controls, .contacts #slder_stockists .bx-controls, .stockists #slder_about .bx-controls, .stockists #slder_contacts .bx-controls, .stockists #slder_stockists .bx-controls {
     display: none; }
   .about #slder_about li, .about #slder_contacts li, .about #slder_stockists li, .contacts #slder_about li, .contacts #slder_contacts li, .contacts #slder_stockists li, .stockists #slder_about li, .stockists #slder_contacts li, .stockists #slder_stockists li {
@@ -917,9 +925,16 @@ body {
 
 .article .content {
   position: relative; }
-  .article .content.opened #slder_article, .article .content.opened_right #slder_article {
-    top: 0;
-    position: relative; }
+  .article .content.opened #slder_article {
+    -webkit-transform: translate(280px, 0);
+            transform: translate(280px, 0);
+    -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  .article .content.opened_right #slder_article {
+    -webkit-transform: translate(-280px, 0);
+            transform: translate(-280px, 0);
+    -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
   .article .content .close {
     position: absolute;
     top: 62px;
@@ -971,7 +986,11 @@ body {
     float: right;
     position: fixed;
     top: 53px;
-    right: 0; }
+    right: 0;
+    -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
     .article .content #slder_article.left {
       float: left;
       left: 0; }
@@ -1992,7 +2011,9 @@ footer {
   .about #slder_about, .article .content #slder_article, .contacts #slder_contacts, .stockists #slder_stockists {
     position: relative;
     top: inherit;
-    right: inherit; }
+    right: inherit;
+    -webkit-transform: translate(0, 0) !important;
+            transform: translate(0, 0) !important; }
   .contacts #slder_contacts,
   .contacts .text_block,
   .about #slder_about, .about #slder_contacts, .about #slder_stockists,
