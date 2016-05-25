@@ -273,22 +273,24 @@ body
 
 
 .menu-bar
-  opacity: 0
+  //opacity: 0
   width: 280px
   position: absolute
-  left: -280px
+  left: 0
   transition: all .6s ease
   height: 100vh
   background: #1d1d1f
   top: 0
   z-index: 17
   overflow: auto
+  transform: translate3d(-280px,0,0)
 
 
   &.opened
-    left: 0
+    //left: 0
     transition: all .6s ease
-    opacity: 1
+    transform: translate3d(0,0,0)
+    //opacity: 1
   .nav-menu-wrapper
     position: absolute
     top: 0
@@ -511,20 +513,22 @@ body
 
 
 .bag_bar
-  opacity: 0
+  //opacity: 0
   width: 280px
   position: absolute
-  right: -280px
+  right: 0
   transition: all .6s ease
   height: 100vh
   background: #eaeaec
   top: 0
   z-index: 17
+  transform: translate3d(280px,0,0)
 
   &.opened
-    right: 0
+    //right: 0
     transition: all .6s ease
-    opacity: 1
+    transform: translate3d(0,0,0)
+    //opacity: 1
 
   .bag-icon
     float: right
@@ -2256,7 +2260,7 @@ footer
   body
     min-width: 320px
     max-width: 959px
-  .bag_bar, .menu-bar
+  //.bag_bar, .menu-bar
     display: none
     &.opened
       display: block
