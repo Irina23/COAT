@@ -775,7 +775,7 @@ body
   .collections_block
 
     box-sizing: border-box
-    width: calc(( 100vw - 50px)/3)
+    width: calc((100vw - 50px)/3)
     float: left
     overflow: auto
     //height: calc( 100% - 53px)
@@ -818,7 +818,7 @@ body
           display: block
           padding: 40px 30px 40px 70px
           color: #bcbcbc
-          transform: all 0.35s
+          transition: all 0.35s
           &.color_bg
             opacity: 0
             width: 100%
@@ -834,7 +834,7 @@ body
           text-decoration: none
           span
             color: #1d1d1f
-            transform: all 0.35s
+            transition: all 0.35s
             &.color_bg
               background: #ebeef0
               opacity: 1
@@ -842,7 +842,7 @@ body
 
   .block_text_collections
     //width: 70%
-    width: calc((( 100vw - 50px )/3)*2 + 50px)
+    width: calc(((100vw - 50px )/3)*2 + 50px)
     float: right
     padding-left: 25px
     padding-top: 50px
@@ -887,7 +887,7 @@ body
         list-style-type: decimal
 
     .block_left
-      width: calc(( 100vw - 50px )/3)
+      width: calc((100vw - 50px)/3)
       padding-right: 25px
       float: left
       height: 100%
@@ -1384,6 +1384,7 @@ footer
           max-height: 100%
           overflow: auto
           padding: 30px 0 30px 70px
+          min-height: 200px
 
 
       [id^="attribut"]
@@ -1764,7 +1765,7 @@ footer
         margin-top: -4px
         right: 30px
         transition: all 250ms cubic-bezier(.55,.085,.68,.53)
-        transform: rotate(0)
+        transform: rotate(0deg)
 
       &:hover
         transition: all 0.35s
@@ -1960,7 +1961,7 @@ footer
             display: inline-block
             vertical-align: middle
             transition: all 0.35s
-            transform: rotate(0)
+            transform: rotate(0deg)
 
 
         .dropdown
@@ -1971,7 +1972,7 @@ footer
           box-sizing: border-box
           //min-height: 64px!important
           //height: 200px!important
-          transform: all 0.35s
+          transition: all 0.35s
           li
             text-transform: uppercase
             color: #90a4ae
@@ -2580,11 +2581,11 @@ footer
     padding: 13px 15px
 
   .about .text_block .overflow-block, .contacts .text_block .overflow-block,
-  .stockists .text_block dt,
-  .stockists .text_block dd,
   .article .content .text_block .overflow-block
+    padding: 40px 30px
+  .stockists .text_block dt,
+  .stockists .text_block dd
     padding: 30px
-
 
 
   .checkout #checkout .cart .list_cart .item .product .img-holder
