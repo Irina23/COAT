@@ -60,7 +60,8 @@ body
   &.no-scroll
     -webkit-overflow-scrolling: touch
     overflow: hidden!important
-
+    .page_wrapper
+      overflow: hidden!important
   p
     color: #545353
     line-height: 1.5em
@@ -287,10 +288,10 @@ body
 
 
 #bar_opened
-  width: 300%
-  height: 300%
+  width: 100%
+  height: 100%
   background: rgba(29, 29, 31, 0.5)
-  position: absolute
+  position: fixed
   left: 0
   top: 0
   right: 0
@@ -321,7 +322,7 @@ body
   left: 0
   transition: all .6s ease
   height: 100%
-  min-height: 100vh
+  //min-height: 100vh
   background: #1d1d1f
   top: 0
   bottom: 0
@@ -342,7 +343,7 @@ body
     right: 0
     left: 0
     width: 100%
-    height: calc( 100vh - 156px)
+    height: calc( 100% - 156px)
 
 
   .mCSB_container
@@ -569,7 +570,7 @@ body
   z-index: 17
   transform: translate3d(280px,0,0)
   bottom: 0
-  min-height: 100vh
+  //min-height: 100vh
 
   &.opened
     //right: 0
@@ -599,6 +600,9 @@ body
     background: #fff
     padding: 18px 30px
     clear: both
+    position: absolute
+    width: 100%
+    bottom: 52px
     span
       text-transform: uppercase
       display: inline-block
@@ -628,6 +632,8 @@ body
     height: 52px
     overflow: hidden
     border: 0
+    position: absolute
+    bottom: 0
     &.disabled
       span
         color: rgba(255, 255, 255, 0.5)
@@ -664,9 +670,12 @@ body
           transition: all 0.35s
 
   .list_product_bag
-    height: calc( 100vh - 154px)
+    //height: calc( 100% - 154px)
     overflow: auto
     clear: both
+    position: absolute
+    top: 52px
+    bottom: 154px
     .item_product
       border-bottom: 1px solid #dedfe0
       padding: 20px 30px
