@@ -285,7 +285,8 @@ body {
     -webkit-transition: all .6s ease;
     transition: all .6s ease;
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
+            transform: translate3d(0, 0, 0);
+    -webkit-overflow-scrolling: touch; }
   .menu-bar .nav-menu-wrapper {
     position: absolute;
     top: 0;
@@ -514,7 +515,8 @@ body {
     -webkit-transition: all .6s ease;
     transition: all .6s ease;
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
+            transform: translate3d(0, 0, 0);
+    -webkit-overflow-scrolling: touch; }
   .bag_bar .bag-icon {
     float: right;
     padding: 13px 23px 13px 30px;
@@ -1258,10 +1260,9 @@ footer {
       height: 100%; }
       .filter .block_filter .list_filters .block_filters .block_filters2 {
         width: 100%;
-        max-height: 100%;
         overflow: auto;
         padding: 30px 0 30px 70px;
-        min-height: 200px; }
+        height: 100%; }
     .filter .block_filter .list_filters [id^="attribut"] {
       display: inline-block;
       vertical-align: top;
