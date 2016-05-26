@@ -231,8 +231,7 @@ body {
   transition: left .6s ease;
   left: 0;
   width: 100%;
-  padding-top: 52px;
-  overflow: scroll; }
+  padding-top: 52px; }
   .content.opened {
     left: 280px;
     -webkit-transition: left .6s ease;
@@ -291,8 +290,7 @@ body {
     transition: all .6s ease;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-    -webkit-overflow-scrolling: touch;
-    overflow: scroll; }
+    -webkit-overflow-scrolling: touch; }
   .menu-bar .nav-menu-wrapper {
     position: absolute;
     top: 0;
@@ -523,8 +521,7 @@ body {
     transition: all .6s ease;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-    -webkit-overflow-scrolling: touch;
-    overflow: scroll; }
+    -webkit-overflow-scrolling: touch; }
   .bag_bar .bag-icon {
     float: right;
     padding: 13px 23px 13px 30px;
