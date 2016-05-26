@@ -267,6 +267,8 @@ body {
   display: none;
   cursor: pointer;
   overflow: scroll; }
+  #bar_opened::-webkit-scrollbar {
+    width: 0 !important; }
   #bar_opened.opened {
     display: block;
     z-index: 16; }
