@@ -266,7 +266,8 @@ body {
   left: 0;
   right: 0;
   display: none;
-  cursor: pointer; }
+  cursor: pointer;
+  overflow: scroll; }
   #bar_opened.opened {
     display: block;
     z-index: 16; }
