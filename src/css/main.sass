@@ -57,7 +57,9 @@ body
   -ms-overflow-style: none
   &::-webkit-scrollbar
     width: 0!important
-
+  &.no-scroll
+    -webkit-overflow-scrolling: touch
+    overflow: hidden!important
 
   p
     color: #545353
@@ -286,11 +288,11 @@ body
 
 #bar_opened
   width: 100%
-  height: 100%
+  height: 100vh
   background: rgba(29, 29, 31, 0.5)
   position: fixed
-  left: -40px
-  top: -16px
+  left: 0
+  top: 0
   visibility: hidden
   cursor: pointer
 

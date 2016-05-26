@@ -109,15 +109,18 @@ jQuery(document).ready(function() {
 ///bar
     jQuery(".menu-icon").on("click", function(){
         jQuery(".content, .top, #bar_opened, .menu-bar, footer").addClass("opened");
+        jQuery("body").addClass("no-scroll");
 
     });
     jQuery(".top .bag-icon").on("click", function(){
         jQuery(".content, .top").addClass("opened_right");
         jQuery("#bar_opened, .bag_bar, footer").addClass("opened");
+        jQuery("body").addClass("no-scroll");
     });
     jQuery("#bar_opened, .bag_bar .bag-icon").click(function(){
         jQuery(".content, .top, #bar_opened, .menu-bar, .bag_bar, footer").removeClass("opened");
         jQuery(".content, .top").removeClass("opened_right");
+        jQuery("body").removeClass("no-scroll");
 
     });
 
