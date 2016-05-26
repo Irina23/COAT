@@ -277,7 +277,8 @@ body {
   left: 0;
   -webkit-transition: all .6s ease;
   transition: all .6s ease;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   background: #1d1d1f;
   top: 0;
   bottom: 0;
@@ -515,7 +516,7 @@ body {
   -webkit-transform: translate3d(280px, 0, 0);
           transform: translate3d(280px, 0, 0);
   bottom: 0;
-  min-height: 200px; }
+  min-height: 200vh; }
   .bag_bar.opened {
     -webkit-transition: all .6s ease;
     transition: all .6s ease;
