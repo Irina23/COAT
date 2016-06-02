@@ -1279,7 +1279,7 @@ footer {
         .filter .block_filter .list_filters .block_filters .block_filters2 {
           width: 100%;
           overflow: auto;
-          padding: 30px 0 30px 70px; }
+          padding: 0 0 0 70px; }
       .filter .block_filter .list_filters [id^="attribut"] {
         display: inline-block;
         vertical-align: top;
@@ -2279,8 +2279,6 @@ footer {
     background-size: 50%; }
   .article .content .close {
     top: 310px; }
-  .filter .block_filter .list_filters .block_filters .block_filters2 {
-    height: 100%; }
   .filter .block_filter button span, .filter .block_filter a span {
     padding: 19px 0;
     text-align: center; } }
@@ -2337,3 +2335,8 @@ footer {
     width: 20%; }
   .checkout #checkout .cart .list_cart .item .product .name {
     font-size: 10px; } }
+
+@media screen and (max-height: 479px) {
+  .filter .block_filter .list_filters .block_filters .block_filters2 {
+    height: 100%;
+    padding: 30px 0 30px 70px; } }
