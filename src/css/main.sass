@@ -934,16 +934,29 @@ body
 
       .gallery-icons
         a
-          float: left
+          //float: left
           width: 67px
-          height: 100px
+          max-height: 100px
           margin: 0 15px 15px 0
           border: 1px solid #dedfe0
           opacity: 0.7
           transition:  all 0.35s
+          //overflow: hidden
+          text-align: center
+          box-sizing: border-box
+          display: inline-block
+          vertical-align: middle
+
+
+
           img
             max-height: 100%
             width: 65px
+            height: auto
+            display: block
+
+
+
           &.active, &:hover
             opacity: 1
             transition:  all 0.35s
@@ -1155,7 +1168,7 @@ body
   .content
     //border-top: 1px solid #dedfe0
     padding: 103px 28px 85px
-    min-height: calc( 100vh - 440px)
+    min-height: calc( 100vh - 446px)
     height: auto
   .list_products
     font-size: 0
@@ -1234,7 +1247,7 @@ body
 
 footer
   background: #90a4ae
-  padding: 105px 0 100px
+  padding: 105px 0 60px
   text-align: center
   color: #fff
   line-height: 1em
@@ -1254,7 +1267,10 @@ footer
     &.name
       text-transform: uppercase
       width: 100%
-
+    &.copyright
+      margin-bottom: 0
+      a
+        display: inline-block
 
 
       //font-size: 1rem
@@ -1265,6 +1281,7 @@ footer
     display: block
   .social
     text-align: center
+    margin-bottom: 30px
     li
       width: 55px
       height: 55px
@@ -1394,6 +1411,7 @@ footer
     background: #1b1b1f
     color: #bcbcbc
     z-index: 2
+    top: 0
     //padding: 0 40px 0 0
     .list_filters
 
@@ -1504,6 +1522,8 @@ footer
       height: 50px
       width: 210px
       overflow: hidden
+      bottom: -53px
+
       &:hover 
         span
           top: -100%
@@ -1511,6 +1531,8 @@ footer
           &.hover
             top: 0
             transition: all 0.35s
+
+
 
       span
         position: absolute
@@ -1527,6 +1549,8 @@ footer
         &.hover
           top: 100%
           transition: all 0.35s
+
+
 
       &:hover
         transition: all 0.35s
@@ -2312,7 +2336,7 @@ footer
     a
       width: 49%
       display: inline-block
-      vertical-align: top
+      vertical-align: middle
       font-size: 0
       margin-bottom: 30px
       box-sizing: border-box
@@ -2399,6 +2423,35 @@ footer
 
   #preloader
     background-size: 30%
+
+
+
+  .content
+    #main_img
+      transition: all 0.6s ease
+    &.opened
+      #main_img
+        position: relative
+        transition: all 0.6s ease
+
+
+  .filter
+    .block_filter
+      top: 53px
+
+      .list_filters
+        height: calc( 100% - 103px)
+        padding: 30px 0
+
+      button, a
+        position: absolute
+        bottom: 0
+      button
+        right: 0
+      a
+        left: 0
+
+
 @media screen and (max-width: 900px)
   .media .content .list_media_items .media_item
     width: 49%
@@ -2632,7 +2685,7 @@ footer
     font-size: 10px
 
 
-@media screen and (max-height: 479px)
+//@media screen and (max-height: 479px)
   .filter .block_filter .list_filters .block_filters .block_filters2
     height: 100%
     padding: 30px 0 30px 70px

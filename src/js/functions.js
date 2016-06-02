@@ -66,8 +66,21 @@ jQuery(document).ready(function() {
             controls: false,
             mode: 'vertical',
             pagerCustom: '.gallery-icons',
-            pause: 10000
+            pause: 10000,
+            speed: 2000
         });
+
+
+
+        var height_collettion = $(".block_text_collections").height();
+        $(".block_text_collections .bx-viewport").css('height', height_collettion);
+        
+        jQuery(window).resize(function() {
+            height_collettion = $(".block_text_collections").height();
+            $(".block_text_collections .bx-viewport").css('height', height_collettion);
+        });
+
+
         $(' .collections .gallery').on('wheel', function (e) {
             e.preventDefault();
             var delta = e.originalEvent.deltaY || e.originalEvent.detail || e.originalEvent.wheelDelta;
