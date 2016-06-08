@@ -26,6 +26,10 @@ jQuery(document).ready(function() {
 
 
     jQuery(window).load(function() {
+        /*$('.lazy').lazyload({
+            effect: "fadeIn"
+        });*/
+        
         jQuery('#checkout select').selectbox();
         //home img
         jQuery("#main_img").addClass("show");
@@ -67,7 +71,15 @@ jQuery(document).ready(function() {
             mode: 'vertical',
             pagerCustom: '.gallery-icons',
             pause: 10000,
-            speed: 2000
+            speed: 2000,
+
+            onSlideBefore: function($slideElement, oldIndex, newIndex){
+                var $lazy = $slideElement.find(".lazy")
+                var $load = $lazy.attr("data-src");
+                $('.lazy img').load(function(){
+                    $lazy.attr("src",$load).removeClass("lazy");
+                });
+            }
         });
 
 
@@ -86,8 +98,10 @@ jQuery(document).ready(function() {
             var delta = e.originalEvent.deltaY || e.originalEvent.detail || e.originalEvent.wheelDelta;
             if (delta > 0) {
                 gallerySlederBx.goToNextSlide();
+                //setTimeout(function() { $(window).trigger("scroll"); }, 100);
             } else {
                 gallerySlederBx.goToPrevSlide();
+                //setTimeout(function() { $(window).trigger("scroll"); }, 100);
             }
         });
 
@@ -106,7 +120,7 @@ jQuery(document).ready(function() {
             jQuery(this).remove();
         });
 
-        $(".menu-bar .nav-menu-wrapper, .collections_block .collections, .list_product_bag, .block_filters2, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
+        $(".menu-bar .nav-menu-wrapper, .list_product_bag, .block_filters2, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
             theme:"dark",
             mouseWheelPixels: 150
 

@@ -45,6 +45,7 @@ body {
   line-height: 1em;
   font-size: 1rem;
   width: initial;
+  -webkit-text-size-adjust: 100%;
   -ms-overflow-style: none; }
   body::-webkit-scrollbar {
     width: 0 !important; }
@@ -573,7 +574,6 @@ body {
     font-size: 0.8571428571428571rem;
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
-    position: relative;
     width: 100%;
     height: 52px;
     overflow: hidden;
@@ -719,6 +719,26 @@ body {
 .contacts #slder_contacts {
   width: 70%; }
 
+.collections .content.opened .block_text_collections .block_left {
+  -webkit-transform: translate(280px, 0);
+          transform: translate(280px, 0);
+  -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.collections .content.opened .block_text_collections.mobile .block_left {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0); }
+
+.collections .content.opened_right .block_text_collections .block_left {
+  -webkit-transform: translate(-280px, 0);
+          transform: translate(-280px, 0);
+  -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.collections .content.opened_right .block_text_collections.mobile .block_left {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0); }
+
 .collections .collections_block {
   box-sizing: border-box;
   width: calc((100vw - 50px)/3);
@@ -746,7 +766,7 @@ body {
     display: block;
     text-transform: uppercase;
     color: #1d1d1f;
-    font-size: 1rem;
+    font-size: 14px;
     line-height: 1em;
     font-family: "GothamPro-Bold", sans-serif;
     position: relative;
@@ -788,6 +808,9 @@ body {
   box-sizing: border-box; }
   .collections .block_text_collections.mobile {
     display: none; }
+    .collections .block_text_collections.mobile .block_left {
+      position: inherit;
+      right: inherit; }
   .collections .block_text_collections h3 {
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -821,19 +844,26 @@ body {
     list-style-type: decimal; }
   .collections .block_text_collections .block_left {
     width: calc((100vw - 50px)/3);
-    padding-right: 25px;
     float: left;
-    height: 100%; }
+    height: 100%;
+    position: fixed;
+    right: calc((100vw - 50px)/3 + 25px);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
     .collections .block_text_collections .block_left .bx-wrapper .bx-viewport {
       min-height: calc(100vh - 102px) !important; }
     .collections .block_text_collections .block_left .gallery a {
       display: block;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      min-width: 100%; }
       .collections .block_text_collections .block_left .gallery a img {
         width: 100%; }
   .collections .block_text_collections .block_right {
     overflow: hidden;
-    padding-right: 40px; }
+    padding-right: 40px;
+    padding-left: calc((100vw - 50px)/3 + 25px); }
     .collections .block_text_collections .block_right .gallery-icons a {
       width: 67px;
       max-height: 100px;
