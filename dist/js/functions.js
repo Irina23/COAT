@@ -71,15 +71,7 @@ jQuery(document).ready(function() {
             mode: 'vertical',
             pagerCustom: '.gallery-icons',
             pause: 10000,
-            speed: 2000,
-
-            onSlideBefore: function($slideElement, oldIndex, newIndex){
-                var $lazy = $slideElement.find(".lazy")
-                var $load = $lazy.attr("data-src");
-                $('.lazy img').load(function(){
-                    $lazy.attr("src",$load).removeClass("lazy");
-                });
-            }
+            speed: 2000
         });
 
 
@@ -113,7 +105,7 @@ jQuery(document).ready(function() {
 
 
 
-        jQuery('#preloader, #preloader_blue, #preloader_pink, #preloader_green, #preloader_grey').fadeOut('slow',function(){
+        jQuery('#preloader, #preloader_blue, #preloader_pink, #preloader_green, #preloader_grey, #loader').fadeOut('slow',function(){
             if (location.hash) {
                 jQuery('html, body').animate({ scrollTop:  jQuery(location.hash).offset().top - 52 }, 1000);
             }
