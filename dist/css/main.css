@@ -133,6 +133,7 @@ body {
   position: fixed;
   width: 100%;
   left: 0;
+  top: 0;
   -webkit-transition: left .6s ease;
   transition: left .6s ease;
   background: #fff;
