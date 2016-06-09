@@ -168,8 +168,8 @@ body {
         margin-bottom: 0; }
     .top .menu-icon:hover .label {
       opacity: 1;
-      -webkit-transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-      transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      -webkit-transition: all 250ms ease;
+      transition: all 250ms ease;
       -webkit-transform: translateX(4px);
               transform: translateX(4px); }
     .top .menu-icon .label {
@@ -184,8 +184,8 @@ body {
       opacity: 0;
       -webkit-transform: translateX(0);
               transform: translateX(0);
-      -webkit-transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-      transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+      -webkit-transition: all 250ms ease;
+      transition: all 250ms ease; }
   .top .logo {
     position: absolute;
     top: 17px;
@@ -212,8 +212,8 @@ body {
       opacity: 1;
       -webkit-transform: translateX(0);
               transform: translateX(0);
-      -webkit-transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-      transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+      -webkit-transition: all 250ms ease;
+      transition: all 250ms ease; }
     .top .bag-icon .label {
       text-transform: uppercase;
       font-family: "GothamPro-Bold", sans-serif;
@@ -226,8 +226,8 @@ body {
       line-height: 27px;
       -webkit-transform: translateX(4px);
               transform: translateX(4px);
-      -webkit-transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-      transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+      -webkit-transition: all 250ms ease;
+      transition: all 250ms ease; }
 
 .content {
   position: relative;
@@ -245,8 +245,8 @@ body {
     .content.opened #slder_about, .content.opened #slder_article, .content.opened #slder_contacts, .content.opened #slder_stockists {
       -webkit-transform: translate(280px, 0);
               transform: translate(280px, 0);
-      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+      -webkit-transition: all .6s ease;
+      transition: all .6s ease; }
   .content.opened_right {
     left: -280px;
     -webkit-transition: left .6s ease;
@@ -256,8 +256,8 @@ body {
     .content.opened_right #slder_about, .content.opened_right #slder_article, .content.opened_right #slder_contacts, .content.opened_right #slder_stockists {
       -webkit-transform: translate(-280px, 0);
               transform: translate(-280px, 0);
-      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+      -webkit-transition: all .6s ease;
+      transition: all .6s ease; }
 
 #bar_opened {
   width: 100%;
@@ -345,19 +345,19 @@ body {
         text-transform: uppercase;
         font-size: 0.8571428571428571rem;
         display: block;
-        -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-        transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-        transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-        transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        -webkit-transition: -webkit-transform 0.35s ease;
+        transition: -webkit-transform 0.35s ease;
+        transition: transform 0.35s ease;
+        transition: transform 0.35s ease, -webkit-transform 0.35s ease;
         -webkit-transform: translateX(0);
                 transform: translateX(0);
         letter-spacing: 1px; }
         .menu-bar .menu .nav li a:hover {
           color: #FFF;
-          -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-          transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-          transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-          transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          -webkit-transition: -webkit-transform 0.35s ease;
+          transition: -webkit-transform 0.35s ease;
+          transition: transform 0.35s ease;
+          transition: transform 0.35s ease, -webkit-transform 0.35s ease;
           -webkit-transform: translateX(5px);
                   transform: translateX(5px);
           text-decoration: none; }
@@ -701,8 +701,8 @@ body {
   position: fixed;
   top: 53px;
   right: 0;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0); }
   .about #slder_about .bx-controls, .about #slder_contacts .bx-controls, .about #slder_stockists .bx-controls, .contacts #slder_about .bx-controls, .contacts #slder_contacts .bx-controls, .contacts #slder_stockists .bx-controls, .stockists #slder_about .bx-controls, .stockists #slder_contacts .bx-controls, .stockists #slder_stockists .bx-controls {
@@ -722,8 +722,8 @@ body {
 .collections .content.opened .block_text_collections .block_left {
   -webkit-transform: translate(280px, 0);
           transform: translate(280px, 0);
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease; }
 
 .collections .content.opened .block_text_collections.mobile .block_left {
   -webkit-transform: translate(0, 0);
@@ -732,8 +732,8 @@ body {
 .collections .content.opened_right .block_text_collections .block_left {
   -webkit-transform: translate(-280px, 0);
           transform: translate(-280px, 0);
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease; }
 
 .collections .content.opened_right .block_text_collections.mobile .block_left {
   -webkit-transform: translate(0, 0);
@@ -850,8 +850,8 @@ body {
     right: calc((100vw - 50px)/3 + 25px);
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease; }
     .collections .block_text_collections .block_left .bx-wrapper .bx-viewport {
       min-height: calc(100vh - 102px) !important; }
     .collections .block_text_collections .block_left .gallery a {
@@ -982,13 +982,13 @@ body {
   .article .content.opened #slder_article {
     -webkit-transform: translate(280px, 0);
             transform: translate(280px, 0);
-    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease; }
   .article .content.opened_right #slder_article {
     -webkit-transform: translate(-280px, 0);
             transform: translate(-280px, 0);
-    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease; }
   .article .content .close {
     position: absolute;
     top: 62px;
@@ -1041,8 +1041,8 @@ body {
     position: fixed;
     top: 53px;
     right: 0;
-    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0); }
     .article .content #slder_article.left {
@@ -1340,10 +1340,10 @@ footer {
           .filter .block_filter .list_filters [id^="attribut"] .attribute input[type="checkbox"] {
             display: none; }
             .filter .block_filter .list_filters [id^="attribut"] .attribute input[type="checkbox"]:checked + label {
-              -webkit-transition: -webkit-transform 0.35ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-              transition: -webkit-transform 0.35ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-              transition: transform 0.35ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-              transition: transform 0.35ms cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.35ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+              -webkit-transition: -webkit-transform 0.35ms ease;
+              transition: -webkit-transform 0.35ms ease;
+              transition: transform 0.35ms ease;
+              transition: transform 0.35ms ease, -webkit-transform 0.35ms ease;
               -webkit-transform: translateX(10px);
                       transform: translateX(10px);
               color: #FFF; }
@@ -1359,10 +1359,10 @@ footer {
             text-indent: 0;
             position: relative;
             letter-spacing: 1px;
-            -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-            transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-            transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-            transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            -webkit-transition: -webkit-transform 0.35s ease;
+            transition: -webkit-transform 0.35s ease;
+            transition: transform 0.35s ease;
+            transition: transform 0.35s ease, -webkit-transform 0.35s ease;
             -webkit-transform: translateX(0);
                     transform: translateX(0); }
             .filter .block_filter .list_filters [id^="attribut"] .attribute label:before {
@@ -1380,10 +1380,10 @@ footer {
               content: ""; }
             .filter .block_filter .list_filters [id^="attribut"] .attribute label:hover {
               color: #FFF;
-              -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-              transition: -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-              transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-              transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+              -webkit-transition: -webkit-transform 0.35s ease;
+              transition: -webkit-transform 0.35s ease;
+              transition: transform 0.35s ease;
+              transition: transform 0.35s ease, -webkit-transform 0.35s ease;
               -webkit-transform: translateX(10px);
                       transform: translateX(10px); }
     .filter .block_filter button, .filter .block_filter a {
@@ -1461,8 +1461,8 @@ footer {
         top: 3px;
         left: 0;
         opacity: 0;
-        -webkit-transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-        transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        -webkit-transition: all 250ms ease;
+        transition: all 250ms ease;
         -webkit-transform: translateX(4px);
                 transform: translateX(4px); }
       .filter .block_filter .close:hover {
@@ -1470,8 +1470,8 @@ footer {
         transition: all 0.35s; }
         .filter .block_filter .close:hover .label {
           opacity: 1;
-          -webkit-transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-          transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          -webkit-transition: all 250ms ease;
+          transition: all 250ms ease;
           -webkit-transform: translateX(0);
                   transform: translateX(0); }
 
@@ -1593,8 +1593,8 @@ footer {
       top: 3px;
       left: 0;
       opacity: 0;
-      -webkit-transition: all 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-      transition: all 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
       -webkit-transform: translateX(4px);
               transform: translateX(4px); }
     .modal_div .modal_close:hover {
@@ -1602,8 +1602,8 @@ footer {
       transition: all 0.35s; }
       .modal_div .modal_close:hover .label {
         opacity: 1;
-        -webkit-transition: all 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-        transition: all 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
         -webkit-transform: translateX(0);
                 transform: translateX(0); }
   .modal_div .content-holder {
@@ -1654,8 +1654,8 @@ footer {
       letter-spacing: 1px;
       font-weight: 400; }
       .add_bag #attribute_size .name.open:after {
-        -webkit-transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-        transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        -webkit-transition: all 250ms ease;
+        transition: all 250ms ease;
         -webkit-transform: rotate(180deg);
                 transform: rotate(180deg); }
       .add_bag #attribute_size .name:after {
@@ -1668,8 +1668,8 @@ footer {
         top: 50%;
         margin-top: -4px;
         right: 30px;
-        -webkit-transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-        transition: all 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        -webkit-transition: all 250ms ease;
+        transition: all 250ms ease;
         -webkit-transform: rotate(0deg);
                 transform: rotate(0deg); }
       .add_bag #attribute_size .name:hover {
@@ -2209,12 +2209,12 @@ footer {
   #preloader {
     background-size: 30%; }
   .content #main_img {
-    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease; }
   .content.opened #main_img {
     position: relative;
-    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease; }
   .filter .block_filter {
     top: 53px; }
     .filter .block_filter .list_filters {

@@ -176,7 +176,7 @@ body
     &:hover
       .label
         opacity: 1
-        transition: all 250ms cubic-bezier(.55,.085,.68,.53)
+        transition: all 250ms ease
         transform: translateX(4px)
         //animation: fadeInLeft 0.5s
     .label
@@ -190,7 +190,7 @@ body
       right: 0
       opacity: 0
       transform: translateX(0)
-      transition: all 250ms cubic-bezier(.55,.085,.68,.53)
+      transition: all 250ms ease
 
 
   .logo 
@@ -227,7 +227,7 @@ body
         //animation-play-state: running
         opacity: 1
         transform: translateX(0)
-        transition: all 250ms cubic-bezier(.55,.085,.68,.53)
+        transition: all 250ms ease
 
 
     .label
@@ -243,7 +243,7 @@ body
       //transition: all 0.35s
       line-height: 27px
       transform: translateX(4px)
-      transition: all 250ms cubic-bezier(.55,.085,.68,.53)
+      transition: all 250ms ease
 
 .content
   position: relative
@@ -266,8 +266,7 @@ body
       //position: relative
       //top: inherit
       transform: translate(280px,0)
-      //transition: all .5s cubic-bezier(.645,.045,.355,1)
-      transition: all .6s cubic-bezier(.165,.84,.44,1)
+      transition: all .6s ease
 
 
 
@@ -281,8 +280,7 @@ body
       //position: relative
       //top: inherit
       transform: translate(-280px,0)
-      //transition: all .5s cubic-bezier(.645,.045,.355,1)
-      transition: all .6s cubic-bezier(.165,.84,.44,1)
+      transition: all .6s ease
 
 
 
@@ -395,13 +393,13 @@ body
           text-transform: uppercase
           font-size: 0.8571428571428571rem
           display: block
-          transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+          transition: transform 0.35s ease
           transform: translateX(0)
           letter-spacing: 1px
           &:hover
 
             color: #FFF
-            transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+            transition: transform 0.35s ease
             transform: translateX(5px)
             text-decoration: none
 
@@ -768,13 +766,9 @@ body
     position: fixed
     top: 53px
     right: 0
-    transition: all .6s cubic-bezier(.165,.84,.44,1)
+    transition: all .6s ease
     transform: translate(0,0)
 
-    //transition-property: opacity
-    //transition-duration: 3s
-    //transition-timing-function: cubic-bezier(.165,.84,.44,1)
-    //transition-delay: .8s
 
 
     .bx-controls
@@ -803,7 +797,7 @@ body
 
       .block_text_collections .block_left
         transform: translate(280px,0)
-        transition: all .6s cubic-bezier(.165,.84,.44,1)
+        transition: all .6s ease
       .block_text_collections.mobile .block_left
         transform: translate(0,0)
 
@@ -813,7 +807,7 @@ body
 
       .block_text_collections .block_left
         transform: translate(-280px,0)
-        transition: all .6s cubic-bezier(.165,.84,.44,1)
+        transition: all .6s ease
       .block_text_collections.mobile .block_left
         transform: translate(0,0)
 
@@ -945,7 +939,7 @@ body
       position: fixed
       right: calc((100vw - 50px)/3 + 25px)
       transform: translate(0, 0)
-      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
+      transition: all 0.6s ease
 
 
 
@@ -1104,11 +1098,11 @@ body
         //top: 0
         //position: relative
         transform: translate(280px,0)
-        transition: all .6s cubic-bezier(.165,.84,.44,1)
+        transition: all .6s ease
     &.opened_right
       #slder_article
         transform: translate(-280px,0)
-        transition: all .6s cubic-bezier(.165,.84,.44,1)
+        transition: all .6s ease
 
     .close
       position: absolute
@@ -1168,7 +1162,7 @@ body
       position: fixed
       top: 53px
       right: 0
-      transition: all .6s cubic-bezier(.165,.84,.44,1)
+      transition: all .6s ease
       transform: translate(0,0)
       &.left
         float: left
@@ -1490,12 +1484,15 @@ footer
             display: none
             &:checked
               + label
-                transition: transform 0.35ms cubic-bezier(0.55, 0.085, 0.68, 0.53)
+                transition: transform 0.35ms ease
                 transform: translateX(10px)
                 color: #FFF
                 &:before
                   opacity: 1
                   transition: opacity 300ms ease
+
+
+
 
 
           label
@@ -1508,7 +1505,7 @@ footer
             //transition: all 0.35s
             position: relative
             letter-spacing: 1px
-            transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+            transition: transform 0.35s ease
             transform: translateX(0)
             &:before
               transition: opacity 300ms ease
@@ -1527,7 +1524,7 @@ footer
               //text-indent: 10px
               color: #FFF
               //transition: all 0.35s
-              transition: transform 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+              transition: transform 0.35s ease
               transform: translateX(10px)
 
 
@@ -1620,7 +1617,7 @@ footer
         top: 3px
         left: 0
         opacity: 0
-        transition: all 250ms cubic-bezier(.55,.085,.68,.53)
+        transition: all 250ms ease
         transform: translateX(4px)
 
 
@@ -1628,7 +1625,7 @@ footer
         transition: all 0.35s
         .label
           opacity: 1
-          transition: all 250ms cubic-bezier(.55,.085,.68,.53)
+          transition: all 250ms ease
           transform: translateX(0)
 
 
@@ -1776,7 +1773,7 @@ footer
       top: 3px
       left: 0
       opacity: 0
-      transition: all 0.35s cubic-bezier(.55,.085,.68,.53)
+      transition: all 0.35s ease
       transform: translateX(4px)
 
 
@@ -1784,7 +1781,7 @@ footer
       transition: all 0.35s
       .label
         opacity: 1
-        transition: all 0.35s cubic-bezier(.55,.085,.68,.53)
+        transition: all 0.35s ease
         transform: translateX(0)
 
   .content-holder
@@ -1839,7 +1836,7 @@ footer
         &:after
           //background: url("../img/icons/up.svg") no-repeat
           //background-size: 100%
-          transition: all 250ms cubic-bezier(.55,.085,.68,.53)
+          transition: all 250ms ease
           transform: rotate(180deg)
       &:after 
         position: absolute 
@@ -1851,7 +1848,7 @@ footer
         top: 50%
         margin-top: -4px
         right: 30px
-        transition: all 250ms cubic-bezier(.55,.085,.68,.53)
+        transition: all 250ms ease
         transform: rotate(0deg)
 
       &:hover
@@ -2463,12 +2460,12 @@ footer
 
   .content
     #main_img
-      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
+      transition: all 0.6s ease
       //position: relative
     &.opened
       #main_img
         position: relative
-        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
+        transition: all 0.6s ease
 
 
   .filter
