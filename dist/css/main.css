@@ -1274,7 +1274,8 @@ footer {
     cursor: pointer;
     overflow: hidden;
     height: 50px;
-    width: 210px; }
+    width: 210px;
+    z-index: 1; }
     .filter .title span {
       position: absolute;
       top: 0;
@@ -1308,11 +1309,12 @@ footer {
     background: #1b1b1f;
     color: #bcbcbc;
     z-index: 2;
-    top: 0; }
+    top: 53px; }
     .filter .block_filter .list_filters {
-      height: calc( 100vh - 103px);
+      height: calc( 100% - 103px);
       display: table;
-      width: 100%; }
+      width: 100%;
+      min-width: 420px; }
       .filter .block_filter .list_filters .block_filters {
         display: table-cell;
         vertical-align: middle;

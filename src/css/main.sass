@@ -142,6 +142,7 @@ body
   background: #fff
   z-index: 15
   border-bottom: 1px solid #dedfe0
+  //background: orange
   &.opened
     left: 280px
     transition: left .6s ease
@@ -1408,6 +1409,7 @@ footer
     overflow: hidden
     height: 50px
     width: 210px
+    z-index: 1
     span
       position: absolute
       top: 0
@@ -1441,14 +1443,17 @@ footer
     background: #1b1b1f
     color: #bcbcbc
     z-index: 2
-    top: 0
+    top: 53px
+
     //padding: 0 40px 0 0
     .list_filters
 
 
-      height: calc( 100vh - 103px)
+      height: calc( 100% - 103px)
       display: table
       width: 100%
+      min-width: 420px
+
       .block_filters
 
         display: table-cell

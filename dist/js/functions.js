@@ -147,7 +147,9 @@ jQuery(document).ready(function() {
         //e.preventDefault();
         var filter_data, $el;
         $el = $( this );
+
         filter_data = $el.serialize();
+        console.log(filter_data);
         if(filter_data.length !== 0) {
             jQuery(".add_button")
                 .removeAttr("disabled")
@@ -354,6 +356,7 @@ jQuery(document).ready(function() {
     jQuery("#attribute_size label").click(function(){
         var size_active = jQuery(this).text();
         jQuery(".attribute_holder").slideUp();
+        //console.log(size_active);
         jQuery("#attribute_size .name").text(size_active);
     });
 
