@@ -353,7 +353,7 @@ jQuery(document).ready(function() {
         jQuery(this).next(".attribute_holder").slideToggle();
         jQuery(this).toggleClass("open");
     });
-    jQuery("#attribute_size label").click(function(){
+    jQuery("#attribute_size label:not('.disabled')").click(function(){
         var size_active = jQuery(this).text();
         jQuery(".attribute_holder").slideUp();
         //console.log(size_active);
