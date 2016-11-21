@@ -1730,6 +1730,8 @@ footer {
           display: block;
           -webkit-transition: all 0.35s;
           transition: all 0.35s; }
+          .add_bag #attribute_size .attribute_holder .attribute label.disabled {
+            text-decoration: line-through; }
           .add_bag #attribute_size .attribute_holder .attribute label:hover {
             -webkit-transition: all 0.35s;
             transition: all 0.35s;
