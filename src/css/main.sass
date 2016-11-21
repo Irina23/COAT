@@ -1894,6 +1894,11 @@ footer
         margin-bottom: 25px
         input[type="radio"]
           display: none
+          &:disabled
+            + label
+              cursor: default
+              &:hover
+                color: #bcbcbc
           &:checked
             + label
               color: #FFF

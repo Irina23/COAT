@@ -1715,6 +1715,10 @@ footer {
         margin-bottom: 25px; }
         .add_bag #attribute_size .attribute_holder .attribute input[type="radio"] {
           display: none; }
+          .add_bag #attribute_size .attribute_holder .attribute input[type="radio"]:disabled + label {
+            cursor: default; }
+            .add_bag #attribute_size .attribute_holder .attribute input[type="radio"]:disabled + label:hover {
+              color: #bcbcbc; }
           .add_bag #attribute_size .attribute_holder .attribute input[type="radio"]:checked + label {
             color: #FFF;
             -webkit-transition: all 0.35s;
