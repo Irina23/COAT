@@ -353,11 +353,16 @@ jQuery(document).ready(function() {
         jQuery(this).next(".attribute_holder").slideToggle();
         jQuery(this).toggleClass("open");
     });
-    jQuery("#attribute_size label:not('.disabled')").click(function(){
+    $("#attribute_size label:not('.disabled')").on('click', function(){
         var size_active = jQuery(this).text();
-        jQuery(".attribute_holder").slideUp();
-        //console.log(size_active);
-        jQuery("#attribute_size .name").text(size_active);
+        $(".attribute_holder").slideUp();
+        $("#attribute_size .name").text(size_active);
+    });
+    $("#attribute_size ").on('click', "label:not('.disabled')", function(){
+        //console.log('111');
+        var size_active = jQuery(this).text();
+        $(".attribute_holder").slideUp();
+        $("#attribute_size .name").text(size_active);
     });
 
 });
