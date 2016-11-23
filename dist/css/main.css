@@ -259,6 +259,16 @@ body {
               transform: translate(-280px, 0);
       -webkit-transition: all .6s ease;
       transition: all .6s ease; }
+    .content.opened_right .filter .block_filter, .content.opened_right .filter .title {
+      -webkit-transform: translate(-280px, 0);
+              transform: translate(-280px, 0);
+      -webkit-transition: all .6s ease;
+      transition: all .6s ease; }
+    .content.opened_right + .add_bag {
+      -webkit-transform: translate(-280px, 0);
+              transform: translate(-280px, 0);
+      -webkit-transition: all .6s ease;
+      transition: all .6s ease; }
 
 #bar_opened {
   width: 100%;
@@ -1275,7 +1285,11 @@ footer {
     overflow: hidden;
     height: 50px;
     width: 210px;
-    z-index: 1; }
+    z-index: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease; }
     .filter .title span {
       position: absolute;
       top: 0;
@@ -1309,7 +1323,11 @@ footer {
     background: #1b1b1f;
     color: #bcbcbc;
     z-index: 2;
-    top: 53px; }
+    top: 53px;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease; }
     .filter .block_filter .list_filters {
       height: calc( 100% - 103px);
       display: table;
@@ -1502,7 +1520,7 @@ footer {
       display: block;
       margin-bottom: 30px; }
       .product .content .img-holder a img {
-        width: 800px;
+        max-width: 800px;
         margin: auto;
         max-height: calc( 100vh - 140px); }
   .product .content .pdocut_info {
@@ -1636,7 +1654,11 @@ footer {
   position: fixed;
   right: 0;
   bottom: 0;
-  width: 420px; }
+  width: 420px;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease; }
   .add_bag #attribute_size {
     width: 210px;
     float: left; }
