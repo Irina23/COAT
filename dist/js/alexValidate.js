@@ -45,6 +45,9 @@
 							//return $('input[type="radio"]:checked').val();
 						case 'quantity':
 							return /^[1-9]/.test(data);
+						case 'index':
+							return /^[0-9]{3}/.test(data);
+
 						default:
 							return true;
 					}

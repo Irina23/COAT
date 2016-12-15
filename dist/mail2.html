@@ -13,6 +13,24 @@
             padding: 60px 80px 70px;
             box-sizing: border-box;
         }
+        h2{
+            color: #455a64;
+            margin-bottom: 30px;
+            margin-top: 0;
+        }
+        h3{
+            color: #455a64;
+            margin-top: 0;
+        }
+        p{
+            color: #607d8b;
+            margin-top: 0;
+            margin-bottom: 40px;
+            line-height: 1.3em;
+        }
+        strong{
+            font-weight: bold;
+        }
 
         .order_number{
             text-transform: uppercase;
@@ -21,18 +39,7 @@
             font-weight: bold;
             margin-bottom: 80px;
         }
-        h2{
-            color: #455a64;
-            margin-bottom: 30px;
-        }
-        h3{
-            color: #607d8b;
-        }
-        p{
-            color: #607d8b;
-            margin-bottom: 40px;
-            line-height: 1.3em;
-        }
+
         .img-holder{
             width: 75px;
         }
@@ -42,7 +49,50 @@
 
         .items{
             font-weight: bold;
-            color: #607d8b;
+            color: #455a64;
+            width: 100%;
+            border: 0;
+            border-spacing: 0;
+            border-bottom: 1px solid #d1d6d8;
+        }
+        .items tr td{
+            border-bottom: 1px solid #d1d6d8;
+            padding: 25px 0;
+        }
+        .items tr:last-child td{
+            border-bottom: 0;
+        }
+        hr{
+            height: 1px;
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            background: #d1d6d8;
+            border: 0;
+        }
+        .total_price{
+            text-align: right;
+            margin-bottom: 20px;
+
+        }
+        .total_price span{
+            border-bottom: 1px solid #d1d6d8;
+            padding: 20px 0;
+            display: inline-block;
+            font-weight: bold;
+            color: #455a64;
+        }
+
+        .social{
+            text-align: center;
+        }
+        .social a{
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 80px;
+        }
+        .social a:last-child{
+            margin-right: 0;
         }
 
     </style>
@@ -73,7 +123,7 @@
 
 
 
-
+                                <hr>
                                 <h3>Your order</h3>
                                 <table class="items">
                                     <tbody>
@@ -100,9 +150,34 @@
                                                 {{ item.subtotal }}
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="img-holder">
+                                                    <img src="img/content/product.png" alt="{{ item.name }}">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                {{ item.name }}
+                                            </td>
+                                            <td>
+                                                {{ item.qty }}
+                                            </td>
+                                            <td>
+                                                M
+                                            </td>
+
+
+
+                                            <td>
+                                                {{ item.subtotal }}
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
-                                <p><b>Итого:</b> {{ order.total }}</p>
+
+                                <div class="total_price">
+                                    <span>Итого: {{ order.total }}</span>
+                                </div>
 
                                 <div class="shipping_info">
                                     <h3>shipping information</h3>
@@ -115,6 +190,7 @@
                                     <p><b>Доставка:</b> {{ order.shipping_type }}</p>
                                     <p><b>Оплата:</b> {{ order.payment_type }}</p>
                                 </div>
+                                <hr>
                                 <p>
                                     text
                                 </p>
