@@ -1,0 +1,142 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .main-table{
+            background: #eceff1;
+            color: #607d8b;
+            padding: 40px 0;
+        }
+        .page{
+            width: 800px;
+            background: #fff;
+            padding: 60px 80px 70px;
+            box-sizing: border-box;
+        }
+
+        .order_number{
+            text-transform: uppercase;
+            text-align: right;
+            color: #90a4ae;
+            font-weight: bold;
+            margin-bottom: 80px;
+        }
+        h2{
+            color: #455a64;
+            margin-bottom: 30px;
+        }
+        h3{
+            color: #607d8b;
+        }
+        p{
+            color: #607d8b;
+            margin-bottom: 40px;
+            line-height: 1.3em;
+        }
+        .img-holder{
+            width: 75px;
+        }
+        .img-holder img{
+            width: 100%;
+        }
+
+        .items{
+            font-weight: bold;
+            color: #607d8b;
+        }
+
+    </style>
+</head>
+<body>
+<center>
+    <table class="main-table" align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+        <tbody>
+        <tr>
+            <td align="center">
+
+                <table class="page" >
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="/" target="_blank">
+                                    <img alt="the coat" src="img/icons/logo.png" width="280" height="26">
+                                </a>
+                                <div class="order_number">
+                                    Order #{{ order.id }}
+                                </div>
+                                <h2>
+                                    title
+                                </h2>
+                                <p>
+                                    text
+                                </p>
+
+
+
+
+                                <h3>Your order</h3>
+                                <table class="items">
+                                    <tbody>
+
+                                        <tr>
+                                            <td>
+                                                <div class="img-holder">
+                                                    <img src="img/content/product.png" alt="{{ item.name }}">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                {{ item.name }}
+                                            </td>
+                                            <td>
+                                                {{ item.qty }}
+                                            </td>
+                                            <td>
+                                                M
+                                            </td>
+
+
+
+                                            <td>
+                                                {{ item.subtotal }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p><b>Итого:</b> {{ order.total }}</p>
+
+                                <div class="shipping_info">
+                                    <h3>shipping information</h3>
+
+                                    <p>{{ order.shipping_name }} {{ order.shipping_surname }}</p>
+                                    <p>{{ order.shipping_street }}, <br>01034, {{ order.shipping_country }}, {{ order.shipping_town }}</p>
+
+                                    <p>{{ order.shipping_phone }}<br>{{ order.email }}</p>
+
+                                    <p><b>Доставка:</b> {{ order.shipping_type }}</p>
+                                    <p><b>Оплата:</b> {{ order.payment_type }}</p>
+                                </div>
+                                <p>
+                                    text
+                                </p>
+                                <div class="social">
+                                    <a href="#" target="_blank" class="facebook">
+                                        <img src="img/icons/icon_fb.png" />
+
+                                    </a>
+                                    <a href="#" target="_blank" class="instagram" >
+                                        <img src="img/icons/icon_insta.png" />
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</center>
+</body>
+</html>
