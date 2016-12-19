@@ -2,6 +2,31 @@
 <head>
     <meta charset="utf-8">
     <style>
+
+        @font-face {
+            font-family: "GothamPro";
+            src: url("{{ url() }}/themes/coat/assets/fonts/GothamPro.eot");
+            src: url("{{ url() }}/themes/coat/assets/fonts/GothamPro.eot?#iefix") format("embedded-opentype"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro.otf") format("otf"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro.svg") format("svg"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro.woff") format("woff"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro.ttf") format("truetype");
+            font-style: normal;
+            font-weight: normal; }
+
+        @font-face {
+            font-family: "GothamPro-Bold";
+            src: url("{{ url() }}/themes/coat/assets/fonts/GothamPro-Bold.eot");
+            src: url("{{ url() }}/themes/coat/assets/fonts/GothamPro-Bold.eot?#iefix") format("embedded-opentype"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro-Bold.otf") format("otf"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro-Bold.svg") format("svg"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro-Bold.woff") format("woff"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro-Bold.ttf") format("truetype");
+            font-style: normal;
+            font-weight: normal; }
+        body{
+            font-family: "GothamPro", Arial, sans-serif;
+        }
         .main-table{
             background: #eceff1;
             color: #607d8b;
@@ -13,23 +38,30 @@
             padding: 60px 80px 70px;
             box-sizing: border-box;
         }
-        h2{
+        h2, h3{
             color: #455a64;
             margin-bottom: 30px;
             margin-top: 0;
+            font-family: "GothamPro-Bold", Arial, sans-serif;
+            font-size: 24px;
+            line-height: 1em;
         }
-        h3{
-            color: #455a64;
-            margin-top: 0;
-        }
+
         p{
             color: #607d8b;
             margin-top: 0;
             margin-bottom: 40px;
             line-height: 1.3em;
+            font-size: 24px;
+
+        }
+        p a{
+            color: #607d8b;
+            text-decoration: none;
         }
         strong{
             font-weight: bold;
+            font-family: "GothamPro-Bold", Arial, sans-serif;
         }
 
         .order_number{
@@ -38,10 +70,14 @@
             color: #90a4ae;
             font-weight: bold;
             margin-bottom: 80px;
+            font-family: "GothamPro-Bold", Arial, sans-serif;
+            font-size: 24px;
+            line-height: 1em;
         }
 
         .img-holder{
-            width: 75px;
+            width: 100px;
+            background: #8da3af;
         }
         .img-holder img{
             width: 100%;
@@ -54,6 +90,7 @@
             border: 0;
             border-spacing: 0;
             border-bottom: 1px solid #d1d6d8;
+            font-family: "GothamPro-Bold", Arial, sans-serif;
         }
         .items tr td{
             border-bottom: 1px solid #d1d6d8;
@@ -89,10 +126,29 @@
         .social a{
             display: inline-block;
             vertical-align: middle;
-            margin-right: 80px;
+            margin-right: 40px;
         }
         .social a:last-child{
             margin-right: 0;
+        }
+
+        .logo{
+            margin-bottom: 25px;
+            display: block;
+        }
+
+
+        .shipping_info td{
+            vertical-align: top;
+            width: 50%;
+        }
+        .shipping_info td h3{
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        .shipping_info td p{
+            font-size: 18px;
+            margin-bottom: 30px;
         }
 
     </style>
@@ -108,17 +164,18 @@
                     <tbody>
                         <tr>
                             <td>
-                                <a href="/" target="_blank">
-                                    <img alt="the coat" src="img/icons/logo.png" width="280" height="26">
+                                <a class="logo" href="/" target="_blank">
+                                    <img alt="the coat" src="img/icons/logo.svg" width="283" height="26">
                                 </a>
                                 <div class="order_number">
                                     Order #{{ order.id }}
                                 </div>
                                 <h2>
-                                    title
+                                    Your order is preparing
                                 </h2>
                                 <p>
-                                    text
+                                    Hi!<br>
+                                    We received your order and it will be heading your way soon.
                                 </p>
 
 
@@ -179,29 +236,50 @@
                                     <span>Итого: {{ order.total }}</span>
                                 </div>
 
-                                <div class="shipping_info">
-                                    <h3>shipping information</h3>
+                                <table class="shipping_info">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h3>Shipping information</h3>
 
-                                    <p>{{ order.shipping_name }} {{ order.shipping_surname }}</p>
-                                    <p>{{ order.shipping_street }}, <br>01034, {{ order.shipping_country }}, {{ order.shipping_town }}</p>
+                                                <p>{{ order.shipping_name }} {{ order.shipping_surname }}</p>
+                                                <p>{{ order.shipping_street }}, <br>01034, {{ order.shipping_country }}, {{ order.shipping_town }}</p>
 
-                                    <p>{{ order.shipping_phone }}<br>{{ order.email }}</p>
+                                                <p>{{ order.shipping_phone }}<br>{{ order.email }}</p>
+                                            </td>
 
-                                    <p><b>Доставка:</b> {{ order.shipping_type }}</p>
-                                    <p><b>Оплата:</b> {{ order.payment_type }}</p>
-                                </div>
+                                            <td>
+                                                <h3>Shipping method:</h3>
+                                                <p>{{ order.shipping_type }}</p>
+                                                <h3>Payment method:</h3>
+                                                <p>{{ order.payment_type }}</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+
+                                </table>
                                 <hr>
                                 <p>
-                                    text
+                                    As soon as it ships, we'll email you with tracking information.
+                                </p>
+                                <p>
+                                    Thank you for shopping at
+                                    <strong><a href="http://thecoat.me/" target="_blank">thecoat.me</a></strong>
+                                </p>
+                                <p>
+                                    If you have any questions contact us at
+                                    <strong><a href="mailto:sales@thecoat.me">sales@thecoat.me</a></strong>
                                 </p>
                                 <div class="social">
+                                    <a href="#" target="_blank" class="instagram" >
+                                        <img src="../dist/img/icons/icon_insta.png" />
+                                    </a>
                                     <a href="#" target="_blank" class="facebook">
-                                        <img src="img/icons/icon_fb.png" />
+                                        <img src="../dist/img/icons/icon_fb.png" />
 
                                     </a>
-                                    <a href="#" target="_blank" class="instagram" >
-                                        <img src="img/icons/icon_insta.png" />
-                                    </a>
+
                                 </div>
                             </td>
                         </tr>

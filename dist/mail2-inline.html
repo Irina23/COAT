@@ -1,0 +1,296 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+
+        @font-face {
+            font-family: "GothamPro";
+            src: url("{{ url() }}/themes/coat/assets/fonts/GothamPro.eot");
+            src: url("{{ url() }}/themes/coat/assets/fonts/GothamPro.eot?#iefix") format("embedded-opentype"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro.otf") format("otf"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro.svg") format("svg"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro.woff") format("woff"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro.ttf") format("truetype");
+            font-style: normal;
+            font-weight: normal; }
+
+        @font-face {
+            font-family: "GothamPro-Bold";
+            src: url("{{ url() }}/themes/coat/assets/fonts/GothamPro-Bold.eot");
+            src: url("{{ url() }}/themes/coat/assets/fonts/GothamPro-Bold.eot?#iefix") format("embedded-opentype"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro-Bold.otf") format("otf"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro-Bold.svg") format("svg"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro-Bold.woff") format("woff"),
+            url("{{ url() }}/themes/coat/assets/fonts/GothamPro-Bold.ttf") format("truetype");
+            font-style: normal;
+            font-weight: normal; }
+        body{
+            font-family: "GothamPro", Arial, sans-serif;
+        }
+        .main-table{
+            background: #eceff1;
+            color: #607d8b;
+            padding: 40px 0;
+        }
+        .page{
+            width: 800px;
+            background: #fff;
+            padding: 60px 80px 70px;
+            box-sizing: border-box;
+        }
+        h2, h3{
+            color: #455a64;
+            margin-bottom: 30px;
+            margin-top: 0;
+            font-family: "GothamPro-Bold", Arial, sans-serif;
+            font-size: 24px;
+            line-height: 1em;
+        }
+
+        p{
+            color: #607d8b;
+            margin-top: 0;
+            margin-bottom: 40px;
+            line-height: 1.3em;
+            font-size: 24px;
+
+        }
+        p a{
+            color: #607d8b;
+            text-decoration: none;
+        }
+        strong{
+            font-weight: bold;
+            font-family: "GothamPro-Bold", Arial, sans-serif;
+        }
+
+        .order_number{
+            text-transform: uppercase;
+            text-align: right;
+            color: #90a4ae;
+            font-weight: bold;
+            margin-bottom: 80px;
+            font-family: "GothamPro-Bold", Arial, sans-serif;
+            font-size: 24px;
+            line-height: 1em;
+        }
+
+        .img-holder{
+            width: 100px;
+            background: #8da3af;
+        }
+        .img-holder img{
+            width: 100%;
+        }
+
+        .items{
+            font-weight: bold;
+            color: #455a64;
+            width: 100%;
+            border: 0;
+            border-spacing: 0;
+            border-bottom: 1px solid #d1d6d8;
+            font-family: "GothamPro-Bold", Arial, sans-serif;
+        }
+        .items tr td{
+            border-bottom: 1px solid #d1d6d8;
+            padding: 25px 0;
+        }
+        .items tr:last-child td{
+            border-bottom: 0;
+        }
+        hr{
+            height: 1px;
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            background: #d1d6d8;
+            border: 0;
+        }
+        .total_price{
+            text-align: right;
+            margin-bottom: 20px;
+
+        }
+        .total_price span{
+            border-bottom: 1px solid #d1d6d8;
+            padding: 20px 0;
+            display: inline-block;
+            font-weight: bold;
+            color: #455a64;
+        }
+
+        .social{
+            text-align: center;
+        }
+        .social a{
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 40px;
+        }
+        .social a:last-child{
+            margin-right: 0;
+        }
+
+        .logo{
+            margin-bottom: 25px;
+            display: block;
+        }
+
+
+        .shipping_info td{
+            vertical-align: top;
+            width: 50%;
+        }
+        .shipping_info td h3{
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        .shipping_info td p{
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<center>
+    <table class="main-table" align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="background-color:#eceff1;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;color:#607d8b;padding-top:40px;padding-bottom:40px;padding-right:0;padding-left:0;" >
+        <tbody>
+        <tr>
+            <td align="center">
+
+                <table class="page" style="width:800px;background-color:#fff;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;padding-top:60px;padding-bottom:70px;padding-right:80px;padding-left:80px;box-sizing:border-box;" >
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a class="logo" href="/" target="_blank" style="margin-bottom:25px;display:block;" >
+                                <img alt="the coat" src="img/icons/logo.svg" width="283" height="26">
+                            </a>
+                            <div class="order_number" style="text-transform:uppercase;text-align:right;color:#90a4ae;font-weight:bold;margin-bottom:80px;font-family:'GothamPro-Bold', Arial, sans-serif;font-size:24px;line-height:1em;" >
+                                Order #{{ order.id }}
+                            </div>
+                            <h2 style="color:#455a64;margin-bottom:30px;margin-top:0;font-family:'GothamPro-Bold', Arial, sans-serif;font-size:24px;line-height:1em;" >
+                                Your order is preparing
+                            </h2>
+                            <p style="color:#607d8b;margin-top:0;margin-bottom:40px;line-height:1.3em;font-size:24px;" >
+                                Hi!<br>
+                                We received your order and it will be heading your way soon.
+                            </p>
+
+
+
+                            <hr style="height:1px;width:100%;margin-top:30px;margin-bottom:30px;background-color:#d1d6d8;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:0;" >
+                            <h3 style="color:#455a64;margin-bottom:30px;margin-top:0;font-family:'GothamPro-Bold', Arial, sans-serif;font-size:24px;line-height:1em;" >Your order</h3>
+                            <table class="items" style="font-weight:bold;color:#455a64;width:100%;border-width:0;border-spacing:0;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#d1d6d8;font-family:'GothamPro-Bold', Arial, sans-serif;" >
+                                <tbody>
+
+                                <tr>
+                                    <td style="border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#d1d6d8;padding-top:25px;padding-bottom:25px;padding-right:0;padding-left:0;" >
+                                        <div class="img-holder" style="width:100px;background-color:#8da3af;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;" >
+                                            <img src="img/content/product.png" alt="{{ item.name }}" style="width:100%;" >
+                                        </div>
+                                    </td>
+                                    <td style="border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#d1d6d8;padding-top:25px;padding-bottom:25px;padding-right:0;padding-left:0;" >
+                                        {{ item.name }}
+                                    </td>
+                                    <td style="border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#d1d6d8;padding-top:25px;padding-bottom:25px;padding-right:0;padding-left:0;" >
+                                        {{ item.qty }}
+                                    </td>
+                                    <td style="border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#d1d6d8;padding-top:25px;padding-bottom:25px;padding-right:0;padding-left:0;" >
+                                        M
+                                    </td>
+
+
+
+                                    <td style="border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#d1d6d8;padding-top:25px;padding-bottom:25px;padding-right:0;padding-left:0;" >
+                                        {{ item.subtotal }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#d1d6d8;padding-top:25px;padding-bottom:25px;padding-right:0;padding-left:0;" >
+                                        <div class="img-holder" style="width:100px;background-color:#8da3af;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;" >
+                                            <img src="img/content/product.png" alt="{{ item.name }}" style="width:100%;" >
+                                        </div>
+                                    </td>
+                                    <td style="border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#d1d6d8;padding-top:25px;padding-bottom:25px;padding-right:0;padding-left:0;" >
+                                        {{ item.name }}
+                                    </td>
+                                    <td style="border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#d1d6d8;padding-top:25px;padding-bottom:25px;padding-right:0;padding-left:0;" >
+                                        {{ item.qty }}
+                                    </td>
+                                    <td style="border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#d1d6d8;padding-top:25px;padding-bottom:25px;padding-right:0;padding-left:0;" >
+                                        M
+                                    </td>
+
+
+
+                                    <td style="border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#d1d6d8;padding-top:25px;padding-bottom:25px;padding-right:0;padding-left:0;" >
+                                        {{ item.subtotal }}
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="total_price" style="text-align:right;margin-bottom:20px;" >
+                                <span style="border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#d1d6d8;padding-top:20px;padding-bottom:20px;padding-right:0;padding-left:0;display:inline-block;font-weight:bold;color:#455a64;" >Итого: {{ order.total }}</span>
+                            </div>
+
+                            <table class="shipping_info">
+                                <tbody>
+                                <tr>
+                                    <td style="vertical-align:top;width:50%;" >
+                                        <h3 style="color:#455a64;margin-top:0;font-family:'GothamPro-Bold', Arial, sans-serif;line-height:1em;font-size:18px;margin-bottom:25px;" >Shipping information</h3>
+
+                                        <p style="color:#607d8b;margin-top:0;line-height:1.3em;font-size:18px;margin-bottom:30px;" >{{ order.shipping_name }} {{ order.shipping_surname }}</p>
+                                        <p style="color:#607d8b;margin-top:0;line-height:1.3em;font-size:18px;margin-bottom:30px;" >{{ order.shipping_street }}, <br>01034, {{ order.shipping_country }}, {{ order.shipping_town }}</p>
+
+                                        <p style="color:#607d8b;margin-top:0;line-height:1.3em;font-size:18px;margin-bottom:30px;" >{{ order.shipping_phone }}<br>{{ order.email }}</p>
+                                    </td>
+
+                                    <td style="vertical-align:top;width:50%;" >
+                                        <h3 style="color:#455a64;margin-top:0;font-family:'GothamPro-Bold', Arial, sans-serif;line-height:1em;font-size:18px;margin-bottom:25px;" >Shipping method:</h3>
+                                        <p style="color:#607d8b;margin-top:0;line-height:1.3em;font-size:18px;margin-bottom:30px;" >{{ order.shipping_type }}</p>
+                                        <h3 style="color:#455a64;margin-top:0;font-family:'GothamPro-Bold', Arial, sans-serif;line-height:1em;font-size:18px;margin-bottom:25px;" >Payment method:</h3>
+                                        <p style="color:#607d8b;margin-top:0;line-height:1.3em;font-size:18px;margin-bottom:30px;" >{{ order.payment_type }}</p>
+                                    </td>
+                                </tr>
+                                </tbody>
+
+
+                            </table>
+                            <hr style="height:1px;width:100%;margin-top:30px;margin-bottom:30px;background-color:#d1d6d8;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:0;" >
+                            <p style="color:#607d8b;margin-top:0;margin-bottom:40px;line-height:1.3em;font-size:24px;" >
+                                As soon as it ships, we'll email you with tracking information.
+                            </p>
+                            <p style="color:#607d8b;margin-top:0;margin-bottom:40px;line-height:1.3em;font-size:24px;" >
+                                Thank you for shopping at
+                                <strong style="font-weight:bold;font-family:'GothamPro-Bold', Arial, sans-serif;" ><a href="http://thecoat.me/" target="_blank" style="color:#607d8b;text-decoration:none;" >thecoat.me</a></strong>
+                            </p>
+                            <p style="color:#607d8b;margin-top:0;margin-bottom:40px;line-height:1.3em;font-size:24px;" >
+                                If you have any questions contact us at
+                                <strong style="font-weight:bold;font-family:'GothamPro-Bold', Arial, sans-serif;" ><a href="mailto:sales@thecoat.me" style="color:#607d8b;text-decoration:none;" >sales@thecoat.me</a></strong>
+                            </p>
+                            <div class="social" style="text-align:center;" >
+                                <a href="#" target="_blank" class="instagram" style="display:inline-block;vertical-align:middle;margin-right:40px;" >
+                                    <img src="../dist/img/icons/icon_insta.png" />
+                                </a>
+                                <a href="#" target="_blank" class="facebook" style="display:inline-block;vertical-align:middle;margin-right:40px;" >
+                                    <img src="../dist/img/icons/icon_fb.png" />
+
+                                </a>
+
+                            </div>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</center>
+</body>
+</html>
