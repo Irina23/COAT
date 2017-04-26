@@ -750,7 +750,7 @@ body
       text-align: justify
       strong,b
         font-family: "GothamPro-Bold", sans-serif
-        font-style: italic
+        //font-style: italic
     a
 
       color: #000
@@ -919,11 +919,13 @@ body
       text-align: justify
       strong,b
         font-family: "GothamPro-Bold", sans-serif
-        font-style: italic
+        //font-style: italic
     a
 
       color: #000
-      display: block
+    .gallery-icons
+      a
+        display: block
 
     //font-family: "GothamPro-Bold", sans-serif
     ul,ol
@@ -1147,7 +1149,7 @@ body
         color: #000
         strong,b
           font-family: "GothamPro-Bold", sans-serif
-          font-style: italic
+          //font-style: italic
       a
 
         color: #000
@@ -2405,21 +2407,21 @@ footer
         width: 100%
         padding: 0
 
+    .gallery_mobile
+      a
+        width: 49%
+        display: inline-block
+        vertical-align: middle
+        font-size: 0
+        margin-bottom: 30px
+        box-sizing: border-box
+        &:nth-child(2n+1)
+          padding-right: 15px
+        &:nth-child(2n)
+          padding-left: 15px
 
-    a
-      width: 49%
-      display: inline-block
-      vertical-align: middle
-      font-size: 0
-      margin-bottom: 30px
-      box-sizing: border-box
-      &:nth-child(2n+1)
-        padding-right: 15px
-      &:nth-child(2n)
-        padding-left: 15px
-
-      img
-        width: 100%
+        img
+          width: 100%
 
 
   .collections .collections_block

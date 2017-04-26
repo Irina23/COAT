@@ -690,8 +690,7 @@ body {
     color: #000;
     text-align: justify; }
     .about .text_block p strong, .about .text_block p b, .contacts .text_block p strong, .contacts .text_block p b, .stockists .text_block p strong, .stockists .text_block p b {
-      font-family: "GothamPro-Bold", sans-serif;
-      font-style: italic; }
+      font-family: "GothamPro-Bold", sans-serif; }
   .about .text_block a, .contacts .text_block a, .stockists .text_block a {
     color: #000; }
   .about .text_block ul, .about .text_block ol, .contacts .text_block ul, .contacts .text_block ol, .stockists .text_block ul, .stockists .text_block ol {
@@ -837,10 +836,10 @@ body {
     color: #000;
     text-align: justify; }
     .collections .block_text_collections p strong, .collections .block_text_collections p b {
-      font-family: "GothamPro-Bold", sans-serif;
-      font-style: italic; }
+      font-family: "GothamPro-Bold", sans-serif; }
   .collections .block_text_collections a {
-    color: #000;
+    color: #000; }
+  .collections .block_text_collections .gallery-icons a {
     display: block; }
   .collections .block_text_collections ul, .collections .block_text_collections ol {
     margin-bottom: 30px; }
@@ -1031,8 +1030,7 @@ body {
       line-height: 1.5em;
       color: #000; }
       .article .content .text_block p strong, .article .content .text_block p b {
-        font-family: "GothamPro-Bold", sans-serif;
-        font-style: italic; }
+        font-family: "GothamPro-Bold", sans-serif; }
     .article .content .text_block a {
       color: #000; }
     .article .content .text_block ul, .article .content .text_block ol {
@@ -2185,18 +2183,18 @@ footer {
       .collections .block_text_collections.mobile .block_left {
         width: 100%;
         padding: 0; }
-    .collections .block_text_collections a {
+    .collections .block_text_collections .gallery_mobile a {
       width: 49%;
       display: inline-block;
       vertical-align: middle;
       font-size: 0;
       margin-bottom: 30px;
       box-sizing: border-box; }
-      .collections .block_text_collections a:nth-child(2n+1) {
+      .collections .block_text_collections .gallery_mobile a:nth-child(2n+1) {
         padding-right: 15px; }
-      .collections .block_text_collections a:nth-child(2n) {
+      .collections .block_text_collections .gallery_mobile a:nth-child(2n) {
         padding-left: 15px; }
-      .collections .block_text_collections a img {
+      .collections .block_text_collections .gallery_mobile a img {
         width: 100%; }
   .collections .collections_block {
     height: auto;
