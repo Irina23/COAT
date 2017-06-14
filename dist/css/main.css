@@ -1536,7 +1536,7 @@ footer {
       display: block;
       margin-bottom: 30px; }
       .product .content .img-holder a img {
-        max-width: 800px;
+        max-width: 100%;
         margin: auto;
         max-height: calc( 100vh - 140px); }
   .product .content .pdocut_info {
