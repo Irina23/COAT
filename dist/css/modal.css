@@ -1,0 +1,119 @@
+.modal_div {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.95);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 4;
+  display: none;
+  opacity: 0; }
+  .modal_div .modal_close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: url("../img/icons/close.svg") no-repeat center right;
+    padding-left: 55px;
+    background-size: 12px 12px;
+    position: absolute;
+    top: 30px;
+    right: 30px; }
+    @media screen and (max-width: 600px) {
+      .modal_div .modal_close {
+        top: 5px; } }
+  .modal_div .label {
+    text-transform: uppercase;
+    font-family: "GothamPro-Bold", sans-serif;
+    color: #000;
+    font-size: 0.7142857142857143rem;
+    line-height: 18px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px); }
+  .modal_div:hover {
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s; }
+    .modal_div:hover .label {
+      opacity: 1;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+      -webkit-transform: translateX(0);
+              transform: translateX(0); }
+  .modal_div .content-holder {
+    padding: 70px;
+    text-align: center;
+    max-height: calc(100vh - 106px);
+    max-width: calc( 100vw - 40px);
+    width: 570px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    @media screen and (max-width: 600px) {
+      .modal_div .content-holder {
+        padding: 25px; } }
+    .modal_div .content-holder tr {
+      border-bottom: 2px solid #eaeaec; }
+      .modal_div .content-holder tr th {
+        color: #333333;
+        font-family: "GothamPro-Bold", sans-serif;
+        font-weight: normal;
+        line-height: 1em;
+        padding: 10px 0;
+        width: 15%; }
+        .modal_div .content-holder tr th:first-child {
+          width: 25%; }
+      .modal_div .content-holder tr td {
+        font-size: 1rem;
+        padding: 10px 0;
+        line-height: 1em;
+        color: #333333;
+        font-family: "GothamPro", sans-serif; }
+        .modal_div .content-holder tr td:first-child {
+          text-align: left; }
+
+#info_delivery, #info_payment {
+  text-align: left; }
+  #info_delivery .content-holder, #info_payment .content-holder {
+    width: 1140px;
+    padding: 70px 140px;
+    text-align: left;
+    overflow: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    @media screen and (max-width: 1024px) {
+      #info_delivery .content-holder, #info_payment .content-holder {
+        padding: 70px; } }
+    @media screen and (max-width: 600px) {
+      #info_delivery .content-holder, #info_payment .content-holder {
+        padding: 20px 15px; } }
+    #info_delivery .content-holder h3, #info_payment .content-holder h3 {
+      text-transform: uppercase;
+      font-family: "GothamPro-Bold", sans-serif;
+      font-weight: normal;
+      font-size: 1.142857142857143rem;
+      line-height: 1em;
+      margin-bottom: 30px; }
+    #info_delivery .content-holder p, #info_payment .content-holder p {
+      margin-bottom: 20px;
+      font-size: 1rem;
+      line-height: 1.3em;
+      color: #1d1d1f; }
+      #info_delivery .content-holder p:last-child, #info_payment .content-holder p:last-child {
+        margin-bottom: 0; }
+    #info_delivery .content-holder ul, #info_payment .content-holder ul {
+      margin-bottom: 20px; }
+      #info_delivery .content-holder ul:last-child, #info_payment .content-holder ul:last-child {
+        margin-bottom: 0; }
+      #info_delivery .content-holder ul li, #info_payment .content-holder ul li {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        line-height: 1.3em;
+        color: #1d1d1f;
+        margin-left: 30px;
+        list-style-type: disc; }
+        #info_delivery .content-holder ul li:last-child, #info_payment .content-holder ul li:last-child {
+          margin-bottom: 0; }

@@ -1,0 +1,2704 @@
+$main-color: #ff4504
+$color-grey: #727272
+
+
+.chromeperfectpixel-initial-block iframe,
+#chromeperfectpixel-supported-by
+  display: none !important
+#__bs_notify__
+  display: none !important
+  opacity: 0 !important
+
+
+
+@font-face
+  font-family: "GothamPro"
+  src: url("../fonts/GothamPro.eot")
+  src: url("../fonts/GothamPro.eot?#iefix")format("embedded-opentype"),url("../fonts/GothamPro.otf") format("otf"), url("../fonts/GothamPro.svg") format("svg"),url("../fonts/GothamPro.woff") format("woff"),url("../fonts/GothamPro.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+
+@font-face
+  font-family: "GothamPro-Bold"
+  src: url("../fonts/GothamPro-Bold.eot")
+  src: url("../fonts/GothamPro-Bold.eot?#iefix")format("embedded-opentype"),url("../fonts/GothamPro-Bold.otf") format("otf"), url("../fonts/GothamPro-Bold.svg") format("svg"),url("../fonts/GothamPro-Bold.woff") format("woff"),url("../fonts/GothamPro-Bold.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+@font-face
+  font-family: "GothamPro-MediumItalic"
+  src: url("../fonts/GothamPro-MediumItalic.eot")
+  src: url("../fonts/GothamPro-MediumItalic.eot?#iefix")format("embedded-opentype"),url("../fonts/GothamPro-MediumItalic.otf") format("otf"), url("../fonts/GothamPro-MediumItalic.svg") format("svg"),url("../fonts/GothamPro-MediumItalic.woff") format("woff"),url("../fonts/GothamPro-MediumItalic.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+@font-face
+  font-family: "GothamPro-LightItalic"
+  src: url("../fonts/GothamPro-LightItalic.eot")
+  src: url("../fonts/GothamPro-LightItalic.eot?#iefix")format("embedded-opentype"),url("../fonts/GothamPro-LightItalic.otf") format("otf"), url("../fonts/GothamPro-LightItalic.svg") format("svg"),url("../fonts/GothamPro-LightItalic.woff") format("woff"),url("../fonts/GothamPro-LightItalic.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+
+
+html
+  font-size: 14px
+body
+  font-family: "GothamPro", sans-serif
+  font-weight: 400
+  padding: 0
+  margin: 0
+  line-height: 1em
+  font-size: 1rem
+  width: initial
+  -webkit-text-size-adjust: 100%
+  //overflow-x: hidden
+  //overflow-y: scroll
+  -ms-overflow-style: none
+  &::-webkit-scrollbar
+    width: 0!important
+  &.no-scroll
+    -webkit-overflow-scrolling: touch
+    overflow: hidden!important
+    .page_wrapper
+      overflow: hidden!important
+  p
+    color: #545353
+    line-height: 1.5em
+  .bx-wrapper
+    margin: auto
+
+*
+  box-sizing: border-box
+
+
+
+#preloader
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 99999
+  width: 100vw
+  height: 100vh
+  overflow: visible
+  background: #fff url('../img/icons/logo.svg') no-repeat center center
+  background-size: 20%
+  animation-fill-mode: both
+
+#preloader_blue, #preloader_pink, #preloader_green, #preloader_grey
+  z-index: 99999
+  width: 100vw
+  height: 100vh
+  overflow: visible
+  position: absolute
+
+#preloader_blue
+  background: #DFF6F9
+#preloader_pink
+  background: #FFEAED
+#preloader_green
+  background: #E7F4E8
+#preloader_grey
+  background: #EBEEF0
+
+#main_img
+  height: 100vh
+  transform: scale(1.3) translate3d(0,0,0)
+  background: #ffe5ed
+  position: fixed
+  width: 100vw
+  transition: all 1s
+  &.show
+    transform: scale(1) translate3d(0,0,0)
+    transition: all 1s
+  a
+    display: block
+    width: 100%
+    height: 100%
+  .wrap
+    width: 1140px
+    margin: auto
+
+  .block_text
+    color: #fefefe
+    font-size: 3.428571428571429rem
+    line-height: 1em
+    letter-spacing: 2px
+    //font-style: italic
+    float: right
+    margin-top: 180px
+    font-weight: normal
+    font-family: "GothamPro-LightItalic", sans-serif
+.home
+  .top
+    border-bottom: 0
+.top
+  position: fixed
+  width: 100%
+  left: 0
+  top: 0
+  transition: left .6s ease
+  background: #fff
+  z-index: 15
+  border-bottom: 1px solid #dedfe0
+  //background: orange
+  &.opened
+    left: 280px
+    transition: left .6s ease
+  &.opened_right
+
+    left: -280px
+    transition: left .6s ease
+    .bag-icon
+      display: none
+
+  >div
+    //display: inline-block
+    //vertical-align: middle
+    position: relative
+    
+  .menu-icon
+    width: 83px
+    height: 52px
+    padding: 19px 40px 19px 25px
+    cursor: pointer
+    float: left
+    background: url("../img/icons/menu_icon.svg") no-repeat 25px center
+    background-size: 18px 18px
+
+
+    .icon-bar
+      height: 2px
+      background: #000
+      width: 18px
+      display: block
+      margin-bottom: 4px
+      &:nth-child(3)
+        margin-bottom: 0
+    &:hover
+      .label
+        opacity: 1
+        transition: all 250ms ease
+        transform: translateX(4px)
+        //animation: fadeInLeft 0.5s
+    .label
+      text-transform: uppercase
+      font-family: "GothamPro-Bold", sans-serif
+      color:  #000000
+      font-size: 0.7142857142857143rem
+      line-height: 14px
+      position: absolute
+      top: 21px
+      right: 0
+      opacity: 0
+      transform: translateX(0)
+      transition: all 250ms ease
+
+
+  .logo
+    position: absolute
+    top: 17px
+    left: 50%
+    margin-left: -109px
+    width: 218px
+    height: 20px
+  .bag-icon
+    float: right
+    padding: 13px 23px 13px 30px
+    cursor: pointer
+    span
+      color: #000
+      font-family: "GothamPro-Bold", sans-serif
+      font-size: 0.7142857142857143rem
+      border-radius: 26px
+      background: #eaeaec
+      text-align: center
+      line-height: 27px
+      width: 26px
+      height: 26px
+      display: block
+
+
+    &:hover
+      .label
+
+        //transition: all 0.35s
+        //animation-duration: 1s
+        //animation-fill-mode: both
+        //animation: fadeInRight 1s
+        //animation-play-state: running
+        opacity: 1
+        transform: translateX(0)
+        transition: all 250ms ease
+
+
+    .label
+      text-transform: uppercase
+      font-family: "GothamPro-Bold", sans-serif
+      color:  #000000
+      font-size: 0.7142857142857143rem
+
+      position: absolute
+      top: 13px
+      left: 0
+      opacity: 0
+      //transition: all 0.35s
+      line-height: 27px
+      transform: translateX(4px)
+      transition: all 250ms ease
+
+.content
+  position: relative
+  transition: left .6s ease
+  left: 0
+  width: 100%
+  //height: 100vh
+  padding-top: 52px
+  //overflow: scroll
+
+
+
+
+  &.opened
+    left: 280px
+    transition: left .6s ease
+    overflow: hidden
+    height: 100vh !important
+    #slder_about, #slder_article, #slder_contacts, #slder_stockists
+      //position: relative
+      //top: inherit
+      transform: translate(280px,0)
+      transition: all .6s ease
+
+
+
+  &.opened_right
+    left: -280px
+    //left: inherit
+    transition: left .6s ease
+    overflow: hidden
+    height: 100vh!important
+    #slder_about, #slder_article, #slder_contacts, #slder_stockists
+      //position: relative
+      //top: inherit
+      transform: translate(-280px,0)
+      transition: all .6s ease
+    .filter
+      .block_filter, .title
+        transform: translate(-280px, 0)
+        transition: all .6s ease
+    + .add_bag
+
+        transform: translate(-280px, 0)
+        transition: all .6s ease
+
+
+
+#bar_opened
+  width: 100%
+  height: 100%
+  background: rgba(29, 29, 31, 0.5)
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  visibility: hidden
+  cursor: pointer
+
+  &::-webkit-scrollbar
+    width: 0!important
+  &.opened
+    visibility: visible
+    z-index: 16
+    -webkit-overflow-scrolling: touch
+    overflow: hidden!important
+
+
+
+
+
+
+
+
+
+.menu-bar
+  //opacity: 0
+  width: 280px
+  position: fixed
+  left: 0
+  transition: all .6s ease
+  height: 100%
+  //min-height: 100vh
+  background: #1d1d1f
+  top: 0
+  bottom: 0
+  z-index: 17
+  transform: translate3d(-280px,0,0)
+
+
+  &.opened
+    //left: 0
+    transition: all .6s ease
+    transform: translate3d(0,0,0)
+    -webkit-overflow-scrolling: touch
+    //overflow: scroll
+    //opacity: 1
+  .nav-menu-wrapper
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    width: 100%
+    height: calc( 100% - 156px)
+
+
+  .mCSB_container
+    overflow: auto
+    display: table
+    width: 100%
+    height: 100%
+  .menu
+
+    display: table
+    width: 100%
+    box-sizing: border-box
+    height: 100%
+    .menu-holder
+      display: table-cell
+      vertical-align: middle
+      width: 100%
+      height: 100%
+      .menu-block
+        display: table-cell
+        padding: 30px 50px
+        max-height: 310px
+        overflow: auto
+
+    .title
+      margin-bottom: 60px
+      font-size: 1rem
+      font-family: "GothamPro-Bold", sans-serif
+      color: #fff
+      text-transform: uppercase
+      letter-spacing: 1px
+
+
+
+    .nav
+      li
+        display: block
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0
+        &.active
+          a
+
+            transform: translateX(5px)
+            color: #FFF
+        a
+          color: #bcbcbc
+          text-transform: uppercase
+          font-size: 0.8571428571428571rem
+          display: block
+          transition: transform 0.35s ease
+          transform: translateX(0)
+          letter-spacing: 1px
+          &:hover
+
+            color: #FFF
+            transition: transform 0.35s ease
+            transform: translateX(5px)
+            text-decoration: none
+
+
+  .social
+      border-top: 2px solid #2d2d2d
+      border-bottom: 2px solid #2d2d2d
+      position: absolute
+      bottom: 104px
+      left: 0
+      width: 100%
+      li
+          width: 50%
+          float: left
+          box-sizing: border-box
+          &.instagram
+            border-right: 1px solid #2d2d2d
+
+          &.facebook
+            border-left: 1px solid #2d2d2d
+          a
+            display: block
+            transition: all 0.5s
+            height: 50px
+            position: relative
+            overflow: hidden
+            span
+              position: absolute
+              width: 100%
+              height: 53px
+              top: 0
+              left: 0
+              transition: all 0.35s
+
+              &.hover
+                top: 100%
+                transition: all 0.35s
+            img
+              width: 18px
+              height: 18px
+              position: absolute
+              top: 50%
+              left: 50%
+              margin-left: -9px
+              margin-top: -9px
+
+            &:hover
+              transition: all 0.5s
+              background: #000
+              span
+                top: -100%
+                transition: all 0.35s
+                &.hover
+                  top: 0
+                  transition: all 0.35s
+
+
+
+
+  .lang
+    border-bottom: 2px solid #2d2d2d
+    position: absolute
+    bottom: 52px
+    left: 0
+    width: 100%
+    li
+      width: 100%
+      line-height: 50px
+      text-align: center
+      &.active
+        display: none
+      a
+        color: #bcbcbc
+        font-size: 0.8571428571428571rem
+        display: block
+        transition: all 0.5s
+        position: relative
+        height: 50px
+        overflow: hidden
+        span
+          position: absolute
+          top: 0
+          left: 0
+          display: block
+          line-height: 50px
+          transition: all 0.35s
+          width: 100%
+          &.hover
+            top: 100%
+            transition: all 0.35s
+
+
+        &:hover
+          transition: all 0.5s
+          text-decoration: none
+          background: #000
+
+          span
+            top: -100%
+            transition: all 0.35s
+
+
+            &.hover
+              top: 0
+              transition: all 0.35s
+         
+
+
+  .info
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    //padding: 16px 0
+    a
+      display: block
+      text-align: center
+      position: relative
+      transition: all 0.35s
+      height: 52px
+      overflow: hidden
+      span
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        display: block
+        transition: all 0.5s
+        height: 52px
+        img
+          width: 18px
+          height: 18px
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-top: -9px
+          margin-left: -9px
+        &.hover
+          top: 100%
+          transition: all 0.35s
+
+      &:hover
+          transition: all 0.5s
+          background: #000
+          span
+            top: -100%
+            transition: all 0.35s
+            &.hover
+              top: 0
+              transition: all 0.35s
+
+
+
+
+
+
+
+.bag_bar
+  //opacity: 0
+  width: 280px
+  position: fixed
+  right: 0
+  transition: all .6s ease
+  height: 100%
+  background: #eaeaec
+  top: 0
+  z-index: 17
+  transform: translate3d(280px,0,0)
+  bottom: 0
+  //min-height: 100vh
+
+  &.opened
+    //right: 0
+    transition: all .6s ease
+    transform: translate3d(0,0,0)
+    -webkit-overflow-scrolling: touch
+    //overflow: scroll
+    //opacity: 1
+
+  .bag-icon
+    float: right
+    padding: 13px 23px 13px 30px
+    cursor: pointer
+    span
+      color: #fefefe
+      font-family: "GothamPro-Bold", sans-serif
+      font-size: 0.7142857142857143rem
+      border-radius: 26px
+      background: #1d1d1f
+      text-align: center
+      line-height: 27px
+      width: 26px
+      height: 26px
+      display: block
+  .total
+    display: block
+    background: #fff
+    padding: 18px 30px
+    clear: both
+    position: absolute
+    width: 100%
+    bottom: 52px
+    span
+      text-transform: uppercase
+      display: inline-block
+      vertical-align: middle
+      width: 49%
+      text-align: left
+      font-size: 0.8571428571428571rem
+      color: #bcbcbc
+      letter-spacing: 1px
+      &:nth-child(2)
+        text-align: right
+        color: #1d1d1f
+        font-family: "GothamPro-Bold", sans-serif
+
+
+  .checkout
+    display: block
+    background: #1d1d1f
+    padding: 19px 30px
+    text-transform: uppercase
+    text-align: center
+    color: #eaeaec
+    font-size: 0.8571428571428571rem
+    transition: all 0.35s
+    //position: relative
+    width: 100%
+    height: 52px
+    overflow: hidden
+    border: 0
+    position: absolute
+    bottom: 0
+    &.disabled
+      span
+        color: rgba(255, 255, 255, 0.5)
+        cursor: default
+
+      &:hover
+        span
+          color: rgba(255, 255, 255, 0.5)
+          top: 0
+          &.hover
+            top: 100%
+    span
+      font-size: 0.8571428571428571rem
+      color: #eaeaec
+      display: block
+      text-align: center
+      padding: 19px 30px
+      position: absolute
+      width: 100%
+      top: 0
+      left: 0
+      transition: all 0.35s
+      &.hover
+        top: 100%
+        transition: all 0.35s
+    &:hover
+      transition: all 0.35s
+      text-decoration: none
+      span
+        top: -100%
+        transition: all 0.35s
+        &.hover
+          top: 0
+          transition: all 0.35s
+
+  .list_product_bag
+    //height: calc( 100% - 154px)
+    overflow: auto
+    clear: both
+    position: absolute
+    top: 52px
+    bottom: 154px
+    .item_product
+      border-bottom: 1px solid #dedfe0
+      padding: 20px 30px
+      a
+        display: block
+        color:  #000
+        font-size: 0.8571428571428571rem
+        &:hover
+          text-decoration: none
+      .img-holder
+
+        height: 150px
+        width: 150px
+        margin: 0 auto 20px
+      .title
+        margin-bottom: 15px
+        line-height: 1.2em
+        font-family: "GothamPro-Bold", sans-serif
+        text-transform: uppercase
+        font-size: 0.7142857142857143rem
+      .size
+        line-height: 1em
+        margin-bottom: 10px
+      .price
+        float: right
+        font-family: "GothamPro-Bold", sans-serif
+      .delete
+        float: left
+        width: 8px
+        height: 8px
+        background-size: 100%
+        background: url("../img/icons/close.svg") no-repeat
+        border: 0
+        box-shadow: none
+        cursor: pointer
+
+
+.about, .contacts, .stockists
+
+  .text_block
+    float: left
+    //overflow: auto
+    width: 40%
+    box-sizing: border-box
+
+    height: calc( 100vh - 52px)
+    .overflow-block
+      padding: 50px 70px
+
+
+    h3
+      text-transform: uppercase
+      margin-bottom: 40px
+      color: #000
+      font-size: 1rem
+      line-height: 1em
+      font-family: "GothamPro-Bold", sans-serif
+      font-weight: normal
+    p
+      margin-bottom: 30px
+      font-size: 1rem
+      line-height: 1.5em
+      color: #000
+      text-align: justify
+      strong,b
+        font-family: "GothamPro-Bold", sans-serif
+        //font-style: italic
+    a
+
+      color: #000
+      //font-family: "GothamPro-Bold", sans-serif
+    ul,ol
+      margin-bottom: 30px
+      li
+        font-size: 1rem
+        line-height: 1.5em
+        color: #000
+        margin-left: 30px
+    ul
+      li
+        list-style-type: disc
+    ol
+      li
+        list-style-type: decimal
+
+  #slder_about, #slder_contacts, #slder_stockists
+    width: 60%
+    float: right
+    position: fixed
+    top: 53px
+    right: 0
+    transition: all .6s ease
+    transform: translate(0,0)
+
+
+
+    .bx-controls
+      display: none
+    li
+      display: block
+      height: calc( 100vh - 52px)
+
+.contacts
+  .text_block
+    width: 30%
+    //padding:  50px
+    h3
+      margin-bottom: 10px
+
+
+  #slder_contacts
+    width: 70%
+
+
+.collections
+
+  .content
+
+    &.opened
+
+      .block_text_collections .block_left
+        transform: translate(280px,0)
+        transition: all .6s ease
+      .block_text_collections.mobile .block_left
+        transform: translate(0,0)
+
+
+
+    &.opened_right
+
+      .block_text_collections .block_left
+        transform: translate(-280px,0)
+        transition: all .6s ease
+      .block_text_collections.mobile .block_left
+        transform: translate(0,0)
+
+  .collections_block
+
+    box-sizing: border-box
+    width: calc((100vw - 50px)/3)
+    float: left
+    overflow: auto
+    //height: calc( 100% - 53px)
+    position: relative
+    z-index: 2
+    .active_collections
+      display: none
+      padding: 40px 36px 40px 25px
+      text-transform: uppercase
+      color: #1d1d1f
+      font-size: 1rem
+      line-height: 1em
+      font-family: "GothamPro-Bold", sans-serif
+      cursor: pointer
+      position: relative
+      &:after
+        position: absolute
+        background: url("../img/icons/down-white.svg") no-repeat center
+        content: ""
+        top: 50%
+        margin-top: -8px
+        right: 20px
+        width: 16px
+        height: 16px
+        background-size: 16px
+        
+  
+    .item
+      &.active
+        a
+          span
+            color: #1d1d1f
+            &.color_bg
+              background: #ebeef0
+              opacity: 1
+              transition: opacity 0.35s
+
+      a
+        display: block
+        //padding: 40px 30px 40px 70px
+        text-transform: uppercase
+        color: #1d1d1f
+        font-size: 14px
+        line-height: 1em
+        font-family: "GothamPro-Bold", sans-serif
+        position: relative
+        z-index: 2
+        span
+          z-index: 1
+          position: relative
+          display: block
+          padding: 40px 30px 40px 70px
+          color: #bcbcbc
+          transition: all 0.35s
+          &.color_bg
+            opacity: 0
+            width: 100%
+            position: absolute
+            height: 100%
+            left: 0
+            z-index: 0
+            transition: opacity 0.35s
+
+
+
+        &:hover
+          text-decoration: none
+          span
+            color: #1d1d1f
+            transition: all 0.35s
+            &.color_bg
+              background: #ebeef0
+              opacity: 1
+              transition: opacity 0.35s
+
+  .block_text_collections
+    //width: 70%
+    width: calc(((100vw - 50px )/3)*2 + 50px)
+    float: right
+    padding-left: 25px
+    padding-top: 50px
+    box-sizing: border-box
+
+
+    &.mobile
+      display: none
+      .block_left
+        position: inherit
+        right: inherit
+
+    h3
+      text-transform: uppercase
+      margin-bottom: 30px
+      color: #000
+      font-size: 1rem
+      line-height: 1em
+      font-family: "GothamPro-Bold", sans-serif
+      font-weight: normal
+    p
+      margin-bottom: 60px
+      font-size: 1rem
+      line-height: 1.5em
+      color: #000
+      text-align: justify
+      strong,b
+        font-family: "GothamPro-Bold", sans-serif
+        //font-style: italic
+    a
+
+      color: #000
+    .gallery-icons
+      a
+        display: block
+
+    //font-family: "GothamPro-Bold", sans-serif
+    ul,ol
+      margin-bottom: 30px
+      li
+        font-size: 1rem
+        line-height: 1.5em
+        color: #000
+        margin-left: 30px
+    ul
+      li
+        list-style-type: disc
+    ol
+      li
+        list-style-type: decimal
+
+    .block_left
+      width: calc((100vw - 50px)/3)
+      //padding-right: 25px
+      float: left
+      height: 100%
+      position: fixed
+      right: calc((100vw - 50px)/3 + 25px)
+      transform: translate(0, 0)
+      transition: all 0.6s ease
+
+
+
+
+      .bx-wrapper .bx-viewport
+        min-height: calc(100vh - 102px)!important
+      .gallery
+        //height: 100%
+
+        a
+          display: block
+          margin-bottom: 15px
+          min-width: 100%
+          img
+            width: 100%
+    .block_right
+      overflow: hidden
+      padding-right: 40px
+      padding-left: calc((100vw - 50px)/3 + 25px)
+
+
+      .gallery-icons
+        a
+          //float: left
+          width: 67px
+          max-height: 100px
+          margin: 0 15px 15px 0
+          border: 1px solid #dedfe0
+          opacity: 0.7
+          transition:  all 0.35s
+          //overflow: hidden
+          text-align: center
+          box-sizing: border-box
+          display: inline-block
+          vertical-align: middle
+
+
+
+          img
+            max-height: 100%
+            width: 65px
+            height: auto
+            display: block
+
+
+
+          &.active, &:hover
+            opacity: 1
+            transition:  all 0.35s
+
+#blueimp-gallery.blueimp-gallery
+  > .close
+    background: url("../img/icons/close.png") no-repeat
+    background-size: 100%
+    width: 25px
+    height: 25px
+    display: block
+    top: 10px
+    right: 10px
+    padding: 0
+    margin: 0
+    transition: all 0.35s
+    &:hover
+      transition: all 0.35s
+
+
+  > .prev, > .next
+    display: block
+    width: 22px
+    height: 38px
+    border: 0
+    border-radius: 0
+    background: url("../img/icons/next.png") no-repeat
+    background-size: 100%
+    transition: all 0.35s
+    &:hover
+      transition: all 0.35s
+  > .next
+    transform: rotate(180deg)
+
+
+
+
+.stockists
+  .text_block
+    padding: 0
+    dt
+      background:  #eaeaec
+      padding: 43px 30px 43px 70px
+      text-transform: uppercase
+      color:  #1d1d1f
+      font-size: 1rem
+      line-height: 1em
+      font-family: "GothamPro-Bold", sans-serif
+    dd
+      padding: 50px 30px 50px 70px
+      h3
+        font-size: 1rem
+        margin-bottom: 20px
+      p
+        margin-bottom: 0
+        font-size: 1rem
+        line-height: 1.3em
+      .info_stockists
+        margin-bottom: 50px
+        &:last-child
+          margin-bottom: 0
+
+
+
+.media
+  .content
+    //border-top: 1px solid #dedfe0
+    padding: 103px 28px 50px
+    height: auto
+    .list_media_items
+      //width: 1222px
+      margin: auto
+      //text-align: center
+      .media_item
+        padding: 0 10px 50px
+        display: inline-block
+        vertical-align: top
+        width: 33%
+        box-sizing: border-box
+
+        a
+          display: block
+          text-align: left
+          &:hover
+            text-decoration: none
+          .img-holder
+            width: 100%
+            height: auto
+            margin-bottom: 10px
+            img
+              width: 100%
+          .title
+            font-size: 1rem
+            line-height: 1.3em
+            color: #000
+            margin-bottom: 10px
+          .url
+            font-size: 1rem
+            text-transform: uppercase
+            color: #000
+            font-family: "GothamPro-Bold", sans-serif
+
+
+.article
+  .content
+    //border-top: 1px solid #dedfe0
+    position: relative
+    &.opened
+      #slder_article
+        //top: 0
+        //position: relative
+        transform: translate(280px,0)
+        transition: all .6s ease
+    &.opened_right
+      #slder_article
+        transform: translate(-280px,0)
+        transition: all .6s ease
+
+    .close
+      position: absolute
+      top: 62px
+      right: 23px
+      width: 26px
+      height: 26px
+      background: url("../img/icons/close_round.svg") no-repeat
+      cursor: pointer
+      z-index: 10
+    .text_block
+      float: left
+      width: 40%
+      //padding: 50px 70px
+      //overflow: auto
+      box-sizing: border-box
+      height: calc( 100vh - 53px )
+      text-align: justify
+      .overflow-block
+        padding: 50px 70px
+      h1,h3
+        text-transform: uppercase
+        margin-bottom: 30px
+        color: #000
+        font-size: 1rem
+        line-height: 1em
+        font-family: "GothamPro-Bold", sans-serif
+        font-weight: normal
+      p
+        margin-bottom: 30px
+        font-size: 1rem
+        line-height: 1.5em
+        color: #000
+        strong,b
+          font-family: "GothamPro-Bold", sans-serif
+          //font-style: italic
+      a
+
+        color: #000
+      //font-family: "GothamPro-Bold", sans-serif
+      ul,ol
+        margin-bottom: 30px
+        li
+          font-size: 1rem
+          line-height: 1.5em
+          color: #000
+          margin-left: 30px
+      ul
+        li
+          list-style-type: disc
+      ol
+        li
+          list-style-type: decimal
+    #slder_article
+      width: 60%
+      float: right
+      position: fixed
+      top: 53px
+      right: 0
+      transition: all .6s ease
+      transform: translate(0,0)
+      &.left
+        float: left
+        left: 0
+        + .text_block
+          float: right
+      .bx-controls
+        display: none
+      li
+        display: block
+        height: calc( 100vh - 52px)
+    .img-holder
+      float: left
+      width: 60%
+      height: calc( 100vh - 53px )
+      overflow: hidden
+      div
+        height: 100%
+        width: 100%
+      .bx-controls
+        display: none
+
+
+.bag_null
+  text-align: center
+  color: #000
+  font-size: 1rem
+  line-height: 1em
+
+
+.list_product_page
+  .content
+    //border-top: 1px solid #dedfe0
+    padding: 103px 28px 85px
+    min-height: calc( 100vh - 446px)
+    height: auto
+  .list_products
+    font-size: 0
+    .error_product
+      color: #000
+      font-size: 1rem
+      line-height: 1em
+      text-align: center
+      text-transform: uppercase
+
+    .item_product
+      padding: 0 12px 25px
+      display: inline-block
+      vertical-align: top
+      width: 25%
+      box-sizing: border-box
+      a
+        font-size: 0.8571428571428571rem
+        line-height: 1.3em
+        color: #000000
+        text-transform: uppercase
+        text-align: center
+        display: block
+        //transition: all 0.35s
+        position: relative
+        &:hover
+          text-decoration: none
+          //transition: all 0.35s
+          .title
+            opacity: 0
+            transition: opacity 0.5s ease
+          .price
+            opacity: 1
+            transition: all 0.5s  0.5s ease
+            transform: translateY(0)
+        .img-holder
+          margin-bottom: 15px
+          width: 100%
+          height: auto
+          position: relative
+          .label
+            position: absolute
+            width: 100%
+            text-align: right
+            font-style: italic
+            text-transform: uppercase
+            color:  #ababad
+            font-size: 0.7142857142857143rem
+            letter-spacing: 1px
+            font-family: "GothamPro", sans-serif
+            top: 0
+            right: 0
+            + .label
+              top: 20px
+              + .label
+                top: 40px
+              
+        .title
+          font-size: 0.8571428571428571rem
+          line-height: 1.3em
+          letter-spacing: 1px
+          transition: opacity 0.5s 0.5s ease
+          //font-family: "GothamPro-Bold", sans-serif
+        .price
+          position: absolute
+          bottom: 0
+          width: 100%
+          opacity: 0
+          transition: all 0.5s ease
+          font-size: 1.142857142857143rem
+          line-height: 1em
+          font-family: "GothamPro-Bold", sans-serif
+          transform: translateY(15px)
+
+
+
+footer
+  background: #90a4ae
+  padding: 105px 0 60px
+  text-align: center
+  color: #fff
+  line-height: 1em
+  font-size: 1rem
+  //position: relative
+  &.opened
+    display: none
+  p
+    color: #fff
+    line-height: 1.3em
+    font-size: 1rem
+    //margin-bottom: 30px
+    letter-spacing: 1px
+    width: 250px
+    margin: 0 auto 30px
+
+    &.name
+      text-transform: uppercase
+      width: 100%
+    &.copyright
+      margin-bottom: 0
+      a
+        display: inline-block
+
+
+      //font-size: 1rem
+  a
+    color: #fff
+    line-height: 1.3em
+    font-size: 1rem
+    display: block
+  .social
+    text-align: center
+    margin-bottom: 30px
+    li
+      width: 55px
+      height: 55px
+      box-sizing: border-box
+      border: 1px solid #c3ccd1
+      margin-right: 85px
+      display: inline-block
+      vertical-align: top
+      background: #90a4ae
+
+
+      a
+        display: block
+        transition: all 0.5s
+        height: 53px
+        position: relative
+        overflow: hidden
+        span
+          position: absolute
+          width: 100%
+          height: 53px
+          top: 0
+          left: 0
+          transition: all 0.35s
+
+          &.hover
+            top: 100%
+            transition: all 0.35s
+        img
+          width: 18px
+          height: 18px
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-left: -9px
+          margin-top: -9px
+
+        &:hover
+          transition: all 0.5s
+          //background: #000
+          span
+            top: -100%
+            transition: all 0.35s
+            &.hover
+              top: 0
+              transition: all 0.35s
+
+      &:last-child
+        margin-right: 0
+
+
+
+.scrollTop
+  width: 50px
+  height: 50px
+  position: fixed
+  bottom: 0
+  left: 0
+  background: #eaeaec
+  color: #000
+  text-align: center
+  box-sizing: border-box
+  padding-top: 30px
+  //transform: rotate(-90deg)
+  &:before
+    position: absolute
+    content: ""
+    background: url("../img/icons/up.svg") no-repeat center
+    width: 10px
+    height: 10px
+    top: 50%
+    left: 50%
+    margin-left: -5px
+    margin-top: -5px
+  &:hover
+    text-decoration: none
+
+.filter
+  min-width: 320px
+
+  .title
+    background:  #eaeaec
+    color: #000
+    text-align: center
+    text-transform: uppercase
+    position: fixed
+    right: 0
+    bottom: 0
+    font-size: 0.8571428571428571rem
+    line-height: 1em
+    padding: 18px 80px
+    letter-spacing: 1px
+    cursor: pointer
+    overflow: hidden
+    height: 50px
+    width: 210px
+    z-index: 1
+    transform: translate(0, 0)
+    transition: all .6s ease
+    span
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      display: block
+      box-sizing: border-box
+      font-size: 0.8571428571428571rem
+      line-height: 1em
+      padding: 18px 80px
+      transition: all 0.35s
+      &.hover
+        top: 100%
+        transition: all 0.35s
+    &:hover
+      span
+        top: -100%
+        transition: all 0.35s
+        &.hover
+          top: 0
+          transition: all 0.35s
+
+
+
+  .block_filter
+    display: none
+    position: fixed
+    right: 0
+    bottom: 0
+    background: #1b1b1f
+    color: #bcbcbc
+    z-index: 2
+    top: 53px
+    transform: translate(0, 0)
+    transition: all .6s ease
+    //padding: 0 40px 0 0
+    .list_filters
+
+
+      height: calc( 100% - 103px)
+      display: table
+      width: 100%
+      min-width: 420px
+
+      .block_filters
+
+        display: table-cell
+        vertical-align: middle
+        width: 100%
+        height: 100%
+        .block_filters2
+          width: 100%
+          //max-height: 100%
+          overflow: auto
+          padding: 0 0 0 70px
+          //height: 100%
+
+
+      [id^="attribut"]
+        //margin-bottom: 40px
+        display: inline-block
+        vertical-align: top
+        width: 49%
+
+        .name
+          text-transform: uppercase
+          color: #fff
+          font-size: 0.9285714285714286rem
+          line-height: 1em
+          margin-bottom: 30px
+          font-family: "GothamPro-Bold", sans-serif
+          letter-spacing: 2px
+        .attribute
+          margin-bottom: 30px
+          &:last-child
+            margin-bottom: 0
+          input[type="checkbox"]
+            display: none
+            &:checked
+              + label
+                transition: transform 0.35ms ease
+                transform: translateX(10px)
+                color: #FFF
+                &:before
+                  opacity: 1
+                  transition: opacity 300ms ease
+
+
+
+
+
+          label
+            display: block
+            //margin-bottom: 30px
+            font-size: 0.8571428571428571rem
+            line-height: 1em
+            cursor: pointer
+            text-indent: 0
+            //transition: all 0.35s
+            position: relative
+            letter-spacing: 1px
+            transition: transform 0.35s ease
+            transform: translateX(0)
+            &:before
+              transition: opacity 300ms ease
+              width: 4px
+              height: 4px
+              border-radius: 4px
+              background: #fff
+              margin: 0
+              opacity: 0
+              left: -10px
+              position: absolute
+              top: 4px
+              content: ""
+
+            &:hover
+              //text-indent: 10px
+              color: #FFF
+              //transition: all 0.35s
+              transition: transform 0.35s ease
+              transform: translateX(10px)
+
+
+
+
+
+
+
+
+
+    button,a
+
+      box-shadow: none
+      background: #eaeaec
+      border: 0
+      float: left
+      //width: 50%
+      box-sizing: border-box
+      text-transform: uppercase
+      font-size: 0.8571428571428571rem
+      line-height: 1em
+      cursor: pointer
+      color: #000
+      transition: all 0.35s
+      position: relative
+      padding: 19px 80px
+      height: 50px
+      width: 210px
+      overflow: hidden
+      bottom: -53px
+
+      &:hover
+        span
+          top: -100%
+          transition: all 0.35s
+          &.hover
+            top: 0
+            transition: all 0.35s
+
+
+
+      span
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: block
+        padding: 19px 80px
+        box-sizing: border-box
+        font-size: 0.8571428571428571rem
+        line-height: 1em
+        transition: all 0.35s
+        &.hover
+          top: 100%
+          transition: all 0.35s
+
+
+
+      &:hover
+        transition: all 0.35s
+
+      &.apply
+        background: #000
+        color: #fff
+        &:hover
+          transition: all 0.35s
+
+
+
+    .close
+      width: 20px
+      height: 20px
+      cursor: pointer
+      background: url("../img/icons/close_w.svg") no-repeat center right
+      padding-left: 55px
+      background-size: 12px 12px
+      transition: all 0.35s
+      position: absolute
+      top: 10px
+      right: 30px
+
+      .label
+        text-transform: uppercase
+        font-family: "GothamPro-Bold", sans-serif
+        color: #fff
+        font-size: 0.7142857142857143rem
+        line-height: 18px
+        position: absolute
+        top: 3px
+        left: 0
+        opacity: 0
+        transition: all 250ms ease
+        transform: translateX(4px)
+
+
+      &:hover
+        transition: all 0.35s
+        .label
+          opacity: 1
+          transition: all 250ms ease
+          transform: translateX(0)
+
+
+
+
+.product
+  .content
+    padding: 102px 70px 0 0
+    height: auto
+    box-sizing: border-box
+    //width: 1060px
+    margin: auto
+    .close
+      position: absolute
+      top: 62px
+      right: 23px
+      width: 26px
+      height: 26px
+      background: url("../img/icons/close_round.svg") no-repeat
+      cursor: pointer
+    .img-holder
+      //background: #e6e6e6
+      //width: 560px
+      //height: 590px
+      margin-left: 140px
+      width: calc( 100vw - 700px)
+      height: auto
+      padding-bottom: 35px
+      float: left
+      position: relative
+      //height: calc(100vh - 102px)
+      //overflow: auto
+      a
+        display: block
+        margin-bottom: 30px
+        img
+          max-width: 100%
+          margin: auto
+
+          max-height: calc( 100vh - 140px)
+
+
+
+
+    .pdocut_info
+      float: right
+      //margin-top: 45px
+      width: 350px
+      .label
+        margin-bottom: 30px
+        text-align: left
+        font-style: italic
+        text-transform: uppercase
+        color:  #333333
+        font-size: 1.285714285714286rem
+        font-family: "GothamPro", sans-serif
+
+
+      .title
+        text-transform: uppercase
+        margin-bottom: 25px
+        line-height: 1em
+        font-size: 1.428571428571429rem
+        color: #1d1d1f
+        font-family: "GothamPro-Bold", sans-serif
+      .article
+        margin-bottom: 50px
+        color: #333333
+        font-size: 1.142857142857143rem
+      .description
+        text-transform: uppercase
+        margin-bottom: 50px
+
+        p,ul
+          color:  #333333
+          line-height: 1.3em
+          font-size: 0.8571428571428571rem
+          margin-bottom: 20px
+
+          b
+            font-weight: normal
+            font-family: "GothamPro-Bold", sans-serif
+            //font-size: 1rem
+
+        p
+          &:first-child, &:last-child
+            margin-bottom: 0
+      .guide
+        .title
+          color: #212121
+          text-transform: uppercase
+          font-size: 1rem
+          line-height: 1em
+          transition: all 0.35s
+          &:hover
+            transition: all 0.35s
+            text-decoration: none
+            color: #253137
+
+
+#overlay
+  z-index: 3
+  position: fixed
+  background: rgba(84, 110, 122, 0.89)
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  cursor: pointer
+  display: none
+
+
+
+.add_bag
+  position: fixed
+  right: 0
+  bottom: 0
+  width: 420px
+  transform: translate(0, 0)
+  transition: all .6s ease
+  #attribute_size
+    width: 210px
+    float: left
+    .name
+      height: 52px
+      background:  #eaeaec
+      cursor: pointer
+      text-align: center
+      padding: 20px 0
+      overflow: hidden
+      position: relative
+      transition: all 0.35s
+      text-transform: uppercase
+      color:  #1d1d1f
+      font-size: 0.8571428571428571rem
+      line-height: 1em
+      letter-spacing: 1px
+      font-weight: 400
+      &.open
+        &:after
+          //background: url("../img/icons/up.svg") no-repeat
+          //background-size: 100%
+          transition: all 250ms ease
+          transform: rotate(180deg)
+      &:after
+        position: absolute
+        width: 10px
+        height: 8px
+        background: url("../img/icons/down.svg") no-repeat
+        background-size: 100%
+        content: ""
+        top: 50%
+        margin-top: -4px
+        right: 30px
+        transition: all 250ms ease
+        transform: rotate(0deg)
+
+      &:hover
+        transition: all 0.35s
+        span
+          transition: all 0.35s
+          top: -100%
+          &.hover
+            top: 0
+            transition: all 0.35s
+      span
+        padding: 20px 0
+        height: 52px
+        position: absolute
+        top: 0
+        left: 0
+        display: block
+        width: 100%
+        transition: all 0.35s
+        &.hover
+          transition: all 0.35s
+          top: 100%
+
+
+    .attribute_holder
+      display: none
+      position: absolute
+      bottom: 52px
+      right: 0
+      width: 420px
+      height: calc( 100vh - 104px )
+      background: #1d1d1f
+      padding: 150px 0 0 160px
+      box-sizing: border-box
+      overflow: auto
+      .attribute
+        margin-bottom: 25px
+        input[type="radio"]
+          display: none
+          &:disabled
+            + label
+              cursor: default
+              &:hover
+                color: #bcbcbc
+          &:checked
+            + label
+              color: #FFF
+              transition: all 0.35s
+
+        label
+          color: #bcbcbc
+          font-size: 0.8571428571428571rem
+          cursor: pointer
+          display: block
+          transition: all 0.35s
+          &.disabled
+            text-decoration: line-through
+          &:hover
+            transition: all 0.35s
+            color: #fff
+
+
+  .add_button
+    width: 210px
+    float: left
+    line-height: 1em
+    padding: 20px 0
+    color: #fff
+    font-size: 0.8571428571428571rem
+    text-align: center
+    text-transform: uppercase
+    background: #000
+    border: 0
+    box-shadow: none
+    cursor: pointer
+    position: relative
+    height: 52px
+    overflow: hidden
+    box-sizing: border-box
+    transition: all 0.35s
+    letter-spacing: 1px
+    &:disabled
+      color: rgba(255,255,255,.5)
+      cursor: default
+      &:hover
+        span
+          top: 0
+          &.hover
+            top: 100%
+
+    &:hover
+      transition: all 0.35s
+      span
+        transition: all 0.35s
+        top: -100%
+        &.hover
+          top: 0
+          transition: all 0.35s
+
+    span
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      display: block
+      padding: 20px 0
+      transition: all 0.35s
+      &.hover
+        top: 100%
+        transition: all 0.35s
+
+
+
+
+
+.checkout
+  .title_checkout
+    background: #546e7a
+    text-align: center
+    text-transform: uppercase
+    color: #eaeaec
+    padding: 95px 0
+    line-height: 1em
+    font-size: 1.142857142857143rem
+    letter-spacing: 1px
+
+  .content
+    background: #eaeaec
+    height: auto
+  #checkout
+    width: 850px
+    margin: auto
+    padding: 100px 0
+    h3
+      line-height: 1em
+      text-transform: uppercase
+      font-weight: normal
+      color: #1d1d1f
+      font-size: 1.142857142857143rem
+      margin-bottom: 60px
+      position: relative
+
+
+
+    [class^="row-form"]
+      margin-bottom: 15px
+      h3
+        margin-bottom: 40px
+        margin-top: 70px
+
+      >div
+        float: left
+        width: 400px
+        &:first-child
+          margin-right: 50px
+        &.error
+          input[type="text"]
+            border-color: red
+      div.error > .selectbox
+            .select
+              border-color: red
+
+
+      input[type="text"]
+        width: 100%
+        background: none
+        padding: 25px 0
+        text-transform: uppercase
+        border: 0
+        border-bottom: 1px solid #263238
+        line-height: 1em
+        color: #90a4ae
+        font-size: 0.8571428571428571rem
+      select
+        display: none
+      .selectbox
+        display: block
+        cursor: pointer
+        .select
+          padding: 25px 0
+          font-size: 0.8571428571428571rem
+          text-transform: uppercase
+          width: 100%
+          border-bottom: 1px solid #263238
+          color: #90a4ae
+          &.open
+            .trigger
+              //background: url("../img/icons/up.svg") no-repeat top center
+              background-size: 100%
+              transition: all 0.35s
+              transform: rotate(180deg)
+          .text
+            display: inline-block
+            vertical-align: middle
+            width: 390px
+          .trigger
+            width: 10px
+            height: 8px
+            background: url("../img/icons/down.svg") no-repeat top center
+            background-size: 100%
+            display: inline-block
+            vertical-align: middle
+            transition: all 0.35s
+            transform: rotate(0deg)
+
+
+        .dropdown
+          width: 100%
+          background: #546e7a
+          top: 64px !important
+          //bottom: 0!important
+          box-sizing: border-box
+          //min-height: 64px!important
+          //height: 200px!important
+          transition: all 0.35s
+          max-height: 320px
+          li
+            text-transform: uppercase
+            color: #90a4ae
+            font-size: 0.8571428571428571rem
+            padding: 25px 0
+            &.disabled,&.sel
+              display: none
+
+
+
+
+
+
+    .submit
+      color: #ffffff
+      font-size: 0.8571428571428571rem
+      line-height: 1em
+      background: #5f7c8a
+      position: relative
+      width: 400px
+      float: right
+      padding: 20px 0
+      overflow: hidden
+      height: 52px
+      text-align: center
+      cursor: pointer
+      span
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        padding: 20px 0
+        display: block
+        transition: all 0.35s
+        &.hover
+          top: 100%
+          transition: all 0.35s
+      &:hover
+        span
+          transition: all 0.35s
+          top: -100%
+          &.hover
+            top: 0
+            transition: all 0.35s
+
+    .row-form1
+      >div
+        width: 100%
+
+
+
+    .cart
+      margin-bottom: 0
+      h3
+        margin-bottom: 80px
+        margin-top: 80px
+      .list_cart
+        .title,.item
+          line-height: 1em
+          font-size: 0.8571428571428571rem
+          text-transform: uppercase
+          padding-bottom: 15px
+          border-bottom: 1px solid #263238
+          >div
+            display: inline-block
+            vertical-align: middle
+            width: 165px
+            &:first-child
+              width: 400px
+            &:last-child
+              width: 105px
+              text-align: right
+              white-space: nowrap
+        .item
+          padding: 5px 0
+          font-family: "GothamPro-Bold", sans-serif
+          .product
+            a
+              &:hover
+                text-decoration: none
+
+            .img-holder
+              display: inline-block
+              vertical-align: middle
+              width: 75px
+            .name
+              overflow: hidden
+              margin-left: 30px
+              font-family: "GothamPro-Bold", sans-serif
+              text-transform: uppercase
+              display: inline-block
+              vertical-align: middle
+              width: 290px
+              color: #1d1d1f
+
+
+      .subtotal_price
+        float: right
+        width: 400px
+        >div
+          text-transform: uppercase
+          line-height: 1em
+          font-size: 0.8571428571428571rem
+          color: #1d1d1f
+          padding: 25px 0
+          border-top: 1px solid #cccccc
+          &:first-child
+            border: 0
+
+          &.grand
+            font-family: "GothamPro-Bold", sans-serif
+            border-top: 1px solid #000
+
+          .name, .price
+            width: 49%
+            display: inline-block
+            vertical-align: middle
+          .price
+            text-align: right
+
+  .info_icon
+    position: absolute
+    right: 0
+    width: 18px
+    height: 18px
+    background: url("../img/icons/info_blue-gray.svg") no-repeat
+    background-size: 100%
+
+
+#info_delivery,#info_payment
+  width: 1140px
+  margin-left: -570px
+  text-align: left
+  height: 625px
+  margin-top: -312px
+  .content-holder
+    padding: 0 140px
+    text-align: left
+    overflow: auto
+    max-height: 625px
+    box-sizing: border-box
+    height: 100%
+    .block_text
+      padding: 70px 0
+    h3
+      text-transform: uppercase
+      font-family: "GothamPro-Bold", sans-serif
+      font-weight: normal
+      font-size: 1.142857142857143rem
+      line-height: 1em
+      margin-bottom: 30px
+    p
+      margin-bottom: 20px
+      font-size: 1rem
+      line-height: 1.3em
+      color: #1d1d1f
+      &:last-child
+        margin-bottom: 0
+    ul
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+      li
+        margin-bottom: 20px
+        font-size: 1rem
+        line-height: 1.3em
+        color: #1d1d1f
+        margin-left: 30px
+        list-style-type: disc
+        &:last-child
+          margin-bottom: 0
+
+
+.page_wrapper.error
+  background: #1d1d1f
+  .content
+    padding: 152px 0 100px
+    text-align: center
+    color: #fff
+    h3
+      text-transform: uppercase
+      margin-bottom: 35px
+      font-size: 1.285714286rem
+      line-height: 1em
+      font-family: "GothamPro-Bold", sans-serif
+
+    p
+      color: #fff
+      font-size: 1rem
+      line-height: 1em
+      margin-bottom: 85px
+
+    a
+      background: #eaeaec
+      line-height: 1em
+      color: #1d1d1f
+      font-size: 0.857142857rem
+      text-transform: uppercase
+      display: inline-block
+      padding: 20px 40px
+      &:hover
+        text-decoration: none
+
+.hidden
+  display: none
+
+.collections_footer.mobile
+  display: none
+  padding: 40px 25px 30px
+  clear: both
+  .item
+      margin-bottom: 40px
+      a
+        //font-family: "GothamPro-Bold", sans-serif
+        color:  #000000
+        font-size: 0.9rem
+        //font-weight: 700
+        line-height: 20px
+        text-align: center
+        &:hover
+          text-decoration: none
+
+
+@media screen and (min-width: 1024px) and (max-height: 900px)
+  .product .content .img-holder a img
+    width: auto
+
+@media screen and (max-height: 725px)
+  #info_delivery, #info_payment
+    height: calc( 100vh - 100px)
+    margin-top: 0
+    top: 77px!important
+    
+
+
+
+@media screen and (max-width: 1024px)
+  #main_img
+    .wrap
+      width: 100vw
+      padding: 0 25px
+      box-sizing: border-box
+    .block_text
+      margin-top: 125px
+
+  .about #slder_about, .article .content #slder_article, .contacts #slder_contacts, .stockists #slder_stockists
+
+    position: relative
+    top: inherit
+    right: inherit
+    transform: translate(0, 0)!important
+
+  .contacts #slder_contacts,
+  .contacts .text_block,
+  .about #slder_about, .about #slder_contacts, .about #slder_stockists,
+  .contacts #slder_about, .contacts #slder_stockists,
+  .stockists #slder_about, .stockists #slder_contacts, .stockists #slder_stockists,
+  .about .text_block, .contacts .text_block, .stockists .text_block,
+  .article .content #slder_article, .article .content .text_block
+    width: 100%
+  .about .text_block, .contacts .text_block, .stockists .text_block,
+  .article .content .text_block
+    height: auto
+
+  .about #slder_about li, .about #slder_contacts li, .about #slder_stockists li,
+  .contacts #slder_about li, .contacts #slder_contacts li,
+  .contacts #slder_stockists li, .stockists #slder_about li,
+  .stockists #slder_contacts li, .stockists #slder_stockists li,
+  .article .content #slder_article li
+    height: 400px
+
+
+
+  .product .content
+    width: 100%
+    padding: 102px 50px 85px
+    .img-holder
+      display: block
+      margin: 0 auto 20px
+      float: none
+      width: 100%
+    .pdocut_info
+      float: none
+      display: block
+      text-align: center
+      width: 100%
+      margin: 0 auto
+      .label
+        text-align: center
+      .title
+        font-size: 1.285714285714286rem
+
+  #info_delivery,
+  #info_payment
+    width: 100%
+    margin-left: 0
+    left: 0
+    .content-holder
+      padding: 0 70px
+      box-sizing: border-box
+
+
+  .collections .collections_block,
+  .collections .block_text_collections
+    width: 100%
+
+  .collections .block_text_collections
+    display: none
+    padding: 50px 25px
+    &.mobile
+      display: block
+      .block_right
+        margin: 0 auto 60px
+        padding: 0
+        p
+          margin-bottom: 30px
+          &:last-child
+            margin-bottom: 0
+
+      .block_left
+        width: 100%
+        padding: 0
+
+    .gallery_mobile
+      a
+        width: 49%
+        display: inline-block
+        vertical-align: middle
+        font-size: 0
+        margin-bottom: 30px
+        box-sizing: border-box
+        &:nth-child(2n+1)
+          padding-right: 15px
+        &:nth-child(2n)
+          padding-left: 15px
+
+        img
+          width: 100%
+
+
+  .collections .collections_block
+    height: auto
+    overflow: visible
+    .active_collections
+      display: block
+      + div
+        display: none
+        position: absolute
+        width: 100%
+        background: #fff
+
+        .item
+          a
+            span
+              color:  #1d1d1f
+          &.active
+            //display: none
+            a
+              &:hover
+                span.color_bg
+                  opacity: 1
+              span.color_bg
+                opacity: 0
+    .item a span
+      padding: 40px 25px
+  .product .content .img-holder a img
+    width: auto
+
+
+  .article .content .close
+    top: 460px
+
+
+  .collections_footer.mobile
+    display: block
+
+@media screen and (max-width: 959px)
+  body
+    min-width: 320px
+    max-width: 959px
+  //.bag_bar, .menu-bar
+    display: none
+    &.opened
+      display: block
+
+  .list_product_page
+    .content
+      padding: 103px 28px 60px
+    .list_products .item_product
+      width: 50%
+      padding: 0 12px 50px
+      a .img-holder .label
+        font-size: 0.8571428571428571rem
+
+
+  footer .social li
+    margin-right: 70px
+
+  .checkout #checkout .cart .list_cart .title > div:first-child,
+  .checkout #checkout .cart .list_cart .item > div:first-child
+    width: 30%
+  .checkout #checkout .cart .list_cart .title > div,
+  .checkout #checkout .cart .list_cart .item > div
+    width: 25%
+  .checkout #checkout .cart .list_cart .title > div:last-child,
+  .checkout #checkout .cart .list_cart .item > div:last-child
+    width: 18%
+  .checkout #checkout .cart .list_cart .item .product .name
+    margin-left: 1%
+    width: 49%
+  .checkout #checkout .cart .list_cart .item .product .img-holder
+    width: 48%
+  .checkout #checkout .submit,
+  .checkout #checkout .cart .subtotal_price
+    width: 300px
+
+
+  .checkout .title_checkout
+    padding: 95px 25px
+
+
+
+  .collections .collections_block .item a span
+    padding: 40px 25px
+
+  #preloader
+    background-size: 30%
+
+
+
+  .content
+    #main_img
+      transition: all 0.6s ease
+      //position: relative
+    &.opened
+      #main_img
+        position: relative
+        transition: all 0.6s ease
+
+
+  .filter
+    .block_filter
+      top: 53px
+
+      .list_filters
+        height: calc( 100% - 103px)
+        padding: 30px 0
+
+      button, a
+        position: absolute
+        bottom: 0
+      button
+        right: 0
+      a
+        left: 0
+
+
+@media screen and (max-width: 900px)
+  .media .content .list_media_items .media_item
+    width: 49%
+    padding: 0 10px 40px
+
+
+  .checkout #checkout
+    width: 100%
+    box-sizing: border-box
+    padding: 100px 70px
+  .checkout #checkout [class^="row-form"] > div:first-child
+    margin-right: 25px
+
+  .checkout #checkout [class^="row-form"] > div
+    width: calc((100% - 25px)/2 )
+
+  .checkout #checkout .row-form1 > div
+    width: 100%
+  .checkout #checkout [class^="row-form"] .selectbox .select .text
+    width: calc(100% - 10px)
+
+
+
+@media screen and (max-width: 770px)
+  .checkout #checkout .cart .list_cart .title > div, .checkout #checkout .cart .list_cart .item > div
+    width: 20%
+  .checkout #checkout .cart .list_cart .title > div:first-child, .checkout #checkout .cart .list_cart .item > div:first-child
+    width: 40%
+
+
+
+
+
+@media screen and (max-width: 719px)
+  #main_img .block_text
+    display: none
+
+@media screen and (max-width: 700px)
+  .checkout #checkout .cart .list_cart .title > div, .checkout #checkout .cart .list_cart .item > div
+    width: 15%
+  .checkout #checkout .cart .list_cart .title > div:last-child, .checkout #checkout .cart .list_cart .item > div:last-child
+    width: 14%
+  .checkout #checkout .cart .list_cart .title > div:first-child, .checkout #checkout .cart .list_cart .item > div:first-child
+    width: 53%
+
+
+
+@media screen and (max-width: 659px)
+  .product .content .img-holder
+    width: 100%
+
+
+
+
+@media screen and (max-width: 600px)
+  .list_product_page .list_products .item_product
+    width: 100%
+
+
+
+
+  
+
+  .checkout #checkout
+    padding: 100px 25px 75px
+
+  .checkout #checkout [class^="row-form"] > div:first-child
+    margin-right: 0
+    margin-bottom: 15px
+
+
+  .checkout #checkout [class^="row-form"] > div
+    margin-bottom: 15px
+
+
+  .checkout #checkout [class^="row-form"] > div,
+  .checkout #checkout .submit, .checkout #checkout .cart .subtotal_price
+    width: 100%!important
+
+  //.checkout #checkout [class^="row-form"] .selectbox .select .text
+    width: calc( 100vw - 60px)
+    //float: left
+
+  .checkout #checkout .cart h3
+    margin-top: 35px
+  .checkout #checkout [class^="row-form"]
+    margin-bottom: 0
+
+
+  .collections .block_text_collections a
+    width: 100%
+    padding: 0!important
+
+@media screen and (max-width: 500px)
+  .media .content .list_media_items .media_item
+    width: 100%
+    padding: 0 0 40px
+    &:last-child
+       padding: 0
+
+
+@media screen and (max-width: 480px)
+  //.menu-bar .menu
+    padding: 150px 50px
+  .about .text_block .overflow-block, .contacts .text_block .overflow-block,
+  .article .content .text_block .overflow-block
+    padding: 50px
+
+  .stockists .text_block dt
+    padding: 43px 30px 43px 50px
+  .stockists .text_block dd
+    padding: 50px 30px 50px 50px
+
+  .about #slder_about li, .about #slder_contacts li, .about #slder_stockists li,
+  .contacts #slder_about li, .contacts #slder_contacts li,
+  .contacts #slder_stockists li, .stockists #slder_about li,
+  .stockists #slder_contacts li, .stockists #slder_stockists li,
+  .article .content #slder_article li
+    height: 250px
+
+  .filter .block_filter, .add_bag,
+  .add_bag #attribute_size .attribute_holder
+    width: 100%
+  .filter .block_filter button, .filter .block_filter a,
+  .add_bag .add_button,
+  .add_bag #attribute_size
+    width: 50%
+  .add_bag #attribute_size .attribute_holder
+    padding: 0
+    text-align: center
+    padding-top: 150px
+
+  #preloader
+    background-size: 50%
+
+  .article .content .close
+    top: 310px
+
+  //.filter .block_filter .list_filters .block_filters .block_filters2
+    height: 100%
+  .filter .block_filter button span, .filter .block_filter a span
+    padding: 19px 0
+    text-align: center
+
+@media screen and (max-width: 455px)
+  .checkout #checkout .cart .list_cart .title > div,
+  .checkout #checkout .cart .list_cart .item > div
+    width: 15%
+
+  .checkout #checkout .cart .list_cart .title > div:last-child,
+  .checkout #checkout .cart .list_cart .item > div:last-child
+    width: 18%
+
+  .checkout #checkout .cart .list_cart .title > div:first-child,
+  .checkout #checkout .cart .list_cart .item > div:first-child
+    width: 45%
+  .checkout #checkout .cart .list_cart .item .product .name
+    width: 45%
+
+
+
+@media screen and (max-width: 430px)
+  .checkout #checkout .cart .list_cart .title > div,
+  .checkout #checkout .cart .list_cart .item > div
+    width: 15%
+
+  .checkout #checkout .cart .list_cart .title > div:last-child,
+  .checkout #checkout .cart .list_cart .item > div:last-child
+    width: 18%
+
+  .checkout #checkout .cart .list_cart .title > div:first-child,
+  .checkout #checkout .cart .list_cart .item > div:first-child
+    width: 47%
+  .checkout #checkout .cart .list_cart .item .product .name
+    width: 40%
+    margin-left: 5px
+
+
+
+@media screen and (max-width: 399px)
+
+  .top .menu-icon .label,
+  .top .bag-icon .label
+    display: none
+
+  .top .menu-icon
+    padding: 19px 15px
+    width: 48px
+    background: url("../img/icons/menu_icon.svg") no-repeat 15px center
+    background-size: 18px 18px
+
+
+  .top .bag-icon
+    padding: 13px 15px
+
+  .about .text_block .overflow-block, .contacts .text_block .overflow-block,
+  .article .content .text_block .overflow-block
+    padding: 40px 30px
+  .stockists .text_block dt,
+  .stockists .text_block dd
+    padding: 30px
+
+
+  .checkout #checkout .cart .list_cart .item .product .img-holder
+    width: 50%
+
+  .checkout #checkout .cart .list_cart .title > div:first-child, .checkout #checkout .cart .list_cart .item > div:first-child
+    width: 45%
+
+  .checkout #checkout .cart .list_cart .title > div:last-child, .checkout #checkout .cart .list_cart .item > div:last-child
+    width: 20%
+  .checkout #checkout .cart .list_cart .item .product .name
+    font-size: 10px
+
+
+//@media screen and (max-height: 479px)
+  .filter .block_filter .list_filters .block_filters .block_filters2
+    height: 100%
+    padding: 30px 0 30px 70px

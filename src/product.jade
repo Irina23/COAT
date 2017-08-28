@@ -1,124 +1,141 @@
 doctype html
 html(lang="ru")
-    include ./head.jade
+	include ./head.jade
 
 
-    body
-        .page_wrapper.product
-            #preloader_grey
-            include ./header.jade
-            .content.cf
-                .close
+	body
+		.page_wrapper.product
+			#preloader_grey
+			include ./header.jade
+			.content.cf
+				.close
 
-                .img-holder
-                    .img_product
+				.img-holder
+					.img_product
 
-                        a.item(href="img/content/product.png")
-                            img(src="img/content/product.png")
-                        a.item(href="img/content/product.png")
-                            img(src="img/content/product.png")
-                        a.item(href="img/content/product.png")
-                            img(src="img/content/product.png")
+						a.item(href="img/content/product.png")
+							img(src="img/content/product.png")
+						a.item(href="img/content/product.png")
+							img(src="img/content/product.png")
+						a.item(href="img/content/product.png")
+							img(src="img/content/product.png")
 
-                .pdocut_info
-                    .label NEW
-                    .title Grey coat with fur
-                    .article #00325
-                    .description
-                        p
-                            b material:
-                        ul
-                            li 70% wool
-                            li 25% polyester
-                            li 3% nylon
-                            li 2% acrylic
-                        p dry clean only
-                    .guide
-                        a.title.open_modal(href="#guide_size") SIZE GUIDE
-            form.add_bag
+				.pdocut_info
+					.label NEW
+					.title Grey coat with fur
+					.article #00325
+					.description
+						p
+							b material:
+						ul
+							li 70% wool
+							li 25% polyester
+							li 3% nylon
+							li 2% acrylic
+						p dry clean only
+					.guide
+						a.title.open_modal(href="#guide_size") SIZE GUIDE
+			form.add_bag
 
-                #attribute_size
-                    .name
-                        span size
-                        span.hover size
-                    .attribute_holder
-                        .attribute
-                            input(type="radio" name="size" value="XXS" id="option8" disabled)
-                            label.disabled(for="option8") XXS
-                        .attribute
-                            input(type="radio" name="size" value="XS" id="option9" )
-                            label(for="option9") XS
-                        .attribute
-                            input(type="radio" name="size" value="S" id="option10" )
-                            label(for="option10") S
-                        .attribute
-                            input(type="radio" name="size" value="M" id="option11" )
-                            label(for="option11") M
-                        .attribute
-                            input(type="radio" name="size" value="L" id="option12" )
-                            label(for="option12") L
-                button.add_button(type="submit" value="$750.00 add" disabled="disabled")
-                    span $750.00 add
-                    span.hover $750.00 add
+				#attribute_size
+					.name
+						span size
+						span.hover size
+					.attribute_holder
+						.attribute
+							input(type="radio" name="size" value="XXS" id="option8" disabled)
+							label.disabled(for="option8") XXS
+						.attribute
+							input(type="radio" name="size" value="XS" id="option9" )
+							label(for="option9") XS
+						.attribute
+							input(type="radio" name="size" value="S" id="option10" )
+							label(for="option10") S
+						.attribute
+							input(type="radio" name="size" value="M" id="option11" )
+							label(for="option11") M
+						.attribute
+							input(type="radio" name="size" value="L" id="option12" )
+							label(for="option12") L
+				button.add_button(type="submit" value="$750.00 add" disabled="disabled")
+					span $750.00 add
+					span.hover $750.00 add
 
-            #guide_size.modal_div
-                .modal_close
-                    .label Close
-                .content-holder
+			#guide_size.modal_div
+				.modal_close
+					.label Close
+				.content-holder
+					h4
+						br
+					table
+						tbody
+							tr
+								td
+									strong Wears size
+								td
+									strong XS
+								td
+									strong S
+								td
+									strong M
+								td
+									strong L
+							tr
+								td
+									| Chest (cm)
+								td
+									| 82-85
+								td
+									| 86-89
+								td
+									| 90-93
+								td
+									| 94-97
+							tr
+								td
+									| Waist (cm)
+								td 63-66
+								td 67-70
+								td
+									| 71-74
+								td 75-78
+							tr
+								td
+									| Hips (cm)
+								td 89-93
+								td
+									| 94-97
+								td
+									| 98-101
+								td
+									| 102-105
+					p
+						br
+					p(style='text-align: left;')
+						strong Shoes size
+					p(style='text-align: justify;')
+						strong 35
+						| (22cm) |
+						strong 36
+						| (23cm) |
+						strong 37
+						| (24cm) |
+						strong 38
+						| (25cm) |
+						strong 39
+						| (26cm) |
+						strong 40
+						| (27cm) |
+						strong 41
+						| (28cm) |
 
-                    table
-                        thead
-                            tr
-                                th
-                                th XXL
-                                th XS
-                                th S
-                                th M
-                                th L
-                        tbody
-                            tr
-                                td RU
-                                td 38
-                                td 40
-                                td 42
-                                td 44
-                                td 46
-                            tr
-                                td EU
-                                td 32
-                                td 34
-                                td 36
-                                td 38
-                                td 40
-                            tr
-                                td Грудь (см)
-                                td 76
-                                td 80
-                                td 84
-                                td 88
-                                td 92
-                            tr
-                                td Талия (см)
-                                td 58
-                                td 62
-                                td 66
-                                td 70
-                                td 74
-                            tr
-                                td Бедра (см)
-                                td 82
-                                td 86
-                                td 92
-                                td 96
-                                td 100
 
 
-
-            include ./footer.jade
-            #blueimp-gallery.blueimp-gallery
-                .slides
-                a.prev
-                a.next
-                a.close
+			include ./footer.jade
+			#blueimp-gallery.blueimp-gallery
+				.slides
+				a.prev
+				a.next
+				a.close
 
 
