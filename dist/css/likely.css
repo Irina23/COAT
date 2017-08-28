@@ -1,0 +1,24 @@
+.page_wrapper.product .block_share {
+  margin-top: 50px; }
+
+.page_wrapper.collections .block_share {
+  margin-top: 35px; }
+
+.page_wrapper.article .block_share {
+  margin-top: 60px; }
+
+.block_share label {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 700;
+  font-family: "GothamPro-Bold", sans-serif;
+  margin-right: 15px; }
+
+.block_share .likely {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0; }
+  .block_share .likely .likely__widget {
+    margin: 0 10px 0;
+    background: none;
+    fill: #1E1E1E !important; }
