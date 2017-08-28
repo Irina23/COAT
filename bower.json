@@ -1,6 +1,6 @@
 {
-  "name": "name",
-  "description": "landing page",
+  "name": "the coat",
+  "description": "",
   "main": "index.html",
   "moduleType": [],
   "keywords": [
@@ -8,10 +8,10 @@
     "page"
   ],
   "authors": [
-    "Alexey Pogorelov"
+    "Irina Pavlenko"
   ],
   "license": "no license",
-  "homepage": "http://studies.makemeat.com",
+  "homepage": "https://github.com/Irina23/COAT",
   "private": true,
   "ignore": [
     "**/.*",
@@ -21,9 +21,9 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-css": "~3.0.3",
     "jquery": "~2.2.0",
     "font-awesome": "~4.5.0",
-    "animate.css": "animate-css#~3.5.1"
+    "animate.css": "animate-css#~3.5.1",
+    "ilyabirman-likely": "^2.2.3"
   }
 }

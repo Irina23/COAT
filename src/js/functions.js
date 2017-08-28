@@ -149,7 +149,7 @@ jQuery(document).ready(function() {
         $el = $( this );
 
         filter_data = $el.serialize();
-        console.log(filter_data);
+        //console.log(filter_data);
         if(filter_data.length !== 0) {
             jQuery(".add_button")
                 .removeAttr("disabled")
@@ -205,7 +205,7 @@ jQuery(document).ready(function() {
             jQuery(".delivery_select select").each(function(){
                 if(jQuery(this).attr('data-country')===$datacountry) {
                     var $datadelivery = jQuery(this).find("option:checked").attr('data-price');
-                    console.log(this);
+                    //console.log(this);
 
                     if (!(typeof($datadelivery) === "undefined")) {
                         var $delivery = '$ ' + $datadelivery;
@@ -376,7 +376,7 @@ window.onload = function(){
                 link = target.src ? target.parentNode : target,
                 options = {index: link, event: event},
                 links = this.getElementsByTagName('a');
-            console.log(links);
+            //console.log(links);
             blueimp.Gallery(links, options);
         };
     });
