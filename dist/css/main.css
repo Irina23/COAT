@@ -850,7 +850,7 @@ body {
     font-family: "GothamPro-Bold", sans-serif;
     font-weight: normal; }
   .collections .block_text_collections p {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     font-size: 1rem;
     line-height: 1.5em;
     color: #000;
@@ -2468,7 +2468,7 @@ footer {
   margin-top: 50px; }
 
 .page_wrapper.collections .block_share {
-  margin-top: 35px; }
+  margin-bottom: 60px; }
 
 .page_wrapper.article .block_share {
   margin-top: 60px; }
