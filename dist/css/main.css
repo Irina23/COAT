@@ -1354,10 +1354,16 @@ footer {
     -webkit-transition: all .6s ease;
     transition: all .6s ease; }
     .filter .block_filter .list_filters {
-      height: calc( 100% - 103px);
-      display: table;
-      width: 100%;
-      min-width: 420px; }
+      height: calc( 100% - 50px);
+      min-width: 420px;
+      overflow: hidden;
+      position: relative;
+      z-index: 2; }
+      .filter .block_filter .list_filters .block_filter_scroll {
+        padding: 25px 0;
+        display: table;
+        width: 100%;
+        height: calc(100vh - 103px); }
       .filter .block_filter .list_filters .block_filters {
         display: table-cell;
         vertical-align: middle;
@@ -1452,7 +1458,8 @@ footer {
       height: 50px;
       width: 210px;
       overflow: hidden;
-      bottom: -53px; }
+      bottom: 0;
+      z-index: 3; }
       .filter .block_filter button:hover span, .filter .block_filter a:hover span {
         top: -100%;
         -webkit-transition: all 0.35s;

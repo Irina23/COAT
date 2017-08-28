@@ -112,7 +112,7 @@ jQuery(document).ready(function() {
             jQuery(this).remove();
         });
 
-        $(".menu-bar .nav-menu-wrapper, .list_product_bag, .block_filters2, .modal_div .content-holder, .selectbox .dropdown,.product .pdocut_info").mCustomScrollbar({
+        $(".menu-bar .nav-menu-wrapper, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown,.product .pdocut_info").mCustomScrollbar({
             theme:"dark",
             mouseWheelPixels: 150
 
