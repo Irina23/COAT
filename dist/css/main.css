@@ -54,6 +54,8 @@ body {
     overflow: hidden !important; }
     body.no-scroll .page_wrapper {
       overflow: hidden !important; }
+  body .page_wrapper.product {
+    overflow: hidden; }
   body p {
     color: #545353;
     line-height: 1.5em; }
@@ -774,7 +776,7 @@ body {
     position: relative; }
     .collections .collections_block .active_collections:after {
       position: absolute;
-      background: url("../img/icons/down-white.svg") no-repeat center;
+      background: url("../img/icons/down.svg") no-repeat center;
       content: "";
       top: 50%;
       margin-top: -8px;
@@ -1552,7 +1554,8 @@ footer {
         max-height: calc( 100vh - 140px); }
   .product .content .pdocut_info {
     float: right;
-    width: 350px; }
+    width: 350px;
+    max-height: calc(100vh - 154px); }
     .product .content .pdocut_info .label {
       margin-bottom: 30px;
       text-align: left;
