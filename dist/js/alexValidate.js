@@ -39,7 +39,7 @@
 						case 'empty':
 							return /^[а-яіїєґёА-ЯІЇЄҐЁa-zA-Z0-9]+/.test(data);
 						case 'select':
-							return !(data === null || data === "null" || data === "false" || data === "0" || data === "undefined");
+							return !(data === null || data === "null" || data === "false" || data === "0" || data === "undefined" || data === "");
 						//case 'radio':
 							//return $('input[type="radio"]:checked').length==0;
 							//return $('input[type="radio"]:checked').val();
@@ -47,6 +47,7 @@
 							return /^[1-9]/.test(data);
 						case 'index':
 							return /^[0-9]{3}/.test(data);
+
 
 						default:
 							return true;

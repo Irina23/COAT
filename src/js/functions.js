@@ -30,7 +30,7 @@ jQuery(document).ready(function() {
             effect: "fadeIn"
         });*/
 
-        jQuery('#checkout select').selectbox();
+        jQuery('#checkout select, #modal_country select').selectbox();
         //home img
         jQuery("#main_img").addClass("show");
 
@@ -112,11 +112,16 @@ jQuery(document).ready(function() {
             jQuery(this).remove();
         });
 
-        $(".menu-bar .nav-menu-wrapper, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
+        $(".menu-bar .nav-menu-wrapper, .list_product_bag, .list_filters, .modal_div .content-holder, #checkout .selectbox .dropdown").mCustomScrollbar({
             theme:"dark",
             mouseWheelPixels: 150
 
         });
+		$("#modal_country .selectbox .dropdown").mCustomScrollbar({
+			theme:"light",
+			mouseWheelPixels: 150
+
+		});
         /*$(".menu-bar .nav-menu-wrapper, .list_filters, .list_product_bag, .attribute_holder, .modal_div .content-holder").mCustomScrollbar({
             theme:"dark",
             mouseWheelPixels: 150

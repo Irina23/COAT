@@ -1,3 +1,36 @@
+#overlay {
+  z-index: 3;
+  position: fixed;
+  background: rgba(84, 110, 122, 0.89);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none; }
+
+#overlay_modal {
+  z-index: 16;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none; }
+  #overlay_modal:after {
+    background-color: rgba(29, 29, 31, 0.5);
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #overlay_modal.show {
+    display: block; }
+
 .modal_div {
   position: fixed;
   background: rgba(255, 255, 255, 0.95);
@@ -117,3 +150,111 @@
         list-style-type: disc; }
         #info_delivery .content-holder ul li:last-child, #info_payment .content-holder ul li:last-child {
           margin-bottom: 0; }
+
+.modal_country {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 17;
+  display: none; }
+  .modal_country.show {
+    display: block; }
+  .modal_country .div_table {
+    width: 100%;
+    height: 100%;
+    display: table; }
+    .modal_country .div_table .div_table_cell {
+      width: 100%;
+      height: 100%;
+      display: table-cell;
+      vertical-align: middle; }
+  .modal_country img {
+    margin-bottom: 20px;
+    width: 328px;
+    border: 0; }
+    @media screen and (max-width: 479px) {
+      .modal_country img {
+        width: 280px; } }
+  .modal_country p {
+    color: #fff;
+    font-family: "GothamPro-Bold", sans-serif;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    text-align: left; }
+  .modal_country .modal_wrap {
+    width: 320px;
+    margin: auto; }
+    @media screen and (max-width: 479px) {
+      .modal_country .modal_wrap {
+        width: 280px; } }
+  .modal_country .form-holder {
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center; }
+    .modal_country .form-holder.open + .submit {
+      opacity: 0; }
+    .modal_country .form-holder .selectbox {
+      width: 100%;
+      height: 40px;
+      position: relative; }
+      .modal_country .form-holder .selectbox .mCSB_scrollTools .mCSB_draggerRail {
+        background: rgba(255, 255, 255, 0.25); }
+      .modal_country .form-holder .selectbox .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+        background: #fff; }
+      .modal_country .form-holder .selectbox .select {
+        width: 100%;
+        border: 2px solid #fff;
+        line-height: 36px;
+        height: 40px;
+        color: #fff;
+        font-size: 1rem;
+        padding: 0 35px;
+        cursor: pointer;
+        text-transform: uppercase; }
+        .modal_country .form-holder .selectbox .select:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          width: 19px;
+          height: 12px;
+          background: url("../img/icons/down-white.svg") no-repeat center;
+          background-size: 100%;
+          z-index: 2;
+          margin-top: -6px; }
+      .modal_country .form-holder .selectbox .dropdown {
+        width: 100%;
+        border: 2px solid #fff;
+        border-top: 0;
+        max-height: 200px;
+        top: 100% !important;
+        color: #fff;
+        text-align: left;
+        padding: 20px 20px 0 50px; }
+        .modal_country .form-holder .selectbox .dropdown li {
+          margin-bottom: 25px;
+          line-height: 1em;
+          font-size: 1rem;
+          cursor: pointer; }
+          .modal_country .form-holder .selectbox .dropdown li.sel {
+            display: none; }
+  .modal_country .submit {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: 2px solid #fff;
+    width: 100%;
+    height: 40px;
+    line-height: 36px;
+    font-family: "GothamPro-Bold", sans-serif;
+    cursor: pointer;
+    -webkit-transition: all 0.35s, opacity 0s;
+    transition: all 0.35s, opacity 0s; }
+    .modal_country .submit:hover {
+      -webkit-transition: all 0.35s;
+      transition: all 0.35s;
+      background: #fff;
+      color: #607d8b; }
