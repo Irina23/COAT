@@ -29,7 +29,7 @@ jQuery(document).ready(function() {
         /*$('.lazy').lazyload({
             effect: "fadeIn"
         });*/
-        
+
         jQuery('#checkout select').selectbox();
         //home img
         jQuery("#main_img").addClass("show");
@@ -78,7 +78,7 @@ jQuery(document).ready(function() {
 
         var height_collettion = $(".block_text_collections").height();
         $(".block_text_collections .bx-viewport").css('height', height_collettion);
-        
+
         jQuery(window).resize(function() {
             height_collettion = $(".block_text_collections").height();
             $(".block_text_collections .bx-viewport").css('height', height_collettion);
@@ -112,7 +112,7 @@ jQuery(document).ready(function() {
             jQuery(this).remove();
         });
 
-        $(".menu-bar .nav-menu-wrapper, .list_product_bag, .block_filters2, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
+        $(".menu-bar .nav-menu-wrapper, .list_product_bag, .list_filters, .modal_div .content-holder, .selectbox .dropdown").mCustomScrollbar({
             theme:"dark",
             mouseWheelPixels: 150
 
