@@ -490,7 +490,10 @@ body {
       -webkit-transition: all 0.35s;
       transition: all 0.35s;
       height: 52px;
-      overflow: hidden; }
+      overflow: hidden;
+      color: #bcbcbc;
+      font-size: 0.8571428571428571rem;
+      line-height: 52px; }
       .menu-bar .info a span {
         position: absolute;
         top: 0;

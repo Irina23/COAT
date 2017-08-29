@@ -21,7 +21,7 @@
 
 					.btn.submit ENTER
 
-#modal_italy.modal_div.show
+#modal_italy.modal_div
 	.modal_close
 		.label Close
 	.content-holder
@@ -38,3 +38,24 @@
 				| tel +39 02 76013108
 				br
 				| fax +39 02 76011002
+
+
+
+#modal_country_change.modal_div
+	.modal_close
+		.label Close
+	.content-holder
+		.block_text
+				h3 In which country do you want to buy our products?
+				form
+					.form-holder
+						select(data-validate="select")
+							option(value="") COUNTRY
+							option(value="Ukraine") Ukraine
+							option(value="Italy") Italy
+							option(value="Ukraine") Ukraine
+							option(value="Italy") Italy
+							option(value="Ukraine") Ukraine
+							option(value="Italy") Italy
+
+					.btn.submit ENTER
