@@ -2340,7 +2340,7 @@ footer {
     font-size: 10px; } }
 
 #overlay {
-  z-index: 3;
+  z-index: 16;
   position: fixed;
   background: rgba(84, 110, 122, 0.89);
   width: 100%;
@@ -2379,7 +2379,7 @@ footer {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 4;
+  z-index: 17;
   display: none;
   opacity: 0; }
   .modal_div .modal_close {
@@ -2395,29 +2395,21 @@ footer {
     @media screen and (max-width: 600px) {
       .modal_div .modal_close {
         top: 5px; } }
-  .modal_div .label {
-    text-transform: uppercase;
-    font-family: "GothamPro-Bold", sans-serif;
-    color: #000;
-    font-size: 0.7142857142857143rem;
-    line-height: 18px;
-    position: absolute;
-    top: 3px;
-    left: 0;
-    opacity: 0;
-    -webkit-transition: all 0.35s ease;
-    transition: all 0.35s ease;
-    -webkit-transform: translateX(4px);
-            transform: translateX(4px); }
-  .modal_div:hover {
-    -webkit-transition: all 0.35s;
-    transition: all 0.35s; }
-    .modal_div:hover .label {
-      opacity: 1;
-      -webkit-transition: all 0.35s ease;
-      transition: all 0.35s ease;
-      -webkit-transform: translateX(0);
-              transform: translateX(0); }
+    .modal_div .modal_close .label {
+      text-transform: uppercase;
+      font-family: "GothamPro-Bold", sans-serif;
+      color: #000;
+      font-size: 0.7142857142857143rem;
+      line-height: 1em;
+      position: absolute;
+      top: 6px;
+      left: 0;
+      opacity: 0; }
+    .modal_div .modal_close:hover {
+      -webkit-transition: all 0.35s;
+      transition: all 0.35s; }
+      .modal_div .modal_close:hover .label {
+        opacity: 1; }
   .modal_div .content-holder {
     padding: 70px;
     text-align: center;
@@ -2491,6 +2483,32 @@ footer {
         list-style-type: disc; }
         #info_delivery .content-holder ul li:last-child, #info_payment .content-holder ul li:last-child {
           margin-bottom: 0; }
+
+#modal_italy {
+  min-width: 600px; }
+  @media screen and (max-width: 630px) {
+    #modal_italy {
+      min-width: inherit; } }
+  #modal_italy .content-holder {
+    text-align: left;
+    padding: 70px 50px; }
+    @media screen and (max-width: 1024px) {
+      #modal_italy .content-holder {
+        padding: 50px; } }
+    @media screen and (max-width: 600px) {
+      #modal_italy .content-holder {
+        padding: 20px 15px; } }
+    #modal_italy .content-holder p {
+      font-size: 1.142857143rem;
+      color: #333;
+      font-weight: 400;
+      margin-bottom: 30px; }
+      #modal_italy .content-holder p:last-child {
+        margin-bottom: 0; }
+      #modal_italy .content-holder p a {
+        font-family: "GothamPro-Bold", sans-serif;
+        text-decoration: underline;
+        color: #333; }
 
 .modal_country {
   text-align: center;
