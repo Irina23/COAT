@@ -647,6 +647,9 @@ body {
     .bag_bar .list_product_bag .item_product {
       border-bottom: 1px solid #dedfe0;
       padding: 20px 30px; }
+      .bag_bar .list_product_bag .item_product p {
+        font-size: 0.8rem;
+        margin: 10px 0 0; }
       .bag_bar .list_product_bag .item_product a {
         display: block;
         color: #000;
@@ -671,8 +674,8 @@ body {
         font-family: "GothamPro-Bold", sans-serif; }
       .bag_bar .list_product_bag .item_product .delete {
         float: left;
-        width: 8px;
-        height: 8px;
+        width: 12px;
+        height: 12px;
         background-size: 100%;
         background: url("../img/icons/close.svg") no-repeat;
         border: 0;
