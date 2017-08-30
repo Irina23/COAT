@@ -1,128 +1,135 @@
 doctype html
 html(lang="ru")
-    include ./head.jade
+	include ./head.jade
 
 
-    body
-        .page_wrapper.checkout
-            #preloader
-            include ./header.jade
-            .content
+	body
+		.page_wrapper.checkout
+			#preloader
+			include ./header.jade
+			.content
 
-                    .title_checkout THE COAT by KATYA SILCHENKO CHECKOUT
-                    form#checkout.cf
-                        h3 BILLING INFORMATION
-                        .row-form2.cf
-                            div
-                                input(type="text", placeholder="FIRST NAME", name="namef", minlength="2", data-validate="name")
-                            div
-                                input(type="text", placeholder="LAST NAME", name="namel", minlength="2", data-validate="name")
-                        .row-form2.cf
-                            div
-                                input(type="text", placeholder="email",name="email", data-validate="email")
-                            div
-                                input(type="text", placeholder="PHONE", name="phone", data-validate="phone" )
-                        .row-form1.cf
-                            div
-                                input(type="text", placeholder="ADDRESS",name="address", data-validate="empty" )
-                        .row-form1.cf
-                            div
-                                input(type="text", placeholder="city",name="city", data-validate="name" )
-                        .row-form2.cf
-                            div
-                                select.country(data-validate="select" name="country" data-group="country")
-                                    option(selected value="0" disabled) country
-                                    option(value="ukraine" data-country="ukraine") Ukraine
-                                    option(value="russia" data-country="russia") Russia
-                            div
-                                input(type="text", placeholder="POSTAL CODE", name="code", data-validate="quantity" )
-                        .row-form2.cf
-                            div
-                                h3 DELIVERY
-                                    a(href="#info_delivery" class="open_modal info_icon")
-                                select.delivery(data-validate="select" name="delivery" data-group="delivery")
-                                    option(selected value="0" disabled) delivery
-                                    option(value="dhl" data-price="50") DHL
-                                    option(value="nova_poshta" data-price="30") nova poshta
-                            div
-                                h3 PAYMENT
-                                    a(href="#info_payment" class="open_modal info_icon")
-                                select.payment(data-validate="select" name="payment" data-group="payment")
-                                    option(selected value="0" disabled) payment
-                                    option(value="LiqPay") LiqPay
-                        .row-form1.cart.cf
-                                h3 YOUR ORDER
-                                .list_cart
-                                    .title.cf
-                                        div PRODUCT
-                                        div size
-                                        div qty
-                                        div price
-                                    .item.cf
-                                        .product
-                                            a(href="#")
-                                                .img-holder
-                                                    img(src="img/content/product.png")
-                                                .name Grey coat with fur
-
-                                        .size S
-                                        .qty 1
-                                        .price $ 450
-                                    .item.cf
-                                        .product
-                                            a(href="#")
-                                                .img-holder
-                                                    img(src="img/content/product.png")
-                                                .name Grey coat with fur
-
-                                        .size S
-                                        .qty 1
-                                        .price $ 450
-
-                                .subtotal_price
-                                    div
-                                        .name SUBTOTAL
-                                        .price.subtotal_product_price(data-product-price="450") $ 450
-
-                                    div
-                                        .name SHIPPING
-                                        .price.delivery_price $ 50
-                                    div.grand
-                                        .name GRAND TOTAL
-                                        .price.grand_price $ 500
+				.title_checkout THE COAT by KATYA SILCHENKO CHECKOUT
+				form#checkout.cf
+					h3 BILLING INFORMATION
+					.row-form2.cf
+						div
+							input(type="text", placeholder="FIRST NAME", name="namef", minlength="2", data-validate="name")
+						div
+							input(type="text", placeholder="LAST NAME", name="namel", minlength="2", data-validate="name")
+					.row-form2.cf
+						div
+							input(type="text", placeholder="email",name="email", data-validate="email")
+						div
+							input(type="text", placeholder="PHONE", name="phone", data-validate="phone" )
+					.row-form1.cf
+						div
+							input(type="text", placeholder="ADDRESS",name="address", data-validate="empty" )
+					.row-form1.cf
+						div
+							input(type="text", placeholder="city",name="city", data-validate="name" )
+					.row-form2.cf
+						div
+							.country Ukraine
+							//select.country(data-validate="select" name="country" data-group="country")
+								option(selected value="0" disabled) country
+								option(value="ukraine" data-country="ukraine") Ukraine
+								option(value="russia" data-country="russia") Russia
+						div
+							input(type="text", placeholder="POSTAL CODE", name="code", data-validate="quantity" )
+					.row-form2.cf
+						div
+							h3 DELIVERY
+								a(href="#info_delivery" class="open_modal info_icon")
 
 
-                        .btn.submit
-                            span CONTINUE PAYMENT
-                            span.hover CONTINUE PAYMENT
-            #info_delivery.modal_div
-                .modal_close
-                    .label Close
-                .content-holder
-                    .block_text
-                        h3 DELIVERY RULES
-                        p In Kiev delivery of the order is carried out by the courier of the COAT to the address specified by the Client in time from 1 to 5 working days. Free of charge.
-                        p Within Ukraine a courier of NOVAPOSHTA delivers an order to the specified address in a period from 1 to 5 working days. Delivery cost up to 100 hrn.
-                        p Within SNG a courier of …(firm) delivers an order to the specified address in a period from 2 to 6 working days. Delivery cost up to 50$.
-                        p The delivery of an order in other countries is carried out by DHL courier to the specified address in a period from 3 to 7 days. Delivery cost up to 80 €.
-                        p Delivery cost is specified in accordance with the tariffs of the delivery service that has been chosen by the Client when ordering.
-                        p * Detailed information on delivery is provided to the Client by e-mail in the letter-confirmation of an order. If you have any questions on payment and delivery, please contact the representatives of our company buy@thecoat.me
 
-            #info_payment.modal_div
-                .modal_close
-                    .label Close
-                .content-holder
-                    .block_text
-                        h3 PAYMENT RULES
-                        p The payment of an order is made in several methods:
-                        ul
-                            li Cash on Delivery Nova Poshta. Upon receipt of an order through a delivery service of New Mail the Client pays to a courier of New Mail. This payment method is available within Ukraine.
-                        p Online payment by credit card VISA / MasterCard:
-                        p For the order receipt the Client pays by credit card via the electronic payment system LiqPay when ordering online.
-                        p Electronic payment system LiqPay guarantees a high level of security thanks to technology OTP (One-time Password - OTP) and 3D secure code. All operations are supported by a one-time password, which is sent via SMS. Reliability of LiqPay is proved by certificates GoDaddy Secure Web Site, Verified by Visa and MasterCard SecureCode.
-                        p After successful payment and transfer of money to the seller, the Client receives an e-mail confirmation letter with the details of the terms and conditions of delivery of an order.
-                        p * If you pay by credit card, a refund is made only to the same card with which the payment was made.
-                        p For any questions on the payment, please contact buy@thecoat.me
+							select.delivery(data-validate="select" name="delivery" data-group="delivery")
+								option(selected value="0" disabled) delivery
+								option(value="dhl" data-price="50") DHL
+								option(value="nova_poshta" data-price="30") nova poshta
+
+
+
+						div
+							h3 PAYMENT
+								a(href="#info_payment" class="open_modal info_icon")
+							select.payment(data-validate="select" name="payment" data-group="payment")
+								option(selected value="0" disabled) payment
+								option(value="LiqPay") LiqPay
+					.row-form1.cart.cf
+						h3 YOUR ORDER
+						.list_cart
+							.title.cf
+								div PRODUCT
+								div size
+								div qty
+								div price
+							.item.cf
+								.product
+									a(href="#")
+										.img-holder
+											img(src="img/content/product.png")
+										.name Grey coat with fur
+
+								.size S
+								.qty 1
+								.price $ 450
+							.item.cf
+								.product
+									a(href="#")
+										.img-holder
+											img(src="img/content/product.png")
+										.name Grey coat with fur
+
+								.size S
+								.qty 1
+								.price $ 450
+
+						.subtotal_price
+							div
+								.name SUBTOTAL
+								.price.subtotal_product_price(data-product-price="450") $ 450
+
+							div
+								.name SHIPPING
+								.price.delivery_price $ 50
+							div.grand
+								.name GRAND TOTAL
+								.price.grand_price $ 500
+
+
+					.btn.submit
+						span CONTINUE PAYMENT
+						span.hover CONTINUE PAYMENT
+			#info_delivery.modal_div
+				.modal_close
+					.label Close
+				.content-holder
+					.block_text
+						h3 DELIVERY RULES
+						p In Kiev delivery of the order is carried out by the courier of the COAT to the address specified by the Client in time from 1 to 5 working days. Free of charge.
+						p Within Ukraine a courier of NOVAPOSHTA delivers an order to the specified address in a period from 1 to 5 working days. Delivery cost up to 100 hrn.
+						p Within SNG a courier of …(firm) delivers an order to the specified address in a period from 2 to 6 working days. Delivery cost up to 50$.
+						p The delivery of an order in other countries is carried out by DHL courier to the specified address in a period from 3 to 7 days. Delivery cost up to 80 €.
+						p Delivery cost is specified in accordance with the tariffs of the delivery service that has been chosen by the Client when ordering.
+						p * Detailed information on delivery is provided to the Client by e-mail in the letter-confirmation of an order. If you have any questions on payment and delivery, please contact the representatives of our company buy@thecoat.me
+
+			#info_payment.modal_div
+				.modal_close
+					.label Close
+				.content-holder
+					.block_text
+						h3 PAYMENT RULES
+						p The payment of an order is made in several methods:
+						ul
+							li Cash on Delivery Nova Poshta. Upon receipt of an order through a delivery service of New Mail the Client pays to a courier of New Mail. This payment method is available within Ukraine.
+						p Online payment by credit card VISA / MasterCard:
+						p For the order receipt the Client pays by credit card via the electronic payment system LiqPay when ordering online.
+						p Electronic payment system LiqPay guarantees a high level of security thanks to technology OTP (One-time Password - OTP) and 3D secure code. All operations are supported by a one-time password, which is sent via SMS. Reliability of LiqPay is proved by certificates GoDaddy Secure Web Site, Verified by Visa and MasterCard SecureCode.
+						p After successful payment and transfer of money to the seller, the Client receives an e-mail confirmation letter with the details of the terms and conditions of delivery of an order.
+						p * If you pay by credit card, a refund is made only to the same card with which the payment was made.
+						p For any questions on the payment, please contact buy@thecoat.me
 
 
 include ./footer.jade

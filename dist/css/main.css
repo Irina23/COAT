@@ -1839,6 +1839,13 @@ footer {
       line-height: 1em;
       color: #90a4ae;
       font-size: 0.8571428571428571rem; }
+    .checkout #checkout [class^="row-form"] .country {
+      padding: 25px 0;
+      font-size: 0.8571428571428571rem;
+      text-transform: uppercase;
+      width: 100%;
+      border-bottom: 1px solid #263238;
+      color: #90a4ae; }
     .checkout #checkout [class^="row-form"] select {
       display: none; }
     .checkout #checkout [class^="row-form"] .selectbox {
