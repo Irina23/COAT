@@ -56,6 +56,9 @@ body {
       overflow: hidden !important; }
   body .page_wrapper.product {
     overflow: hidden; }
+    @media screen and (max-width: 1024px) {
+      body .page_wrapper.product {
+        overflow: inherit; } }
   body p {
     color: #545353;
     line-height: 1.5em; }
@@ -1565,6 +1568,16 @@ footer {
     float: right;
     width: 350px;
     max-height: calc(100vh - 154px); }
+    @media screen and (max-width: 1024px) {
+      .product .content .pdocut_info {
+        max-height: inherit; } }
+    .product .content .pdocut_info price {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      line-height: 1em;
+      color: #1d1d1f;
+      font-weight: 600;
+      display: block; }
     .product .content .pdocut_info .label {
       margin-bottom: 30px;
       text-align: left;
@@ -1581,7 +1594,7 @@ footer {
       color: #1d1d1f;
       font-family: "GothamPro-Bold", sans-serif; }
     .product .content .pdocut_info .article {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       color: #333333;
       font-size: 1.142857142857143rem; }
     .product .content .pdocut_info .description {

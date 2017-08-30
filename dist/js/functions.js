@@ -49,13 +49,13 @@ jQuery(document).ready(function() {
             prevText: "",
             auto: true,
             controls: false,
-            mode: 'vertical',
+           // mode: 'vertical',
             pause: 10000
 
 
         });
 
-        $('.img_product').on('wheel', function (e) {
+        /*$('.img_product').on('wheel', function (e) {
             e.preventDefault();
             var delta = e.originalEvent.deltaY || e.originalEvent.detail || e.originalEvent.wheelDelta;
             if (delta > 0) {
@@ -63,7 +63,7 @@ jQuery(document).ready(function() {
             } else {
                 productSlederBx.goToPrevSlide();
             }
-        });
+        });*/
         var gallerySlederBx = jQuery('.gallery').bxSlider({
             nextText: "",
             prevText: "",
@@ -112,7 +112,7 @@ jQuery(document).ready(function() {
             jQuery(this).remove();
         });
 
-        $(".menu-bar .nav-menu-wrapper, .list_product_bag, .list_filters, .modal_div .content-holder, #checkout .selectbox .dropdown").mCustomScrollbar({
+        $(".menu-bar .nav-menu-wrapper, .list_product_bag, .list_filters, .modal_div .content-holder, #checkout .selectbox .dropdown, .page_wrapper.product .pdocut_info").mCustomScrollbar({
             theme:"dark",
             mouseWheelPixels: 150
 

@@ -65,6 +65,8 @@ body
 			overflow: hidden!important
 	.page_wrapper.product
 		overflow: hidden
+		@media screen and (max-width: 1024px)
+			overflow: inherit
 	p
 		color: #545353
 		line-height: 1.5em
@@ -1715,6 +1717,17 @@ footer
 			//margin-top: 45px
 			width: 350px
 			max-height: calc(100vh - 154px)
+			@media screen and (max-width: 1024px)
+				max-height: inherit
+			price
+				font-size: 2rem
+				margin-bottom: 30px
+				line-height: 1em
+				color: #1d1d1f
+				font-weight: 600
+				display: block
+				//font-family: "GothamPro-Bold", sans-serif
+				
 			.label
 				margin-bottom: 30px
 				text-align: left
@@ -1733,7 +1746,7 @@ footer
 				color: #1d1d1f
 				font-family: "GothamPro-Bold", sans-serif
 			.article
-				margin-bottom: 50px
+				margin-bottom: 30px
 				color: #333333
 				font-size: 1.142857142857143rem
 			.description
