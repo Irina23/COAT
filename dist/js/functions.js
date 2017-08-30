@@ -30,7 +30,7 @@ jQuery(document).ready(function() {
             effect: "fadeIn"
         });*/
 
-        jQuery('#checkout select, #modal_country select').selectbox();
+        jQuery('#checkout select, #modal_country select, #modal_country_change select').selectbox();
         //home img
         jQuery("#main_img").addClass("show");
 
@@ -117,7 +117,7 @@ jQuery(document).ready(function() {
             mouseWheelPixels: 150
 
         });
-		$("#modal_country .selectbox .dropdown").mCustomScrollbar({
+		$("#modal_country .selectbox .dropdown, #modal_country_change .selectbox .dropdown").mCustomScrollbar({
 			theme:"light",
 			mouseWheelPixels: 150
 
@@ -321,7 +321,7 @@ jQuery(document).ready(function() {
     //modal form
 	var overlay = $('#overlay');
 	var open_modal = $('.open_modal');
-	var close = $('.modal_close, #overlay');
+	var close = $('.modal_close');
 	var modal = $('.modal_div');
 
 	if($(modal).hasClass('show')){
@@ -340,6 +340,12 @@ jQuery(document).ready(function() {
 	open_modal.click( function(event){
 		event.preventDefault();
 		var div = $(this).attr('href');
+		console.log(div);
+		if(div=='#modal_country_change'){
+			overlay.addClass('overlay_country_change');
+			jQuery(".content, .top, #bar_opened, .menu-bar, .bag_bar, footer").removeClass("opened");
+
+		}
 		overlay.fadeIn(400,
 			function(){
 				$(div)
@@ -354,7 +360,7 @@ jQuery(document).ready(function() {
 			.animate({opacity: 0}, 200,
 				function(){
 					$(this).css('display', 'none');
-					overlay.fadeOut(400);
+					overlay.fadeOut(400).removeClass('overlay_country_change');
 					$(".message_modal").removeClass("show");
 					$('body').removeClass('no-scroll');
 				}
@@ -366,7 +372,7 @@ jQuery(document).ready(function() {
 			modal.animate({opacity: 0}, 200,
 				function(){
 					$(this).css('display', 'none');
-					overlay.fadeOut(400);
+					overlay.fadeOut(400).removeClass('overlay_country_change');
 					$(".message_modal").removeClass('show');
 					$('body').removeClass('no-scroll');
 

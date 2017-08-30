@@ -2350,8 +2350,9 @@ footer {
   height: 100%;
   top: 0;
   left: 0;
-  cursor: pointer;
   display: none; }
+  #overlay.overlay_country_change {
+    background: rgba(29, 29, 31, 0.5); }
 
 #overlay_modal {
   z-index: 16;
@@ -2385,7 +2386,7 @@ footer {
   z-index: 17;
   display: none;
   opacity: 0; }
-  .modal_div .modal_close {
+  .modal_div .modal_close, .modal_div .modal_close_link {
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -2396,9 +2397,9 @@ footer {
     top: 30px;
     right: 30px; }
     @media screen and (max-width: 600px) {
-      .modal_div .modal_close {
+      .modal_div .modal_close, .modal_div .modal_close_link {
         top: 5px; } }
-    .modal_div .modal_close .label {
+    .modal_div .modal_close .label, .modal_div .modal_close_link .label {
       text-transform: uppercase;
       font-family: "GothamPro-Bold", sans-serif;
       color: #000;
@@ -2408,10 +2409,10 @@ footer {
       top: 6px;
       left: 0;
       opacity: 0; }
-    .modal_div .modal_close:hover {
+    .modal_div .modal_close:hover, .modal_div .modal_close_link:hover {
       -webkit-transition: all 0.35s;
       transition: all 0.35s; }
-      .modal_div .modal_close:hover .label {
+      .modal_div .modal_close:hover .label, .modal_div .modal_close_link:hover .label {
         opacity: 1; }
   .modal_div .content-holder {
     padding: 70px;
@@ -2601,7 +2602,7 @@ footer {
           line-height: 1em;
           font-size: 1rem;
           cursor: pointer; }
-          .modal_country .form-holder .selectbox .dropdown li.sel {
+          .modal_country .form-holder .selectbox .dropdown li.sel, .modal_country .form-holder .selectbox .dropdown li:first-child {
             display: none; }
   .modal_country .submit {
     color: #fff;
@@ -2620,6 +2621,139 @@ footer {
       transition: all 0.35s;
       background: #fff;
       color: #607d8b; }
+
+#modal_country_change {
+  background: #656d70;
+  width: 490px;
+  height: 350px;
+  -webkit-transform: none;
+          transform: none;
+  margin-top: -170px;
+  margin-left: -250px; }
+  @media screen and (max-width: 600px) {
+    #modal_country_change .modal_close {
+      right: 20px; } }
+  #modal_country_change.open {
+    height: 475px; }
+    @media screen and (max-height: 600px) {
+      #modal_country_change.open {
+        height: 350px; } }
+    @media screen and (max-height: 360px) {
+      #modal_country_change.open {
+        height: calc(100vh - 40px); } }
+  @media screen and (max-width: 500px) {
+    #modal_country_change {
+      width: calc(100vw - 40px);
+      left: 20px;
+      margin-left: 0; } }
+  @media screen and (max-height: 360px) {
+    #modal_country_change {
+      height: calc(100vh - 40px);
+      margin-top: 0;
+      top: 20px; } }
+  #modal_country_change .modal_close {
+    background: url("../img/icons/close_w.svg") no-repeat center right;
+    background-size: 12px; }
+    #modal_country_change .modal_close .label {
+      color: #fff; }
+  #modal_country_change .content-modal-holder {
+    padding: 50px 80px;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+    @media screen and (max-width: 600px) {
+      #modal_country_change .content-modal-holder {
+        padding: 20px; } }
+    #modal_country_change .content-modal-holder h3 {
+      color: #fff;
+      text-align: left;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      line-height: 1.3em;
+      font-family: "GothamPro", sans-serif;
+      font-weight: 400; }
+      @media screen and (max-width: 600px) {
+        #modal_country_change .content-modal-holder h3 {
+          font-size: 1.714285714rem; } }
+    #modal_country_change .content-modal-holder .form-holder {
+      margin-bottom: 30px;
+      width: 100%;
+      text-align: center; }
+      #modal_country_change .content-modal-holder .form-holder.open + .submit {
+        opacity: 0; }
+      #modal_country_change .content-modal-holder .form-holder .selectbox {
+        width: 100%;
+        position: relative; }
+        @media screen and (max-height: 600px) {
+          #modal_country_change .content-modal-holder .form-holder .selectbox {
+            height: 40px; } }
+        #modal_country_change .content-modal-holder .form-holder .selectbox .mCSB_scrollTools .mCSB_draggerRail {
+          background: rgba(255, 255, 255, 0.25); }
+        #modal_country_change .content-modal-holder .form-holder .selectbox .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+          background: #fff; }
+        #modal_country_change .content-modal-holder .form-holder .selectbox .select {
+          width: 100%;
+          border: 2px solid #fff;
+          line-height: 36px;
+          height: 40px;
+          color: #fff;
+          font-size: 1rem;
+          padding: 0 35px;
+          cursor: pointer;
+          text-transform: uppercase; }
+          #modal_country_change .content-modal-holder .form-holder .selectbox .select:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            width: 19px;
+            height: 12px;
+            background: url("../img/icons/down-white.svg") no-repeat center;
+            background-size: 100%;
+            z-index: 2;
+            margin-top: -6px; }
+        #modal_country_change .content-modal-holder .form-holder .selectbox .dropdown {
+          width: 100%;
+          border: 2px solid #fff;
+          border-top: 0;
+          max-height: 200px;
+          position: relative !important;
+          top: inherit !important;
+          left: inherit !important;
+          bottom: inherit !important;
+          color: #fff;
+          text-align: left;
+          padding: 20px 20px 0 50px; }
+          @media screen and (max-height: 600px) {
+            #modal_country_change .content-modal-holder .form-holder .selectbox .dropdown {
+              position: absolute !important;
+              top: 100% !important;
+              left: 0 !important;
+              max-height: 120px; } }
+          #modal_country_change .content-modal-holder .form-holder .selectbox .dropdown li {
+            margin-bottom: 25px;
+            line-height: 1em;
+            font-size: 1rem;
+            cursor: pointer; }
+            #modal_country_change .content-modal-holder .form-holder .selectbox .dropdown li.sel, #modal_country_change .content-modal-holder .form-holder .selectbox .dropdown li:first-child {
+              display: none; }
+    #modal_country_change .content-modal-holder .submit {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1rem;
+      border: 2px solid #fff;
+      width: 100%;
+      height: 40px;
+      line-height: 36px;
+      font-family: "GothamPro-Bold", sans-serif;
+      cursor: pointer;
+      -webkit-transition: all 0.35s, opacity 0s;
+      transition: all 0.35s, opacity 0s; }
+      #modal_country_change .content-modal-holder .submit:hover {
+        -webkit-transition: all 0.35s;
+        transition: all 0.35s;
+        background: #fff;
+        color: #607d8b; }
 
 .page_wrapper.product .block_share {
   margin-top: 50px; }
