@@ -220,6 +220,44 @@ jQuery(document).ready(function() {
         $("#attribute_size .name").text(size_active);
     });
 
+
+
+	//delivery
+	$('#checkout select.delivery').on('change', function () {
+		var $datadelivery = jQuery(this).find("option:checked").attr('data-price');
+		console.log($datadelivery);
+		var $dataprice = jQuery(".subtotal_product_price").attr('data-product-price');
+		if (!(typeof($datadelivery) === "undefined")) {
+			var $delivery = '$ ' + $datadelivery;
+			jQuery(".delivery_price").text($delivery);
+			var $price = parseFloat($dataprice) + parseFloat($datadelivery);
+			$price = number_format($price, 0, '', ' ');
+			$price = '$ ' + $price.toString();
+			jQuery(".grand_price").text($price);
+			console.log($price);
+		}
+	});
+
+	function number_format( number, decimals, dec_point, thousands_sep ) {
+		var i, kw, kd;
+		if( isNaN(decimals = Math.abs(decimals)) ){
+			decimals = 2;
+		}
+		if( dec_point == undefined ){
+			dec_point = ",";
+		}
+		if( thousands_sep == undefined ){
+			thousands_sep = ".";
+		}
+		i = parseInt(number = (+number || 0).toFixed(decimals)) + "";
+		kw = i.split( /(?=(?:\d{3})+$)/ ).join( thousands_sep );
+		kd = (decimals ? dec_point + Math.abs(number - i).toFixed(decimals).replace(/-/, 0).slice(2) : "");
+		return kw + kd;
+	}
+
+
+
+
 });
 
 
