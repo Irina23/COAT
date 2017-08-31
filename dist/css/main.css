@@ -1625,6 +1625,21 @@ footer {
         transition: all 0.35s;
         text-decoration: none;
         color: #253137; }
+    .product .content .pdocut_info .whatsapp {
+      display: none;
+      text-transform: uppercase;
+      font-size: 1rem;
+      line-height: 40px;
+      background: #90a4ae;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 600;
+      max-width: 320px;
+      margin: 30px auto 0; }
+      @media screen and (max-width: 959px) {
+        .product .content .pdocut_info .whatsapp {
+          display: block; } }
 
 .add_bag {
   position: fixed;
@@ -2098,18 +2113,6 @@ footer {
         text-align: center; }
       .product .content .pdocut_info .title {
         font-size: 1.285714285714286rem; }
-    .product .content .whatsapp {
-      display: block;
-      text-transform: uppercase;
-      font-size: 1rem;
-      line-height: 40px;
-      background: #90a4ae;
-      color: #fff;
-      text-align: center;
-      text-decoration: none;
-      font-weight: 600;
-      max-width: 320px;
-      margin: 30px auto 0; }
   .collections .collections_block,
   .collections .block_text_collections {
     width: 100%; }
