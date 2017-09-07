@@ -2804,7 +2804,8 @@ footer {
         padding: 0 25px; } }
 
 .page_wrapper.product .block_share {
-  margin-top: 50px; }
+  margin-top: 50px;
+  margin-bottom: 30px; }
 
 .page_wrapper.collections .block_share {
   margin-bottom: 60px; }
