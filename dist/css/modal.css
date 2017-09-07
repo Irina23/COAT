@@ -410,3 +410,11 @@
         transition: all 0.35s;
         background: #fff;
         color: #607d8b; }
+
+#guide_size .content-holder {
+  padding: 70px 0; }
+  #guide_size .content-holder > div {
+    padding: 0 70px; }
+    @media screen and (max-width: 600px) {
+      #guide_size .content-holder > div {
+        padding: 0 25px; } }

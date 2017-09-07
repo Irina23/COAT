@@ -26,7 +26,7 @@ jQuery(document).ready(function() {
             prevText: "",
             auto: true,
             controls: false,
-            pause: 10000
+            pause: 4000
         });
 
 
